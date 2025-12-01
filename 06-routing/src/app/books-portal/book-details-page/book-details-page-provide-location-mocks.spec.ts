@@ -6,7 +6,7 @@ import { provideRouter, Router } from '@angular/router';
 import { booksPortalRoutes } from '../books-portal.routes';
 
 describe('BookDetailsPage Routing', () => {
-  it('should naviate to the details page', async () => {
+  it('should navigate to the details page', async () => {
     TestBed.configureTestingModule({
       providers: [
         provideRouter(booksPortalRoutes),
