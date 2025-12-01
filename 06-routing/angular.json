@@ -11,6 +11,9 @@
   "schematics": {
     "@schematics/angular:application": {
       "testRunner": "karma"
+    },
+    "@schematics/angular:library": {
+      "testRunner": "karma"
     }
   },
   "projects": {
