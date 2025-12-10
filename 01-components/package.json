@@ -6,8 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "lint": "ng lint"
+    "test": "ng test"
   },
   "prettier": {
     "printWidth": 100,
@@ -22,7 +21,7 @@
     ]
   },
   "private": true,
-  "packageManager": "npm@11.5.2",
+  "packageManager": "npm@10.9.2",
   "dependencies": {
     "@angular-buch/styles": "github:angular-buch/styles",
     "@angular/common": "^21.0.0",
@@ -35,19 +34,11 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@angular/build": "^21.0.1",
-    "@angular/cli": "^21.0.1",
+    "@angular/build": "^21.0.3",
+    "@angular/cli": "^21.0.3",
     "@angular/compiler-cli": "^21.0.0",
-    "@types/jasmine": "~5.1.0",
-    "angular-eslint": "21.0.1",
-    "eslint": "^9.39.1",
-    "jasmine-core": "~5.12.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.1.0",
+    "jsdom": "^27.1.0",
     "typescript": "~5.9.2",
-    "typescript-eslint": "8.46.4"
+    "vitest": "^4.0.8"
   }
 }
