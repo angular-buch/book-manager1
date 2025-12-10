@@ -15,6 +15,7 @@ describe('BooksOverviewPage', () => {
 
     fixture = TestBed.createComponent(BooksOverviewPage);
     component = fixture.componentInstance;
+    await fixture.whenStable();
   });
 
   it('should have a list of 2 books', () => {

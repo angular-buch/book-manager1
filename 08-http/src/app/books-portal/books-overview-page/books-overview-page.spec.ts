@@ -14,7 +14,7 @@ describe('BooksOverviewPage', () => {
 
     fixture = TestBed.createComponent(BooksOverviewPage);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    await fixture.whenStable();
   });
 
   it('should create', () => {

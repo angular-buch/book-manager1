@@ -20,7 +20,7 @@ describe('BooksOverviewPage', () => {
 
     fixture = TestBed.createComponent(BooksOverviewPage);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    await fixture.whenStable();
   });
 
   it('should display all books if the search term is empty', () => {
