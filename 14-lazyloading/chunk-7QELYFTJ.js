@@ -1,0 +1,1 @@
+import{Ba as o,Wa as a,Xa as n,eb as m}from"./chunk-D6MFYRRC.js";var i=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=o({type:t,selectors:[["app-home-page"]],decls:2,vars:0,template:function(e,s){e&1&&(a(0,"h1"),m(1,"Welcome to the BookManager!"),n())},encapsulation:2})};export{i as HomePage};
