@@ -22,7 +22,7 @@ describe('BookDetailsPage', () => {
 
     fixture = TestBed.createComponent(BookDetailsPage, {
       bindings: [
-        inputBinding('isbn', () => '9783864909467')
+        inputBinding('isbn', () => '123')
       ]
     });
     component = fixture.componentInstance;

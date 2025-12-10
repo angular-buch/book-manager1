@@ -23,7 +23,7 @@ describe('BookDetailsPage', () => {
 
     fixture = TestBed.createComponent(BookDetailsPage, {
       bindings: [
-        inputBinding('isbn', () => '9783864909467')
+        inputBinding('isbn', () => '123')
       ]
     });
     component = fixture.componentInstance;
@@ -32,12 +32,12 @@ describe('BookDetailsPage', () => {
     TestBed.tick();
 
     // Respond to the HTTP request triggered by the Resource
-    const req = httpMock.expectOne('https://api1.angular-buch.com/books/9783864909467');
+    const req = httpMock.expectOne('https://api1.angular-buch.com/books/123');
     req.flush({
-      isbn: '9783864909467',
+      isbn: '123',
       title: 'Test Book',
       authors: ['Test Author'],
-      published: '2024-01-01',
+      published: '2026-01-01',
       subtitle: '',
       rating: 5,
       thumbnails: [{ url: '', title: '' }],

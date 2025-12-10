@@ -9,10 +9,10 @@ describe('BookCard', () => {
   let fixture: ComponentFixture<BookCard>;
 
   const testBook = {
-    isbn: '9783864909467',
+    isbn: '123',
     title: 'Test Book',
     authors: ['Test Author'],
-    published: '2024-01-01',
+    published: '2026-01-01',
     subtitle: '',
     rating: 5,
     thumbnails: [{ url: '', title: '' }],
