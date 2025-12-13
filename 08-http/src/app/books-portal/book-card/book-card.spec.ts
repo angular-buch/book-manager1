@@ -2,21 +2,20 @@ import { inputBinding } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 
+import { Book } from '../../shared/book';
 import { BookCard } from './book-card';
 
 describe('BookCard', () => {
   let component: BookCard;
   let fixture: ComponentFixture<BookCard>;
 
-  const testBook = {
+  const testBook: Book = {
     isbn: '123',
     title: 'Test Book',
     authors: ['Test Author'],
-    published: '2026-01-01',
-    subtitle: '',
-    rating: 5,
-    thumbnails: [{ url: '', title: '' }],
-    description: ''
+    description: '',
+    imageUrl: 'https://example.com/test.png',
+    createdAt: '2026-01-01'
   };
 
   beforeEach(async () => {

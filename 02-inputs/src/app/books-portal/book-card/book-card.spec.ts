@@ -7,13 +7,12 @@ import { signal, inputBinding } from '@angular/core';
 describe('BookCard', () => {
   let fixture: ComponentFixture<BookCard>;
   const testBook = signal<Book>({
-    isbn: '1111',
-    title: 'Testbuch',
-    subtitle: 'Test',
-    authors: ['Author 1', 'Author 2'],
-    imageUrl: 'https://cdn.ng-buch.de/test.png',
-    description: 'Dies ist ein Testbuch',
-    createdAt: new Date().toISOString()
+    isbn: '123',
+    title: 'Test Book',
+    authors: ['Test Author'],
+    description: '',
+    imageUrl: 'https://example.com/test.png',
+    createdAt: '2026-01-01'
   });
 
   beforeEach(async () => {
@@ -30,11 +29,10 @@ describe('BookCard', () => {
     fixture.detectChanges();
   });
 
-  it('should render book title, subtitle and isbn', () => {
+  it('should render book title and isbn', () => {
     const compiledElement: HTMLElement = fixture.nativeElement;
     expect(compiledElement.textContent).toContain(testBook().isbn);
-    expect(compiledElement.textContent).toContain(testBook().subtitle);
-    expect(compiledElement.textContent).toContain(testBook().isbn);
+    expect(compiledElement.textContent).toContain(testBook().title);
   });
 
   it('should display the correct image', () => {

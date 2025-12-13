@@ -3,12 +3,22 @@ import { inputBinding } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 
+import { Book } from '../../shared/book';
 import { BookDetailsPage } from './book-details-page';
 
 describe('BookDetailsPage', () => {
   let component: BookDetailsPage;
   let fixture: ComponentFixture<BookDetailsPage>;
   let httpMock: HttpTestingController;
+
+  const testBook: Book = {
+    isbn: '123',
+    title: 'Test Book',
+    authors: ['Test Author'],
+    description: '',
+    imageUrl: 'https://example.com/test.png',
+    createdAt: '2026-01-01'
+  };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -33,16 +43,7 @@ describe('BookDetailsPage', () => {
 
     // Respond to the HTTP request triggered by the Resource
     const req = httpMock.expectOne('https://api1.angular-buch.com/books/123');
-    req.flush({
-      isbn: '123',
-      title: 'Test Book',
-      authors: ['Test Author'],
-      published: '2026-01-01',
-      subtitle: '',
-      rating: 5,
-      thumbnails: [{ url: '', title: '' }],
-      description: ''
-    });
+    req.flush(testBook);
 
     await fixture.whenStable();
   });

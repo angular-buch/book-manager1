@@ -10,13 +10,12 @@ describe('BookCard', () => {
   let emittedBook: Book | undefined;
 
   const testBook: Book = {
-    isbn: '1111',
-    title: 'Testbuch',
-    subtitle: 'Test',
-    authors: ['Author 1', 'Author 2'],
-    imageUrl: 'https://cdn.ng-buch.de/test.png',
-    description: 'Dies ist ein Testbuch',
-    createdAt: new Date().toISOString()
+    isbn: '123',
+    title: 'Test Book',
+    authors: ['Test Author'],
+    description: '',
+    imageUrl: 'https://example.com/test.png',
+    createdAt: '2026-01-01'
   };
 
   beforeEach(async () => {
