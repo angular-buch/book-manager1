@@ -21,7 +21,7 @@
     ]
   },
   "private": true,
-  "packageManager": "npm@10.9.2",
+  "packageManager": "npm@11.7.0",
   "dependencies": {
     "@angular-buch/styles": "github:angular-buch/styles",
     "@angular/common": "^21.0.0",
