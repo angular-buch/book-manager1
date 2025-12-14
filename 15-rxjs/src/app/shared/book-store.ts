@@ -38,7 +38,7 @@ export class BookStore {
   search(searchTerm: string): Observable<Book[]> {
     return this.#http.get<Book[]>(
       `${this.#apiUrl}/books`,
-      { params: { search: searchTerm } }
+      { params: { filter: searchTerm } }
     );
   }
 }

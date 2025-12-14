@@ -2,7 +2,8 @@
 
 <section [aria-busy]="isLoading()">
   <label for="search">Search for Books</label>
-  <input type="search" id="search" [field]="searchField" />
+  <input type="search" id="search"
+    (input)="searchTerm$.next($event.target.value)" />
   <ul>
     @for (b of results(); track b.isbn) {
     <li>

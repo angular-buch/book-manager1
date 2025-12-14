@@ -1,26 +1,24 @@
 import { Component, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Field, form } from '@angular/forms/signals';
-import { toObservable, toSignal } from '@angular/core/rxjs-interop';
-import { filter, debounceTime, distinctUntilChanged, switchMap, tap } from 'rxjs';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { filter, debounceTime, distinctUntilChanged, switchMap, tap, Subject } from 'rxjs';
 
 import { BookStore } from '../shared/book-store';
 
 @Component({
   selector: 'app-home-page',
-  imports: [Field, RouterLink],
+  imports: [RouterLink],
   templateUrl: './home-page.html',
   styleUrl: './home-page.scss'
 })
 export class HomePage {
   #bookStore = inject(BookStore);
 
-  protected searchTerm = signal('');
-  protected searchField = form(this.searchTerm);
+  protected searchTerm$ = new Subject<string>();
   protected isLoading = signal(false);
 
   protected results = toSignal(
-    toObservable(this.searchTerm).pipe(
+    this.searchTerm$.pipe(
       filter(term => term.length >= 3),
       debounceTime(500),
       distinctUntilChanged(),
