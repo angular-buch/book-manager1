@@ -12,7 +12,7 @@ describe('BookDetailsPage', () => {
   let httpMock: HttpTestingController;
 
   const testBook: Book = {
-    isbn: '123',
+    isbn: '1234567890123',
     title: 'Test Book',
     authors: ['Test Author'],
     description: '',
@@ -33,7 +33,7 @@ describe('BookDetailsPage', () => {
 
     fixture = TestBed.createComponent(BookDetailsPage, {
       bindings: [
-        inputBinding('isbn', () => '123')
+        inputBinding('isbn', () => '1234567890123')
       ]
     });
     component = fixture.componentInstance;
@@ -54,5 +54,12 @@ describe('BookDetailsPage', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should display formatted book properties', () => {
+    const isbnEl = fixture.nativeElement.querySelector('[data-testid=isbn]')!;
+    const createdAtEl = fixture.nativeElement.querySelector('[data-testid=created-at]')!;
+    expect(isbnEl.textContent).toContain('123-4-5678-9012-3');
+    expect(createdAtEl.textContent).toContain('Jan 1, 2026, 12:00:00');
   });
 });

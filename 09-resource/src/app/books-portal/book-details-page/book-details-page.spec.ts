@@ -12,7 +12,7 @@ describe('BookDetailsPage', () => {
   let httpMock: HttpTestingController;
 
   const testBook: Book = {
-    isbn: '123',
+    isbn: '1234567890123',
     title: 'Test Book',
     authors: ['Test Author'],
     description: '',
@@ -33,7 +33,7 @@ describe('BookDetailsPage', () => {
 
     fixture = TestBed.createComponent(BookDetailsPage, {
       bindings: [
-        inputBinding('isbn', () => '123')
+        inputBinding('isbn', () => '1234567890123')
       ]
     });
     component = fixture.componentInstance;

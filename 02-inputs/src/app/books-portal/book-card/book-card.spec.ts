@@ -7,7 +7,7 @@ import { signal, inputBinding } from '@angular/core';
 describe('BookCard', () => {
   let fixture: ComponentFixture<BookCard>;
   const testBook = signal<Book>({
-    isbn: '123',
+    isbn: '1234567890123',
     title: 'Test Book',
     authors: ['Test Author'],
     description: '',

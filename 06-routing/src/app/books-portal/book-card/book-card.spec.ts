@@ -10,7 +10,7 @@ describe('BookCard', () => {
   let emittedBook: Book | undefined;
 
   const testBook: Book = {
-    isbn: '123',
+    isbn: '1234567890123',
     title: 'Test Book',
     authors: ['Test Author'],
     description: '',
