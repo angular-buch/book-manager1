@@ -38,7 +38,7 @@ export class BookCreatePage {
     authors: [''],
     description: '',
     imageUrl: '',
-    createdAt: new Date().toISOString(),
+    createdAt: '',
   });
   protected readonly bookForm = form(this.#bookFormData, bookFormSchema);
 
@@ -53,21 +53,20 @@ export class BookCreatePage {
     return field().invalid();
   }
 
-  async submitForm(e: SubmitEvent) {
-    e.preventDefault();
+  submitForm() {
+    const formValue = this.bookForm().value();
+    const authors = formValue.authors.filter(author => !!author);
 
-    await submit(this.bookForm, async (form) => {
-      const formValue = form().value();
-      const authors = formValue.authors.filter(author => !!author);
+    const newBook: Book = {
+      ...formValue,
+      authors,
+      createdAt: new Date().toISOString()
+    };
 
-      const newBook: Book = {
-        ...formValue,
-        authors,
-        createdAt: new Date().toISOString()
-      };
-      this.#bookStore.create(newBook).subscribe(createdBook => {
-        this.#router.navigate(['/books', 'details', createdBook.isbn]);
-      });
+    this.#bookStore.create(newBook).subscribe(createdBook => {
+      this.#router.navigate(['/books', 'details', createdBook.isbn]);
     });
+
+    return false; // prevent reload
   }
 }

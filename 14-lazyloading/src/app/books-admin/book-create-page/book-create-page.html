@@ -1,6 +1,6 @@
 <h1>Create book</h1>
 
-<form (submit)="submitForm($event)">
+<form (submit)="submitForm()">
   @let titleInvalid = isInvalid(bookForm.title);
   <label for="title">Title</label>
   <input
@@ -75,10 +75,7 @@
   <small id="image-url-error">The URL is invalid.</small>
   }
 
-  <button
-    type="submit"
-    [disabled]="bookForm().invalid()"
-    [aria-busy]="bookForm().submitting()">
+  <button type="submit" [disabled]="bookForm().invalid()">
     Save
   </button>
 </form>
