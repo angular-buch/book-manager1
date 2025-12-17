@@ -7,18 +7,18 @@ import { BookStore } from '../../shared/book-store';
 
 type BookFormData = Required<Book>;
 
-export const bookFormSchema = schema<BookFormData>((schemaPath) => {
-  required(schemaPath.title);
-  required(schemaPath.isbn);
-  minLength(schemaPath.isbn, 13);
-  maxLength(schemaPath.isbn, 13);
-  validate(schemaPath.authors, (ctx) =>
+export const bookFormSchema = schema<BookFormData>((path) => {
+  required(path.title);
+  required(path.isbn);
+  minLength(path.isbn, 13);
+  maxLength(path.isbn, 13);
+  validate(path.authors, (ctx) =>
     !ctx.value().some((a) => a)
       ? { kind: 'atLeastOneAuthor' }
       : undefined
   );
-  required(schemaPath.description);
-  required(schemaPath.imageUrl);
+  required(path.description);
+  required(path.imageUrl);
 });
 
 @Component({
@@ -46,7 +46,7 @@ export class BookCreatePage {
     this.bookForm.authors().value.update((authors) => [...authors, '']);
   }
 
-  isInvalid(field: FieldTree<unknown>) {
+  isInvalid(field: FieldTree<unknown>): boolean | null {
     if (!field().touched()) {
       return null;
     }

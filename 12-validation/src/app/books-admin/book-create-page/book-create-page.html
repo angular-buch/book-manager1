@@ -7,7 +7,7 @@
     type="text"
     id="title"
     [field]="bookForm.title"
-    [aria-describedby]="titleInvalid ? 'title-error' : null"
+    [aria-errormessage]="titleInvalid ? 'title-error' : null"
     [aria-invalid]="titleInvalid"
   />
   @if (titleInvalid) {
@@ -23,7 +23,7 @@
     type="text"
     id="isbn"
     [field]="bookForm.isbn"
-    [aria-describedby]="isbnInvalid ? 'isbn-error' : null"
+    [aria-errormessage]="isbnInvalid ? 'isbn-error' : null"
     [aria-invalid]="isbnInvalid"
   />
   @if (isbnInvalid) {
@@ -40,7 +40,7 @@
         type="text"
         [aria-label]="`Author ${$index + 1}`"
         [field]="authorField"
-        [aria-describedby]="authorsInvalid ? 'authors-error' : null"
+        [aria-errormessage]="authorsInvalid ? 'authors-error' : null"
         [aria-invalid]="authorsInvalid"
       />
       }
@@ -56,7 +56,7 @@
   <textarea
     id="description"
     [field]="bookForm.description"
-    [aria-describedby]="descriptionInvalid ? 'description-error' : null"
+    [aria-errormessage]="descriptionInvalid ? 'description-error' : null"
     [aria-invalid]="descriptionInvalid">
   </textarea>
   @if (descriptionInvalid) {
@@ -69,7 +69,7 @@
     type="url"
     id="imageUrl"
     [field]="bookForm.imageUrl"
-    [aria-describedby]="imageUrlInvalid ? 'image-url-error' : null"
+    [aria-errormessage]="imageUrlInvalid ? 'image-url-error' : null"
     [aria-invalid]="imageUrlInvalid" />
   @if (imageUrlInvalid) {
   <small id="image-url-error">The URL is invalid.</small>
