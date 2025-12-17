@@ -995,7 +995,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    [aria-describedby]=&quot;titleInvalid ? &#x27;title-error&#x27; : null&quot;</span>
+            <span class="d2h-code-line-ctn">    [aria-errormessage]=&quot;titleInvalid ? &#x27;title-error&#x27; : null&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -1155,7 +1155,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    [aria-describedby]=&quot;isbnInvalid ? &#x27;isbn-error&#x27; : null&quot;</span>
+            <span class="d2h-code-line-ctn">    [aria-errormessage]=&quot;isbnInvalid ? &#x27;isbn-error&#x27; : null&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -1325,7 +1325,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        [aria-describedby]=&quot;authorsInvalid ? &#x27;authors-error&#x27; : null&quot;</span>
+            <span class="d2h-code-line-ctn">        [aria-errormessage]=&quot;authorsInvalid ? &#x27;authors-error&#x27; : null&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -1485,7 +1485,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    [aria-describedby]=&quot;descriptionInvalid ? &#x27;description-error&#x27; : null&quot;</span>
+            <span class="d2h-code-line-ctn">    [aria-errormessage]=&quot;descriptionInvalid ? &#x27;description-error&#x27; : null&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -1615,7 +1615,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    [aria-describedby]=&quot;imageUrlInvalid ? &#x27;image-url-error&#x27; : null&quot;</span>
+            <span class="d2h-code-line-ctn">    [aria-errormessage]=&quot;imageUrlInvalid ? &#x27;image-url-error&#x27; : null&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -2293,7 +2293,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">export const bookFormSchema = schema&lt;BookFormData&gt;((schemaPath) =&gt; {</span>
+            <span class="d2h-code-line-ctn">export const bookFormSchema = schema&lt;BookFormData&gt;((path) =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -2303,7 +2303,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  required(schemaPath.title);</span>
+            <span class="d2h-code-line-ctn">  required(path.title);</span>
         </div>
     </td>
 </tr><tr>
@@ -2313,7 +2313,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  required(schemaPath.isbn);</span>
+            <span class="d2h-code-line-ctn">  required(path.isbn);</span>
         </div>
     </td>
 </tr><tr>
@@ -2323,7 +2323,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  minLength(schemaPath.isbn, 13);</span>
+            <span class="d2h-code-line-ctn">  minLength(path.isbn, 13);</span>
         </div>
     </td>
 </tr><tr>
@@ -2333,7 +2333,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  maxLength(schemaPath.isbn, 13);</span>
+            <span class="d2h-code-line-ctn">  maxLength(path.isbn, 13);</span>
         </div>
     </td>
 </tr><tr>
@@ -2343,7 +2343,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  validate(schemaPath.authors, (ctx) =&gt;</span>
+            <span class="d2h-code-line-ctn">  validate(path.authors, (ctx) =&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -2393,7 +2393,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  required(schemaPath.description);</span>
+            <span class="d2h-code-line-ctn">  required(path.description);</span>
         </div>
     </td>
 </tr><tr>
@@ -2403,7 +2403,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  required(schemaPath.imageUrl);</span>
+            <span class="d2h-code-line-ctn">  required(path.imageUrl);</span>
         </div>
     </td>
 </tr><tr>
@@ -2558,7 +2558,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  isInvalid(field: FieldTree&lt;unknown&gt;) {</span>
+            <span class="d2h-code-line-ctn">  isInvalid(field: FieldTree&lt;unknown&gt;): boolean | null {</span>
         </div>
     </td>
 </tr><tr>
