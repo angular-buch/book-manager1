@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { customError, Field, FieldTree, form, maxLength, minLength, required, schema, submit, validate } from '@angular/forms/signals';
+import { Field, FieldTree, form, maxLength, minLength, required, schema, validate } from '@angular/forms/signals';
 import { Router } from '@angular/router';
 
 import { Book } from '../../shared/book';
@@ -8,17 +8,20 @@ import { BookStore } from '../../shared/book-store';
 type BookFormData = Required<Book>;
 
 export const bookFormSchema = schema<BookFormData>((path) => {
-  required(path.title);
-  required(path.isbn);
-  minLength(path.isbn, 13);
-  maxLength(path.isbn, 13);
+  required(path.title, { message: 'Title is required.' });
+  required(path.isbn, { message: 'ISBN is required.' });
+  minLength(path.isbn, 13, { message: 'ISBN must have 13 digits.' });
+  maxLength(path.isbn, 13, { message: 'ISBN must have 13 digits.' });
   validate(path.authors, (ctx) =>
     !ctx.value().some((a) => a)
-      ? { kind: 'atLeastOneAuthor' }
+      ? {
+        kind: 'atLeastOneAuthor',
+        message: 'At least one author is required.'
+      }
       : undefined
   );
-  required(path.description);
-  required(path.imageUrl);
+  required(path.description, { message: 'Description is required.' });
+  required(path.imageUrl, { message: 'URL is required.' });
 });
 
 @Component({

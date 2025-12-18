@@ -11,7 +11,11 @@
     [aria-invalid]="titleInvalid"
   />
   @if (titleInvalid) {
-  <small id="title-error">The title is invalid.</small>
+  <small role="alert" id="title-error">
+    @for (e of bookForm.title().errors(); track e.kind) {
+    <span>{{ e.message }}</span>
+    }
+  </small>
   }
 
   <label for="subtitle">Subtitle</label>
@@ -27,7 +31,11 @@
     [aria-invalid]="isbnInvalid"
   />
   @if (isbnInvalid) {
-  <small id="isbn-error">The ISBN is invalid.</small>
+  <small role="alert" id="isbn-error">
+    @for (e of bookForm.isbn().errors(); track e.kind) {
+    <span>{{ e.message }}</span>
+    }
+  </small>
   }
 
   <fieldset>
@@ -45,7 +53,11 @@
       />
       }
       @if (authorsInvalid) {
-      <small id="authors-error">At least one author must be added.</small>
+      <small role="alert" id="authors-error">
+        @for (e of bookForm.authors().errors(); track e.kind) {
+        <span>{{ e.message }}</span>
+        }
+      </small>
       }
     </div>
 
@@ -60,7 +72,11 @@
     [aria-invalid]="descriptionInvalid">
   </textarea>
   @if (descriptionInvalid) {
-  <small id="description-error">The description is invalid.</small>
+  <small role="alert" id="description-error">
+    @for (e of bookForm.description().errors(); track e.kind) {
+    <span>{{ e.message }}</span>
+    }
+  </small>
   }
 
   @let imageUrlInvalid = isInvalid(bookForm.imageUrl);
@@ -72,7 +88,11 @@
     [aria-errormessage]="imageUrlInvalid ? 'image-url-error' : null"
     [aria-invalid]="imageUrlInvalid" />
   @if (imageUrlInvalid) {
-  <small id="image-url-error">The URL is invalid.</small>
+  <small role="alert" id="image-url-error">
+    @for (e of bookForm.imageUrl().errors(); track e.kind) {
+    <span>{{ e.message }}</span>
+    }
+  </small>
   }
 
   <button type="submit" [disabled]="bookForm().invalid()">
