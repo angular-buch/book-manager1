@@ -2135,7 +2135,7 @@
                     <tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line">@@ -87,4 +87,68 @@ describe(&#x27;BookCreatePage&#x27;, () =&gt; {</div>
+        <div class="d2h-code-side-line">@@ -87,4 +87,63 @@ describe(&#x27;BookCreatePage&#x27;, () =&gt; {</div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
@@ -2165,56 +2165,6 @@
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
             <span class="d2h-code-line-ctn">  });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -3118,7 +3068,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const titleField = component[&#x27;bookForm&#x27;].title();</span>
+            <span class="d2h-code-line-ctn">    const submitButton = fixture.nativeElement.querySelector(&#x27;button[type=&quot;submit&quot;]&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -3128,7 +3078,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const submitButton = fixture.nativeElement.querySelector(&#x27;button[type=&quot;submit&quot;]&#x27;);</span>
+            <span class="d2h-code-line-ctn">    expect(submitButton.disabled).toBe(true);</span>
         </div>
     </td>
 </tr><tr>
@@ -3148,7 +3098,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    titleField.markAsTouched();</span>
+            <span class="d2h-code-line-ctn">    component[&#x27;bookForm&#x27;]().value.set(validBook);</span>
         </div>
     </td>
 </tr><tr>
@@ -3178,7 +3128,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(submitButton.disabled).toBe(true);</span>
+            <span class="d2h-code-line-ctn">    expect(submitButton.disabled).toBe(false);</span>
         </div>
     </td>
 </tr><tr>
@@ -3188,7 +3138,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">  });</span>
         </div>
     </td>
 </tr><tr>
@@ -3198,7 +3148,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    component[&#x27;bookForm&#x27;]().value.set(validBook);</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -3208,7 +3158,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    await fixture.whenStable();</span>
+            <span class="d2h-code-line-ctn">  it(&#x27;should display an error message for a field and mark it as invalid&#x27;, async () =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -3218,7 +3168,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">    const descriptionField = component[&#x27;bookForm&#x27;].description();</span>
         </div>
     </td>
 </tr><tr>
@@ -3228,7 +3178,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(submitButton.disabled).toBe(false);</span>
+            <span class="d2h-code-line-ctn">    const textareaEl = fixture.nativeElement.querySelector(&#x27;textarea&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -3238,7 +3188,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  });</span>
+            <span class="d2h-code-line-ctn">    let textareaMessageEl = fixture.nativeElement.querySelector(&#x27;#description-error&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -3258,7 +3208,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should display an error message for a field and mark it as invalid&#x27;, async () =&gt; {</span>
+            <span class="d2h-code-line-ctn">    expect(textareaEl.hasAttribute(&#x27;aria-errormessage&#x27;)).toBe(false);</span>
         </div>
     </td>
 </tr><tr>
@@ -3268,7 +3218,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const descriptionField = component[&#x27;bookForm&#x27;].description();</span>
+            <span class="d2h-code-line-ctn">    expect(textareaEl.hasAttribute(&#x27;aria-invalid&#x27;)).toBe(false);</span>
         </div>
     </td>
 </tr><tr>
@@ -3278,7 +3228,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const textareaEl = fixture.nativeElement.querySelector(&#x27;textarea&#x27;);</span>
+            <span class="d2h-code-line-ctn">    expect(textareaMessageEl).toBeNull();</span>
         </div>
     </td>
 </tr><tr>
@@ -3288,7 +3238,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    let textareaMessageEl = fixture.nativeElement.querySelector(&#x27;#description-error&#x27;);</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -3298,7 +3248,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">    descriptionField.markAsTouched();</span>
         </div>
     </td>
 </tr><tr>
@@ -3308,7 +3258,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(textareaEl.hasAttribute(&#x27;aria-errormessage&#x27;)).toBe(false);</span>
+            <span class="d2h-code-line-ctn">    await fixture.whenStable();</span>
         </div>
     </td>
 </tr><tr>
@@ -3318,7 +3268,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(textareaEl.hasAttribute(&#x27;aria-invalid&#x27;)).toBe(false);</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -3328,7 +3278,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(textareaMessageEl).toBeNull();</span>
+            <span class="d2h-code-line-ctn">    textareaMessageEl = fixture.nativeElement.querySelector(&#x27;#description-error&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -3338,7 +3288,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">    expect(textareaEl.getAttribute(&#x27;aria-errormessage&#x27;)).toBe(&#x27;description-error&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -3348,7 +3298,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    descriptionField.markAsTouched();</span>
+            <span class="d2h-code-line-ctn">    expect(textareaEl.getAttribute(&#x27;aria-invalid&#x27;)).toBe(&#x27;true&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -3358,7 +3308,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    await fixture.whenStable();</span>
+            <span class="d2h-code-line-ctn">    expect(textareaMessageEl.textContent).toBe(&#x27;Description is required.&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -3378,7 +3328,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    textareaMessageEl = fixture.nativeElement.querySelector(&#x27;#description-error&#x27;);</span>
+            <span class="d2h-code-line-ctn">    descriptionField.value.set(&#x27;my description&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -3388,7 +3338,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(textareaEl.getAttribute(&#x27;aria-errormessage&#x27;)).toBe(&#x27;description-error&#x27;);</span>
+            <span class="d2h-code-line-ctn">    await fixture.whenStable();</span>
         </div>
     </td>
 </tr><tr>
@@ -3398,7 +3348,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(textareaEl.getAttribute(&#x27;aria-invalid&#x27;)).toBe(&#x27;true&#x27;);</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -3408,7 +3358,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(textareaMessageEl.textContent).toBe(&#x27;Description is required.&#x27;);</span>
+            <span class="d2h-code-line-ctn">    textareaMessageEl = fixture.nativeElement.querySelector(&#x27;#description-error&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -3418,7 +3368,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">    expect(textareaEl.hasAttribute(&#x27;aria-errormessage&#x27;)).toBe(false);</span>
         </div>
     </td>
 </tr><tr>
@@ -3428,7 +3378,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    descriptionField.value.set(&#x27;my description&#x27;);</span>
+            <span class="d2h-code-line-ctn">    expect(textareaEl.getAttribute(&#x27;aria-invalid&#x27;)).toBe(&#x27;false&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -3438,7 +3388,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    await fixture.whenStable();</span>
+            <span class="d2h-code-line-ctn">    expect(textareaMessageEl).toBeNull();</span>
         </div>
     </td>
 </tr><tr>
@@ -3448,62 +3398,12 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      149
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    textareaMessageEl = fixture.nativeElement.querySelector(&#x27;#description-error&#x27;);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      150
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(textareaEl.hasAttribute(&#x27;aria-errormessage&#x27;)).toBe(false);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      151
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(textareaEl.getAttribute(&#x27;aria-invalid&#x27;)).toBe(&#x27;false&#x27;);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      152
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(textareaMessageEl).toBeNull();</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      153
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
             <span class="d2h-code-line-ctn">  });</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      154
+      149
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
