@@ -12,7 +12,7 @@ describe('BooksOverviewPage', () => {
     .compileComponents();
 
     fixture = TestBed.createComponent(BooksOverviewPage);
-    fixture.detectChanges();
+    await fixture.whenStable();
   });
 
   it('should render a BookCard component for each book', () => {

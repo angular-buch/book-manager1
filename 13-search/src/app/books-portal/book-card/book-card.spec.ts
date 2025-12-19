@@ -36,4 +36,17 @@ describe('BookCard', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render book title and isbn', () => {
+    const compiledElement: HTMLElement = fixture.nativeElement;
+    expect(compiledElement.textContent).toContain('123-4-5678-9012-3');
+    expect(compiledElement.textContent).toContain(testBook.title);
+  });
+
+  it('should display the correct image', () => {
+    const compiledElement: HTMLElement = fixture.nativeElement;
+    const imageEl = compiledElement.querySelector('img')!;
+    expect(imageEl).toBeTruthy();
+    expect(imageEl.src).toBe(testBook.imageUrl);
+  });
 });

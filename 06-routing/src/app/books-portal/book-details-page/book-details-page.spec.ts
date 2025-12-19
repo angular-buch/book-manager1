@@ -19,7 +19,6 @@ describe('BookDetailsPage Routing', () => {
 
     const expectedBook = bookStore.getSingle('12345');
 
-    expect(component).toBeTruthy();
     expect(component['book']()).toEqual(expectedBook);
     expect(document.title).toBe('Book Details');
   });

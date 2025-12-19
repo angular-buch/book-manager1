@@ -26,7 +26,7 @@ describe('BookCard', () => {
       bindings: [inputBinding('book', testBook)]
     });
 
-    fixture.detectChanges();
+    await fixture.whenStable();
   });
 
   it('should render book title and isbn', () => {

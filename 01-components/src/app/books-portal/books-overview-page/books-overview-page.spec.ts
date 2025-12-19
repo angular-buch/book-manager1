@@ -30,10 +30,6 @@ describe('BooksOverviewPage', () => {
   });
 
   it('should render the correct book titles', () => {
-    // Act
-    // Durch detectChanges() wird das Template "gerendert"
-    fixture.detectChanges();
-
     // Im gerenderten DOM nach dem Tag <article> suchen
     const compiledElement: HTMLElement = fixture.nativeElement;
     const articleEls = compiledElement.querySelectorAll('article');

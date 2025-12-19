@@ -1,4 +1,3 @@
-import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { inputBinding } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
@@ -15,7 +14,6 @@ describe('BookDetailsPage', () => {
       imports: [BookDetailsPage],
       providers: [
         provideRouter([]),
-        provideHttpClient(),
         provideHttpClientTesting()
       ]
     }).compileComponents();

@@ -31,8 +31,23 @@ describe('BookCard', () => {
       ]
     });
 
-    fixture.detectChanges();
+    await fixture.whenStable();
   });
+
+  
+  it('should render book title and isbn', () => {
+    const compiledElement: HTMLElement = fixture.nativeElement;
+    expect(compiledElement.textContent).toContain(testBook.isbn);
+    expect(compiledElement.textContent).toContain(testBook.title);
+  });
+
+  it('should display the correct image', () => {
+    const compiledElement: HTMLElement = fixture.nativeElement;
+    const imageEl = compiledElement.querySelector('img')!;
+    expect(imageEl).toBeTruthy();
+    expect(imageEl.src).toBe(testBook.imageUrl);
+  });
+  
 
   it('should emit the like event with the correct book', () => {
     // Event manuell auslösen
