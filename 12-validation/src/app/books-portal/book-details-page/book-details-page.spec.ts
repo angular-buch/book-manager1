@@ -42,7 +42,7 @@ describe('BookDetailsPage', () => {
     TestBed.tick();
 
     // Respond to the HTTP request triggered by the Resource
-    const req = httpMock.expectOne('https://api1.angular-buch.com/books/123');
+    const req = httpMock.expectOne('https://api1.angular-buch.com/books/1234567890123');
     req.flush(testBook);
 
     await fixture.whenStable();

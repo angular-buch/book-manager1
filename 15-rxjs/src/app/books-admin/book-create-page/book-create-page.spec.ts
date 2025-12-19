@@ -112,12 +112,7 @@ describe('BookCreatePage', () => {
   });
 
   it('should disable the submit button when form is invalid', async () => {
-    const titleField = component['bookForm'].title();
     const submitButton = fixture.nativeElement.querySelector('button[type="submit"]');
-
-    titleField.markAsTouched();
-    await fixture.whenStable();
-
     expect(submitButton.disabled).toBe(true);
 
     component['bookForm']().value.set(validBook);
