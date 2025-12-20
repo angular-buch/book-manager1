@@ -1,10 +1,11 @@
+import { inputBinding, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BookCard } from './book-card';
 import { Book } from '../../shared/book';
-import { signal, inputBinding } from '@angular/core';
+import { BookCard } from './book-card';
 
 describe('BookCard', () => {
+  let component: BookCard;
   let fixture: ComponentFixture<BookCard>;
   const testBook = signal<Book>({
     isbn: '1234567890123',
@@ -21,12 +22,15 @@ describe('BookCard', () => {
     })
     .compileComponents();
 
-
     fixture = TestBed.createComponent(BookCard, {
       bindings: [inputBinding('book', testBook)]
     });
-
+    component = fixture.componentInstance;
     await fixture.whenStable();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
   });
 
   it('should render book title and isbn', () => {
