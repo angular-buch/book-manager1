@@ -32,7 +32,8 @@ describe('HomePage', () => {
 
     fixture = TestBed.createComponent(HomePage);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    TestBed.tick();
+    await fixture.whenStable();
   });
 
   afterAll(() => {
