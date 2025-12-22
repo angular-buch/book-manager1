@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BooksOverviewPage } from './books-overview-page';
 
 describe('BooksOverviewPage', () => {
+  let component: BooksOverviewPage;
   let fixture: ComponentFixture<BooksOverviewPage>;
 
   beforeEach(async () => {
@@ -12,7 +13,29 @@ describe('BooksOverviewPage', () => {
     .compileComponents();
 
     fixture = TestBed.createComponent(BooksOverviewPage);
+    component = fixture.componentInstance;
     await fixture.whenStable();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('should have a list of 2 books with correct titles', () => {
+    const books = component['books']();
+
+    expect(books.length).toBe(2);
+    expect(books[0].title).toBe('Tierisch gut kochen');
+    expect(books[1].title).toBe('Backen mit Affen');
+  });
+
+  it('should render the correct book titles', () => {
+    const compiledElement: HTMLElement = fixture.nativeElement;
+    const articleEls = compiledElement.querySelectorAll('article');
+
+    expect(articleEls.length).toBe(2);
+    expect(articleEls[0].textContent).toContain('Tierisch gut kochen');
+    expect(articleEls[1].textContent).toContain('Backen mit Affen');
   });
 
   it('should render a BookCard component for each book', () => {
