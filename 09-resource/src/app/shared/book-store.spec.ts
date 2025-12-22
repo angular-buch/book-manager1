@@ -1,16 +1,95 @@
+import { ApplicationRef, Injector, runInInjectionContext, signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
+import { HttpErrorResponse, HttpResourceRef } from '@angular/common/http';
+import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 
 import { BookStore } from './book-store';
+import { Book } from './book';
 
 describe('BookStore', () => {
   let service: BookStore;
+  let httpTesting: HttpTestingController;
+  let injector: Injector;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      providers: [
+        provideHttpClientTesting()
+      ]
+    });
     service = TestBed.inject(BookStore);
+    httpTesting = TestBed.inject(HttpTestingController);
+    injector = TestBed.inject(Injector);
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
+  afterEach(() => {
+    httpTesting.verify();
+  });
+
+  it('should fetch all books from API', async () => {
+    const mockBooks: Book[] = [
+      { isbn: '123', title: 'Book 1', authors: ['Author 1'], description: '', imageUrl: '', createdAt: '2025-01-01' },
+      { isbn: '456', title: 'Book 2', authors: ['Author 2'], description: '', imageUrl: '', createdAt: '2025-01-02' }
+    ];
+
+    let booksResource!: HttpResourceRef<Book[]>;
+    runInInjectionContext(injector, () => {
+      booksResource = service.getAll();
+    });
+
+    TestBed.tick();
+
+    const req = httpTesting.expectOne('https://api1.angular-buch.com/books');
+    expect(req.request.method).toBe('GET');
+    req.flush(mockBooks);
+
+    await TestBed.inject(ApplicationRef).whenStable();
+    expect(booksResource.value()).toEqual(mockBooks);
+  });
+
+  it('should fetch a single book by ISBN', async () => {
+    const mockBook: Book = { isbn: '123', title: 'Test Book', authors: ['Author'], description: '', imageUrl: '', createdAt: '' };
+    const isbn = signal('123');
+
+    let bookResource!: HttpResourceRef<Book | undefined>;
+    runInInjectionContext(injector, () => {
+      bookResource = service.getSingle(isbn);
+    });
+
+    TestBed.tick();
+
+    const req = httpTesting.expectOne('https://api1.angular-buch.com/books/123');
+    expect(req.request.method).toBe('GET');
+    req.flush(mockBook);
+
+    await TestBed.inject(ApplicationRef).whenStable();
+    expect(bookResource.value()).toEqual(mockBook);
+  });
+
+  it('should delete a book', () => {
+    let completed = false;
+    service.remove('123').subscribe(() => completed = true);
+
+    const req = httpTesting.expectOne('https://api1.angular-buch.com/books/123');
+    expect(req.request.method).toBe('DELETE');
+    req.flush(null);
+
+    expect(completed).toBe(true);
+  });
+
+  it('should handle server errors', async () => {
+    let booksResource!: HttpResourceRef<Book[]>;
+    runInInjectionContext(injector, () => {
+      booksResource = service.getAll();
+    });
+
+    TestBed.tick();
+
+    const req = httpTesting.expectOne('https://api1.angular-buch.com/books');
+    req.flush('Server Error', { status: 500, statusText: 'Internal Server Error' });
+
+    await TestBed.inject(ApplicationRef).whenStable();
+    expect(booksResource.error()).toBeInstanceOf(HttpErrorResponse);
+    expect((booksResource.error() as HttpErrorResponse).status).toBe(500);
   });
 });
