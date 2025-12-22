@@ -1,17 +1,31 @@
-import { TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 import { RouterTestingHarness } from '@angular/router/testing';
 
-import { routes } from '../app.routes';
 import { HomePage } from './home-page';
+import { routes } from '../app.routes';
 
-describe('HomePage Routing', () => {
-  it('should load the HomePage component for /home', async () => {
-    TestBed.configureTestingModule({
+describe('HomePage', () => {
+  let component: HomePage;
+  let fixture: ComponentFixture<HomePage>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
       imports: [HomePage],
       providers: [provideRouter(routes)]
-    });
+    })
+    .compileComponents();
 
+    fixture = TestBed.createComponent(HomePage);
+    component = fixture.componentInstance;
+    await fixture.whenStable();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('should load the HomePage component for /home', async () => {
     const harness = await RouterTestingHarness.create();
     const component = await harness.navigateByUrl('/home', HomePage);
 
