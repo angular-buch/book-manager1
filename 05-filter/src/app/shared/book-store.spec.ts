@@ -13,4 +13,9 @@ describe('BookStore', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should return a list of books', () => {
+    const books = service.getAll();
+    expect(books.length).toBeGreaterThan(0);
+  });
 });
