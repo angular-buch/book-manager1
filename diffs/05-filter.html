@@ -52,1410 +52,7 @@
 
     <div id="diff" style="margin-top: 1em">
       <div class="d2h-wrapper d2h-auto-color-scheme">
-    <div id="d2h-083862" class="d2h-file-wrapper" data-lang="ts">
-    <div class="d2h-file-header">
-      <span class="d2h-file-name-wrapper">
-    <svg aria-hidden="true" class="d2h-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12">
-        <path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path>
-    </svg>    <span class="d2h-file-name">src/app/books-portal/book-card/book-card.spec.ts</span>
-    <span class="d2h-tag d2h-changed d2h-changed-tag">CHANGED</span></span>
-<label class="d2h-file-collapse">
-    <input class="d2h-file-collapse-input" type="checkbox" name="viewed" value="viewed">
-    Viewed
-</label>
-    </div>
-    <div class="d2h-files-diff">
-        <div class="d2h-file-side-diff">
-            <div class="d2h-code-wrapper">
-                <table class="d2h-diff-table">
-                    <tbody class="d2h-diff-tbody">
-                    <tr>
-    <td class="d2h-code-side-linenumber d2h-info"></td>
-    <td class="d2h-info">
-        <div class="d2h-code-side-line">@@ -1,60 +1,58 @@</div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      1
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">import { inputBinding, outputBinding, signal } from &#x27;@angular&#x2F;core&#x27;;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      2
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">import { ComponentFixture, TestBed } from &#x27;@angular&#x2F;core&#x2F;testing&#x27;;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      3
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">import { Mock } from &#x27;vitest&#x27;;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      4
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      5
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">import { Book } from &#x27;..&#x2F;..&#x2F;shared&#x2F;book&#x27;;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      6
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">import { BookCard } from &#x27;.&#x2F;book-card&#x27;;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      7
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      8
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">describe(&#x27;BookCard&#x27;, () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      9
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  let component: BookCard;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      10
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  let fixture: ComponentFixture&lt;BookCard&gt;;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      11
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  <del>const</del> <del>testBook</del> <del>=</del> <del>signal&lt;Book&gt;({</del></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      12
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    isbn: &#x27;1234567890123&#x27;,</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      13
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    title: &#x27;Test Book&#x27;,</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      14
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    authors: [&#x27;Test Author&#x27;],</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      15
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    description: &#x27;&#x27;,</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      16
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    imageUrl: &#x27;https:&#x2F;&#x2F;example.com&#x2F;test.png&#x27;,</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      17
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    createdAt: &#x27;2026-01-01&#x27;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      18
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  }<del>)</del>;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      19
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  let likeMock: Mock;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      20
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      21
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  beforeEach(async () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      22
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    <del>likeMock</del> = <del>vi.fn()</del>;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      23
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      24
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    await TestBed.configureTestingModule({</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      25
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">      imports: [BookCard]</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      26
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    })</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      27
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    .compileComponents();</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      28
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      29
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    fixture = TestBed.createComponent(BookCard, {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      30
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">      bindings: [</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      31
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">        inputBinding(&#x27;book&#x27;, testBook),</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      32
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">        outputBinding(&#x27;like&#x27;, <del>likeMock</del>)</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      33
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">      ]</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      34
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      35
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    component = fixture.componentInstance;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      36
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    await fixture.whenStable();</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      37
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      38
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      39
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn"><del>  it(&#x27;should</del> <del>create&#x27;, </del>()<del> =&gt; {</del></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      40
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    expect(component).toBeTruthy();</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      41
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      42
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      43
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should render book title and isbn&#x27;, () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      44
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    const compiledElement: HTMLElement = fixture.nativeElement;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      45
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    expect(compiledElement.textContent).toContain(testBook<del>()</del>.isbn);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      46
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    expect(compiledElement.textContent).toContain(testBook<del>()</del>.title);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      47
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      48
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      49
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should display the correct image&#x27;, () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      50
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    const compiledElement: HTMLElement = fixture.nativeElement;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      51
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    const imageEl = compiledElement.querySelector(&#x27;img&#x27;)!;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      52
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    expect(imageEl).toBeTruthy();</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      53
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    expect(imageEl.src).toBe(testBook<del>()</del>.imageUrl);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      54
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      55
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      56
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should emit the like event with the correct book&#x27;, () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      57
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    fixture.componentInstance.likeBook();</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      58
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn"><del>    expect(likeMock).toHaveBeenCalledExactlyOnceWith(testBook());</del></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      59
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      60
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">});</span>
-        </div>
-    </td>
-</tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="d2h-file-side-diff">
-            <div class="d2h-code-wrapper">
-                <table class="d2h-diff-table">
-                    <tbody class="d2h-diff-tbody">
-                    <tr>
-    <td class="d2h-code-side-linenumber d2h-info"></td>
-    <td class="d2h-info">
-        <div class="d2h-code-side-line">&nbsp;</div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      1
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">import { ComponentFixture, TestBed } from &#x27;@angular&#x2F;core&#x2F;testing&#x27;;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      2
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      3
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">import { BookCard } from &#x27;.&#x2F;book-card&#x27;;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      4
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">import { Book } from &#x27;..&#x2F;..&#x2F;shared&#x2F;book&#x27;;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      5
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">import { inputBinding, outputBinding } from &#x27;@angular&#x2F;core&#x27;;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      6
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      7
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">describe(&#x27;BookCard&#x27;, () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      8
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  let fixture: ComponentFixture&lt;BookCard&gt;;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      9
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  <ins>let</ins> <ins>emittedBook:</ins> <ins>Book</ins> <ins>| undefined;</ins></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      10
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      11
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  const testBook: Book = {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      12
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    isbn: &#x27;1234567890123&#x27;,</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      13
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    title: &#x27;Test Book&#x27;,</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      14
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    authors: [&#x27;Test Author&#x27;],</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      15
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    description: &#x27;&#x27;,</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      16
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    imageUrl: &#x27;https:&#x2F;&#x2F;example.com&#x2F;test.png&#x27;,</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      17
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    createdAt: &#x27;2026-01-01&#x27;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      18
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  };</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      19
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      20
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  beforeEach(async () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      21
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    <ins>emittedBook</ins> = <ins>undefined</ins>;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      22
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      23
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    await TestBed.configureTestingModule({</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      24
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">      imports: [BookCard]</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      25
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    })<ins>.compileComponents();</ins></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      26
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      27
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    fixture = TestBed.createComponent(BookCard, {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      28
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">      bindings: [</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      29
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        inputBinding(&#x27;book&#x27;, <ins>() =&gt; </ins>testBook),</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      30
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        outputBinding(&#x27;like&#x27;, <ins>(book: Book</ins>)<ins> =&gt; emittedBook = book)</ins></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      31
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">      ]</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      32
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      33
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      34
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><ins>    await</ins> <ins>fixture.whenStable</ins>()<ins>;</ins></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      35
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      36
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      37
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should render book title and isbn&#x27;, () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      38
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    const compiledElement: HTMLElement = fixture.nativeElement;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      39
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(compiledElement.textContent).toContain(testBook.isbn);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      40
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(compiledElement.textContent).toContain(testBook.title);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      41
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      42
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      43
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should display the correct image&#x27;, () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      44
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    const compiledElement: HTMLElement = fixture.nativeElement;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      45
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    const imageEl = compiledElement.querySelector(&#x27;img&#x27;)!;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      46
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    expect(imageEl).toBeTruthy();</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      47
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(imageEl.src).toBe(testBook.imageUrl);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      48
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      49
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      50
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should emit the like event with the correct book&#x27;, () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      51
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    &#x2F;&#x2F; Event manuell auslösen</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      52
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    fixture.componentInstance.likeBook();</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      53
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      54
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    &#x2F;&#x2F; Prüfen, ob das Event ausgelöst wurde</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      55
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(emittedBook).toBeDefined();</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      56
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(emittedBook).toEqual(testBook);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      57
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      58
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">});</span>
-        </div>
-    </td>
-</tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="d2h-891727" class="d2h-file-wrapper" data-lang="html">
+    <div id="d2h-891727" class="d2h-file-wrapper" data-lang="html">
     <div class="d2h-file-header">
       <span class="d2h-file-name-wrapper">
     <svg aria-hidden="true" class="d2h-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12">
@@ -1818,531 +415,26 @@
                     <tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line">@@ -1,5 +1,4 @@</div>
+        <div class="d2h-code-side-line">@@ -51,4 +51,34 @@ describe(&#x27;BooksOverviewPage&#x27;, () =&gt; {</div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      1
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">import { ComponentFixture, TestBed } from &#x27;@angular&#x2F;core&#x2F;testing&#x27;;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      2
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      3
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">import { BooksOverviewPage } from &#x27;.&#x2F;books-overview-page&#x27;;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      4
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      5
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">describe(&#x27;BooksOverviewPage&#x27;, () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-info"></td>
-    <td class="d2h-info">
-        <div class="d2h-code-side-line">@@ -9,46 +8,40 @@ describe(&#x27;BooksOverviewPage&#x27;, () =&gt; {</div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      9
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  beforeEach(async () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      10
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    await TestBed.configureTestingModule({</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      11
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">      imports: [BooksOverviewPage]</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      12
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    })</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      13
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    .compileComponents();</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      14
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      15
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    fixture = TestBed.createComponent(BooksOverviewPage);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      16
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    component = fixture.componentInstance;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      17
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    await fixture.whenStable();</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      18
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      19
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      20
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should <del>create</del>&#x27;, () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      21
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    <del>expect(</del>component<del>)</del>.<del>toBeTruthy</del>();</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      22
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      23
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      24
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should have a list of 2 books with correct titles&#x27;, () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      25
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    const books = component[&#x27;books&#x27;]();</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      26
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      27
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    expect(books.length).toBe(2);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      28
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    expect(books[0].title).toBe(&#x27;Tierisch gut kochen&#x27;);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      29
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    expect(books[1].title).toBe(&#x27;Backen mit Affen&#x27;);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      30
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      31
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      32
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should <del>render</del> the <del>correct</del> <del>book titles</del>&#x27;, () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      33
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    <del>const compiledElement: HTMLElement = fixture</del>.<del>nativeElement</del>;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      34
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    const articleEls = compiledElement.querySelectorAll(&#x27;article&#x27;);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      35
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      36
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    <del>expect</del>(<del>articleEls.length</del>)<del>.toBe(2)</del>;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      37
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    expect(<del>articleEls[0]</del>.<del>textContent</del>).<del>toContain</del>(<del>&#x27;Tierisch gut kochen&#x27;</del>);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      38
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    expect(<del>articleEls</del>[<del>1</del>].<del>textContent</del>).<del>toContain</del>(&#x27;Backen mit Affen&#x27;);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      39
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      40
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      41
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should <del>render</del> <del>a</del> <del>BookCard</del> <del>component</del> <del>for each book</del>&#x27;, () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      42
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    <del>const compiledElement: HTMLElement = fixture</del>.<del>nativeElement</del>;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      43
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn"><del>    const bookCardEls = compiledElement.querySelectorAll(&#x27;app-book-card&#x27;);</del></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      44
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    <del>expect</del>(<del>bookCardEls.length</del>)<del>.toBe(2)</del>;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      45
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      46
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      47
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should <del>correctly</del> <del>pass</del> book <del>data</del> <del>to</del> <del>BookCard</del> <del>components</del>&#x27;, () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
-      48
-    </td>
-    <td class="d2h-del d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    <del>const</del> <del>compiledElement: HTMLElement = fixture.nativeElement</del>;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      49
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    const bookCardEls = compiledElement.querySelectorAll(&#x27;app-book-card&#x27;);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      50
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
       51
     </td>
-    <td class="d2h-del d2h-change">
+    <td class="d2h-cntx">
         <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    <del>expect(bookCardEls</del>[<del>0</del>]<del>.textContent).toContain</del>(<del>&#x27;Tierisch gut kochen&#x27;</del>);</span>
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">    expect(bookCardEls[0].textContent).toContain(&#x27;Tierisch gut kochen&#x27;);</span>
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del d2h-change">
+    <td class="d2h-code-side-linenumber d2h-cntx">
       52
     </td>
-    <td class="d2h-del d2h-change">
+    <td class="d2h-cntx">
         <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    expect(<del>bookCardEls[1]</del>.<del>textContent</del>).<del>toContain</del>(<del>&#x27;Backen mit Affen&#x27;</del>);</span>
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn">    expect(bookCardEls[1].textContent).toContain(&#x27;Backen mit Affen&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -2353,6 +445,306 @@
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
             <span class="d2h-code-line-ctn">  });</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -2381,152 +773,27 @@
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      1
+      51
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">import { ComponentFixture, TestBed } from &#x27;@angular&#x2F;core&#x2F;testing&#x27;;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">    expect(bookCardEls[0].textContent).toContain(&#x27;Tierisch gut kochen&#x27;);</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      2
+      52
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">import { BooksOverviewPage } from &#x27;.&#x2F;books-overview-page&#x27;;</span>
+            <span class="d2h-code-line-ctn">    expect(bookCardEls[1].textContent).toContain(&#x27;Backen mit Affen&#x27;);</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      3
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      4
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">describe(&#x27;BooksOverviewPage&#x27;, () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-info"></td>
-    <td class="d2h-info">
-        <div class="d2h-code-side-line">&nbsp;</div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      8
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  beforeEach(async () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      9
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    await TestBed.configureTestingModule({</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      10
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">      imports: [BooksOverviewPage]</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      11
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    })<ins>.compileComponents();</ins></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      12
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      13
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    fixture = TestBed.createComponent(BooksOverviewPage);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      14
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    component = fixture.componentInstance;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      15
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    await fixture.whenStable();</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      16
+      53
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
@@ -2535,88 +802,48 @@
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      17
+    <td class="d2h-code-side-linenumber d2h-ins">
+      54
     </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      18
-    </td>
-    <td class="d2h-ins d2h-change">
+    <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should <ins>display all books if the search term is empty</ins>&#x27;, () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      19
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    component<ins>[&#x27;searchTerm&#x27;]</ins>.<ins>set</ins>(<ins>&#x27;&#x27;</ins>);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      20
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
             <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-ins">
-      21
+      55
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">  it(&#x27;should display all books if the search term is empty&#x27;, () =&gt; {</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      56
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    component[&#x27;searchTerm&#x27;].set(&#x27;&#x27;);</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      57
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      58
     </td>
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
@@ -2625,188 +852,78 @@
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      22
+    <td class="d2h-code-side-linenumber d2h-ins">
+      59
     </td>
-    <td class="d2h-cntx">
+    <td class="d2h-ins">
         <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-prefix">+</span>
             <span class="d2h-code-line-ctn">    expect(books.length).toBe(2);</span>
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
+    <td class="d2h-code-side-linenumber d2h-ins">
+      60
     </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      23
-    </td>
-    <td class="d2h-cntx">
+    <td class="d2h-ins">
         <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-prefix">+</span>
             <span class="d2h-code-line-ctn">  });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      24
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      25
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should <ins>filter</ins> <ins>books based on </ins>the <ins>search</ins> <ins>term</ins>&#x27;, () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      26
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    <ins>component[&#x27;searchTerm&#x27;]</ins>.<ins>set(&#x27;Affe&#x27;)</ins>;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      27
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      28
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    <ins>const books = component[&#x27;filteredBooks&#x27;]</ins>();</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      29
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(<ins>books</ins>.<ins>length</ins>).<ins>toBe</ins>(<ins>1</ins>);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      30
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(<ins>books</ins>[<ins>0</ins>].<ins>title</ins>).<ins>toBe</ins>(&#x27;Backen mit Affen&#x27;);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      31
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      32
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      33
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should <ins>filter</ins> <ins>books</ins> <ins>ignoring</ins> <ins>case</ins> <ins>sensitivity</ins>&#x27;, () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      34
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    <ins>component[&#x27;searchTerm&#x27;]</ins>.<ins>set(&#x27;AFFEN&#x27;)</ins>;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      35
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      36
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    <ins>const books = component[&#x27;filteredBooks&#x27;]</ins>();</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-ins">
-      37
+      61
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      62
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">  it(&#x27;should filter books based on the search term&#x27;, () =&gt; {</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      63
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    component[&#x27;searchTerm&#x27;].set(&#x27;Affe&#x27;);</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      64
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      65
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    const books = component[&#x27;filteredBooks&#x27;]();</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      66
     </td>
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
@@ -2816,7 +933,7 @@
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-ins">
-      38
+      67
     </td>
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
@@ -2825,98 +942,168 @@
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      39
+    <td class="d2h-code-side-linenumber d2h-ins">
+      68
     </td>
-    <td class="d2h-cntx">
+    <td class="d2h-ins">
         <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">  });</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      69
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      70
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">  it(&#x27;should filter books ignoring case sensitivity&#x27;, () =&gt; {</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      71
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    component[&#x27;searchTerm&#x27;].set(&#x27;AFFEN&#x27;);</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      72
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      73
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    const books = component[&#x27;filteredBooks&#x27;]();</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      74
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    expect(books.length).toBe(1);</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      75
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    expect(books[0].title).toBe(&#x27;Backen mit Affen&#x27;);</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      76
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">  });</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      77
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      78
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">  it(&#x27;should return an empty array if no book matches the search term&#x27;, () =&gt; {</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      79
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    component[&#x27;searchTerm&#x27;].set(&#x27;unbekannter Titel&#x27;);</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      80
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      81
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    const books = component[&#x27;filteredBooks&#x27;]();</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      82
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    expect(books.length).toBe(0);</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      83
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
             <span class="d2h-code-line-ctn">  });</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      40
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      41
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should <ins>return</ins> <ins>an</ins> <ins>empty array if no </ins>book <ins>matches</ins> <ins>the</ins> <ins>search</ins> <ins>term</ins>&#x27;, () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      42
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    <ins>component[&#x27;searchTerm&#x27;].set(&#x27;unbekannter</ins> <ins>Titel&#x27;)</ins>;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      43
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      44
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    <ins>const books = component</ins>[<ins>&#x27;filteredBooks&#x27;</ins>]();</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins d2h-change">
-      45
-    </td>
-    <td class="d2h-ins d2h-change">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(<ins>books</ins>.<ins>length</ins>).<ins>toBe</ins>(<ins>0</ins>);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      46
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      47
+      84
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
@@ -3455,229 +1642,6 @@
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
             <span class="d2h-code-line-ctn">  }</span>
-        </div>
-    </td>
-</tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="d2h-928910" class="d2h-file-wrapper" data-lang="ts">
-    <div class="d2h-file-header">
-      <span class="d2h-file-name-wrapper">
-    <svg aria-hidden="true" class="d2h-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12">
-        <path d="M6 5H2v-1h4v1zM2 8h7v-1H2v1z m0 2h7v-1H2v1z m0 2h7v-1H2v1z m10-7.5v9.5c0 0.55-0.45 1-1 1H1c-0.55 0-1-0.45-1-1V2c0-0.55 0.45-1 1-1h7.5l3.5 3.5z m-1 0.5L8 2H1v12h10V5z"></path>
-    </svg>    <span class="d2h-file-name">src/app/shared/book-store.spec.ts</span>
-    <span class="d2h-tag d2h-changed d2h-changed-tag">CHANGED</span></span>
-<label class="d2h-file-collapse">
-    <input class="d2h-file-collapse-input" type="checkbox" name="viewed" value="viewed">
-    Viewed
-</label>
-    </div>
-    <div class="d2h-files-diff">
-        <div class="d2h-file-side-diff">
-            <div class="d2h-code-wrapper">
-                <table class="d2h-diff-table">
-                    <tbody class="d2h-diff-tbody">
-                    <tr>
-    <td class="d2h-code-side-linenumber d2h-info"></td>
-    <td class="d2h-info">
-        <div class="d2h-code-side-line">@@ -13,9 +13,4 @@ describe(&#x27;BookStore&#x27;, () =&gt; {</div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      13
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should be created&#x27;, () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      14
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    expect(service).toBeTruthy();</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      15
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      16
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      17
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should return a list of books&#x27;, () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      18
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    const books = service.getAll();</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      19
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    expect(books.length).toBeGreaterThan(0);</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-del">
-      20
-    </td>
-    <td class="d2h-del">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">  });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      21
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">});</span>
-        </div>
-    </td>
-</tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="d2h-file-side-diff">
-            <div class="d2h-code-wrapper">
-                <table class="d2h-diff-table">
-                    <tbody class="d2h-diff-tbody">
-                    <tr>
-    <td class="d2h-code-side-linenumber d2h-info"></td>
-    <td class="d2h-info">
-        <div class="d2h-code-side-line">&nbsp;</div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      13
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should be created&#x27;, () =&gt; {</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      14
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    expect(service).toBeTruthy();</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      15
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-cntx">
-      16
-    </td>
-    <td class="d2h-cntx">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">});</span>
         </div>
     </td>
 </tr>
