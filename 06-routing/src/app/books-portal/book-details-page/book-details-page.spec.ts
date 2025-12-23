@@ -11,6 +11,7 @@ import { BookStore } from '../../shared/book-store';
 describe('BookDetailsPage', () => {
   let component: BookDetailsPage;
   let fixture: ComponentFixture<BookDetailsPage>;
+  let bookStore: BookStore;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -24,6 +25,7 @@ describe('BookDetailsPage', () => {
 
     fixture = TestBed.createComponent(BookDetailsPage);
     component = fixture.componentInstance;
+    bookStore = TestBed.inject(BookStore);
     await fixture.whenStable();
   });
 
@@ -34,7 +36,6 @@ describe('BookDetailsPage', () => {
   it('should load the correct book by ISBN', async () => {
     const harness = await RouterTestingHarness.create();
     const component = await harness.navigateByUrl('/books/details/12345', BookDetailsPage);
-    const bookStore = TestBed.inject(BookStore);
 
     const expectedBook = bookStore.getSingle('12345');
 
@@ -46,11 +47,8 @@ describe('BookDetailsPage', () => {
     const location = TestBed.inject(Location);
     const router = TestBed.inject(Router);
 
-    // Hier wird später im produktiven Code eine Aktion stattfinden,
-    // z. B. das Absenden eines Formulars und eine anschließende Navigation
     await router.navigate(['/books/details/12345']);
 
-    // Prüfung, ob Navigation zur erwarteten Ziel-URL stattgefunden hat
     expect(location.path()).toBe('/books/details/12345');
   });
 });

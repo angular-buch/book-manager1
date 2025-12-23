@@ -1,40 +1,56 @@
-import { inputBinding, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { provideRouter } from '@angular/router';
+import { provideRouter, Router } from '@angular/router';
+import { provideLocationMocks } from '@angular/common/testing';
+import { Location } from '@angular/common';
+import { inputBinding, signal } from '@angular/core';
 
 import { BookDetailsPage } from './book-details-page';
+import { booksPortalRoutes } from '../books-portal.routes';
 import { BookStore } from '../../shared/book-store';
-
-// TODO: Routing-Tests aus 06-routing übernehmen (RouterTestingHarness)
 
 describe('BookDetailsPage', () => {
   let component: BookDetailsPage;
   let fixture: ComponentFixture<BookDetailsPage>;
   let bookStore: BookStore;
 
-  const isbn = signal('12345');
+  const isbn = signal('');
 
   beforeEach(async () => {
     isbn.set('12345');
 
     await TestBed.configureTestingModule({
       imports: [BookDetailsPage],
-      providers: [provideRouter([])]
-    }).compileComponents();
+      providers: [
+        provideRouter(booksPortalRoutes),
+        provideLocationMocks(),
+      ]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(BookDetailsPage, {
-      bindings: [
-        inputBinding('isbn', isbn)
-      ]
+      bindings: [inputBinding('isbn', isbn)]
     });
     component = fixture.componentInstance;
     bookStore = TestBed.inject(BookStore);
     await fixture.whenStable();
   });
 
-  it('should load the correct book for the given ISBN', () => {
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('should load the correct book by ISBN', async () => {
     const expectedBook = bookStore.getSingle('12345');
     expect(component['book']()).toEqual(expectedBook);
+  });
+
+  it('should navigate to the details page', async () => {
+    const location = TestBed.inject(Location);
+    const router = TestBed.inject(Router);
+
+    await router.navigate(['/books/details/12345']);
+
+    expect(location.path()).toBe('/books/details/12345');
   });
 
   it('should update the book when ISBN changes', async () => {
