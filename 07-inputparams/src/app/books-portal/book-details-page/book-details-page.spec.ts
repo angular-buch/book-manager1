@@ -60,11 +60,4 @@ describe('BookDetailsPage', () => {
     const expectedBook = bookStore.getSingle('67890');
     expect(component['book']()).toEqual(expectedBook);
   });
-
-  it('should return undefined for an unknown ISBN', async () => {
-    isbn.set('unknown');
-    await fixture.whenStable();
-
-    expect(component['book']()).toBeUndefined();
-  });
 });

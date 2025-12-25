@@ -1,27 +1,42 @@
-import { provideHttpClientTesting } from '@angular/common/http/testing';
-import { inputBinding } from '@angular/core';
+import { Location } from '@angular/common';
+import { provideLocationMocks } from '@angular/common/testing';
+import { inputBinding, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { provideRouter } from '@angular/router';
+import { provideRouter, Router } from '@angular/router';
+import { of } from 'rxjs';
+import { Mock } from 'vitest';
 
+import { BookStore } from '../../shared/book-store';
+import { booksPortalRoutes } from '../books-portal.routes';
 import { BookDetailsPage } from './book-details-page';
 
 describe('BookDetailsPage', () => {
   let component: BookDetailsPage;
   let fixture: ComponentFixture<BookDetailsPage>;
+  let getSingleMock: Mock;
+
+  const isbn = signal('');
+  const testBook = { isbn: '12345', title: 'Test Book 1', authors: [] };
 
   beforeEach(async () => {
+    isbn.set('12345');
+    getSingleMock = vi.fn().mockReturnValue(of(testBook));
+
     await TestBed.configureTestingModule({
       imports: [BookDetailsPage],
       providers: [
-        provideRouter([]),
-        provideHttpClientTesting()
+        provideRouter(booksPortalRoutes),
+        provideLocationMocks(),
+        {
+          provide: BookStore,
+          useValue: { getSingle: getSingleMock }
+        }
       ]
-    }).compileComponents();
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(BookDetailsPage, {
-      bindings: [
-        inputBinding('isbn', () => '1234567890123')
-      ]
+      bindings: [inputBinding('isbn', isbn)]
     });
     component = fixture.componentInstance;
     await fixture.whenStable();
@@ -29,5 +44,29 @@ describe('BookDetailsPage', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should load the correct book by ISBN', async () => {
+    expect(component['book']()).toEqual(testBook);
+  });
+
+  it('should navigate to the details page', async () => {
+    const location = TestBed.inject(Location);
+    const router = TestBed.inject(Router);
+
+    await router.navigate(['/books/details/12345']);
+
+    expect(location.path()).toBe('/books/details/12345');
+  });
+
+  it('should update the book when ISBN changes', async () => {
+    const anotherBook = { isbn: '67890', title: 'Test Book 2', authors: [] };
+    getSingleMock.mockReturnValue(of(anotherBook));
+
+    isbn.set('67890');
+    await fixture.whenStable();
+
+    expect(getSingleMock).toHaveBeenCalledWith('67890');
+    expect(component['book']()).toEqual(anotherBook);
   });
 });

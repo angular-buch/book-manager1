@@ -1,9 +1,9 @@
-import { TestBed } from '@angular/core/testing';
 import { HttpErrorResponse } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
+import { TestBed } from '@angular/core/testing';
 
-import { BookStore } from './book-store';
 import { Book } from './book';
+import { BookStore } from './book-store';
 
 describe('BookStore', () => {
   let service: BookStore;
@@ -11,9 +11,7 @@ describe('BookStore', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [
-        provideHttpClientTesting()
-      ]
+      providers: [provideHttpClientTesting()]
     });
     service = TestBed.inject(BookStore);
     httpTesting = TestBed.inject(HttpTestingController);
@@ -23,10 +21,14 @@ describe('BookStore', () => {
     httpTesting.verify();
   });
 
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+
   it('should fetch all books from API', () => {
-    const mockBooks: Book[] = [
-      { isbn: '123', title: 'Book 1', authors: ['Author 1'], description: '', imageUrl: '', createdAt: '2025-01-01' },
-      { isbn: '456', title: 'Book 2', authors: ['Author 2'], description: '', imageUrl: '', createdAt: '2025-01-02' }
+    const mockBooks: Partial<Book>[] = [
+      { isbn: '123', title: 'Book 1' },
+      { isbn: '456', title: 'Book 2' }
     ];
 
     let receivedBooks: Book[] | undefined;
@@ -40,7 +42,7 @@ describe('BookStore', () => {
   });
 
   it('should fetch a single book by ISBN', () => {
-    const mockBook: Book = { isbn: '123', title: 'Test Book', authors: ['Author'], description: '', imageUrl: '', createdAt: '' };
+    const mockBook: Partial<Book> = { isbn: '123', title: 'Test Book' };
 
     let receivedBook: Book | undefined;
     service.getSingle('123').subscribe(book => receivedBook = book);
