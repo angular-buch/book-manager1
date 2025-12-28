@@ -1,7 +1,7 @@
-import { ApplicationRef, Injector, runInInjectionContext, signal } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
 import { HttpErrorResponse, HttpResourceRef } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
+import { ApplicationRef, Injector, runInInjectionContext, signal } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
 
 import { BookStore } from './book-store';
 import { Book } from './book';
@@ -13,9 +13,7 @@ describe('BookStore', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [
-        provideHttpClientTesting()
-      ]
+      providers: [provideHttpClientTesting()]
     });
     service = TestBed.inject(BookStore);
     httpTesting = TestBed.inject(HttpTestingController);
@@ -26,10 +24,14 @@ describe('BookStore', () => {
     httpTesting.verify();
   });
 
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+
   it('should fetch all books from API', async () => {
-    const mockBooks: Book[] = [
-      { isbn: '123', title: 'Book 1', authors: ['Author 1'], description: '', imageUrl: '', createdAt: '2025-01-01' },
-      { isbn: '456', title: 'Book 2', authors: ['Author 2'], description: '', imageUrl: '', createdAt: '2025-01-02' }
+    const mockBooks: Partial<Book>[] = [
+      { isbn: '123', title: 'Book 1' },
+      { isbn: '456', title: 'Book 2' }
     ];
 
     let booksResource!: HttpResourceRef<Book[]>;
@@ -48,7 +50,7 @@ describe('BookStore', () => {
   });
 
   it('should fetch a single book by ISBN', async () => {
-    const mockBook: Book = { isbn: '123', title: 'Test Book', authors: ['Author'], description: '', imageUrl: '', createdAt: '' };
+    const mockBook: Partial<Book> = { isbn: '123', title: 'Test Book' };
     const isbn = signal('123');
 
     let bookResource!: HttpResourceRef<Book | undefined>;
