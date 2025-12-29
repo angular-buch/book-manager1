@@ -48,13 +48,13 @@ describe('BookCard', () => {
 
   it('should display the correct image', () => {
     const compiledElement: HTMLElement = fixture.nativeElement;
-    const imageEl = compiledElement.querySelector('img')!;
+    const imageEl = compiledElement.querySelector('img');
     expect(imageEl).toBeTruthy();
-    expect(imageEl.src).toBe(testBook().imageUrl);
+    expect(imageEl?.src).toBe(testBook().imageUrl);
   });
 
   it('should emit the like event with the correct book', () => {
-    fixture.componentInstance.likeBook();
+    component.likeBook();
     expect(likeMock).toHaveBeenCalledExactlyOnceWith(testBook());
   });
 });

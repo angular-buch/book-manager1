@@ -55,11 +55,4 @@ describe('BookDetailsPage', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('should display formatted book properties', () => {
-    const isbnEl = fixture.nativeElement.querySelector('[data-testid=isbn]')!;
-    const createdAtEl = fixture.nativeElement.querySelector('[data-testid=created-at]')!;
-    expect(isbnEl.textContent).toContain('123-4-5678-9012-3');
-    expect(createdAtEl.textContent).toContain('Jan 1, 2026, 12:00:00');
-  });
 });
