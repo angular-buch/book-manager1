@@ -18,7 +18,7 @@ export class BooksOverviewPage {
   readonly search = input<string>();
   protected searchTerm = linkedSignal(() => this.search() || '');
 
-  protected books = this.#bookStore.getAll(this.searchTerm);
+  protected books = this.#bookStore.getAll(() => this.searchTerm());
   protected likedBooks = signal<Book[]>([]);
 
   constructor() {

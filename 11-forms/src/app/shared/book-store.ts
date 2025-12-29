@@ -1,4 +1,4 @@
-import { inject, Injectable, Signal } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { HttpClient, httpResource, HttpResourceRef } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -18,7 +18,7 @@ export class BookStore {
     );
   }
 
-  getSingle(isbn: Signal<string>): HttpResourceRef<Book | undefined> {
+  getSingle(isbn: () => string): HttpResourceRef<Book | undefined> {
     return httpResource<Book>(
       () => `${this.#apiUrl}/books/${isbn()}`
     );
