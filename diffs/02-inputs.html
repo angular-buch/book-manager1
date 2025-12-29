@@ -1328,7 +1328,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const imageEl = compiledElement.querySelector(&#x27;img&#x27;)!;</span>
+            <span class="d2h-code-line-ctn">    const imageEl = compiledElement.querySelector(&#x27;img&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -1348,7 +1348,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(imageEl.src).toBe(testBook().imageUrl);</span>
+            <span class="d2h-code-line-ctn">    expect(imageEl?.src).toBe(testBook().imageUrl);</span>
         </div>
     </td>
 </tr><tr>
