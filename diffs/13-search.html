@@ -728,7 +728,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  protected books = this.#bookStore.getAll(<ins>this.searchTerm</ins>);</span>
+            <span class="d2h-code-line-ctn">  protected books = this.#bookStore.getAll(<ins>(</ins>)<ins> =&gt; this.searchTerm())</ins>;</span>
         </div>
     </td>
 </tr><tr>
@@ -1101,7 +1101,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  getAll(<ins>searchTerm: Signal&lt;string&gt;</ins>): HttpResourceRef&lt;Book[]&gt; {</span>
+            <span class="d2h-code-line-ctn">  getAll(<ins>searchTerm: (</ins>)<ins> =&gt; string)</ins>: HttpResourceRef&lt;Book[]&gt; {</span>
         </div>
     </td>
 </tr><tr>
