@@ -23,7 +23,7 @@
   "private": true,
   "packageManager": "npm@11.7.0",
   "dependencies": {
-    "@angular-buch/styles": "github:angular-buch/styles",
+    "@angular-buch/styles": "^0.0.8",
     "@angular/common": "^21.0.0",
     "@angular/compiler": "^21.0.0",
     "@angular/core": "^21.0.0",
@@ -34,8 +34,8 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@angular/build": "^21.0.3",
-    "@angular/cli": "^21.0.3",
+    "@angular/build": "^21.0.4",
+    "@angular/cli": "^21.0.4",
     "@angular/compiler-cli": "^21.0.0",
     "jsdom": "^27.1.0",
     "typescript": "~5.9.2",
