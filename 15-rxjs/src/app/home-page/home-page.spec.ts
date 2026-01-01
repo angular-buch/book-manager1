@@ -1,10 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
+import { RouterTestingHarness } from '@angular/router/testing';
 import { delay, of } from 'rxjs';
 import { Mock } from 'vitest';
 
-import { BookStore } from '../shared/book-store';
+import { routes } from '../app.routes';
 import { HomePage } from './home-page';
+import { BookStore } from '../shared/book-store';
 
 describe('HomePage', () => {
   let component: HomePage;
@@ -22,13 +24,14 @@ describe('HomePage', () => {
     await TestBed.configureTestingModule({
       imports: [HomePage],
       providers: [
-        provideRouter([]),
+        provideRouter(routes),
         {
           provide: BookStore,
           useValue: { search: bookStoreSearchMock }
         }
       ]
-    }).compileComponents();
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(HomePage);
     component = fixture.componentInstance;
@@ -42,6 +45,14 @@ describe('HomePage', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should load the HomePage component for /home', async () => {
+    const harness = await RouterTestingHarness.create();
+    const component = await harness.navigateByUrl('/home', HomePage);
+
+    expect(component).toBeTruthy();
+    expect(document.title).toBe('BookManager');
   });
 
   it('should filter search terms shorter than 3 characters', () => {
