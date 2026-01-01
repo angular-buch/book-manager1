@@ -374,7 +374,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">import { inputBinding, signal } from &#x27;@angular&#x2F;core&#x27;;</span>
+            <span class="d2h-code-line-ctn">import { inputBinding, signal, WritableSignal } from &#x27;@angular&#x2F;core&#x27;;</span>
         </div>
     </td>
 </tr><tr>
@@ -544,7 +544,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  const isbn = signal(&#x27;&#x27;);</span>
+            <span class="d2h-code-line-ctn">  let isbn: WritableSignal&lt;string&gt;;</span>
         </div>
     </td>
 </tr><tr>
@@ -584,7 +584,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    isbn.set(&#x27;12345&#x27;);</span>
+            <span class="d2h-code-line-ctn">    isbn = signal(&#x27;12345&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -1093,7 +1093,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">import { inputBinding, signal } from &#x27;@angular&#x2F;core&#x27;;</span>
+            <span class="d2h-code-line-ctn">import { inputBinding, signal, WritableSignal } from &#x27;@angular&#x2F;core&#x27;;</span>
         </div>
     </td>
 </tr><tr>
@@ -1263,7 +1263,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">  const isbn = signal(&#x27;&#x27;);</span>
+            <span class="d2h-code-line-ctn">  let isbn: WritableSignal&lt;string&gt;;</span>
         </div>
     </td>
 </tr><tr>
@@ -1303,7 +1303,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    isbn.set(&#x27;12345&#x27;);</span>
+            <span class="d2h-code-line-ctn">    isbn = signal(&#x27;12345&#x27;);</span>
         </div>
     </td>
 </tr><tr>
