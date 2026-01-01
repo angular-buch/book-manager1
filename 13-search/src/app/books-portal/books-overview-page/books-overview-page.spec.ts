@@ -1,55 +1,111 @@
-import { inputBinding, signal } from '@angular/core';
+import { inputBinding, resource, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter, Router } from '@angular/router';
-import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
-import { vi } from 'vitest';
+import { RouterTestingHarness } from '@angular/router/testing';
+import { Mock } from 'vitest';
 
-import { BooksOverviewPage } from './books-overview-page';
 import { Book } from '../../shared/book';
+import { BookStore } from '../../shared/book-store';
+import { booksPortalRoutes } from '../books-portal.routes';
+import { BooksOverviewPage } from './books-overview-page';
 
 describe('BooksOverviewPage', () => {
   let component: BooksOverviewPage;
   let fixture: ComponentFixture<BooksOverviewPage>;
-  let httpTesting: HttpTestingController;
+  let getAllMock: Mock;
 
   const searchSignal = signal<string | undefined>(undefined);
+  const mockBooks: Partial<Book>[] = [
+    { isbn: '1234', title: 'Tierisch gut kochen' },
+    { isbn: '5678', title: 'Backen mit Affen' }
+  ];
 
   beforeEach(async () => {
     searchSignal.set(undefined);
+    getAllMock = vi.fn().mockResolvedValue(mockBooks);
 
     await TestBed.configureTestingModule({
       imports: [BooksOverviewPage],
       providers: [
-        provideRouter([]),
-        provideHttpClientTesting()
+        provideRouter(booksPortalRoutes),
+        {
+          provide: BookStore,
+          useFactory: () => ({
+            getAll: (searchTerm: () => string) => resource({
+              params: searchTerm,
+              loader: getAllMock,
+            })
+          })
+        }
       ]
-    }).compileComponents();
-
-    httpTesting = TestBed.inject(HttpTestingController);
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(BooksOverviewPage, {
-      bindings: [
-        inputBinding('search', searchSignal)
-      ]
+      bindings: [inputBinding('search', searchSignal)]
     });
     component = fixture.componentInstance;
-
-    TestBed.tick();
-    httpTesting.expectOne(() => true).flush([]);
     await fixture.whenStable();
   });
 
-  afterEach(() => {
-    httpTesting.verify();
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('should have a list of 2 books with correct titles', () => {
+    const books = component['books'].value();
+
+    expect(books.length).toBe(2);
+    expect(books[0].title).toBe('Tierisch gut kochen');
+    expect(books[1].title).toBe('Backen mit Affen');
+  });
+
+  it('should render the correct book titles', () => {
+    const compiledElement: HTMLElement = fixture.nativeElement;
+    const articleEls = compiledElement.querySelectorAll('article');
+
+    expect(articleEls.length).toBe(2);
+    expect(articleEls[0].textContent).toContain('Tierisch gut kochen');
+    expect(articleEls[1].textContent).toContain('Backen mit Affen');
+  });
+
+  it('should render a BookCard component for each book', () => {
+    const compiledElement: HTMLElement = fixture.nativeElement;
+    const bookCardEls = compiledElement.querySelectorAll('app-book-card');
+    expect(bookCardEls.length).toBe(2);
+  });
+
+  it('should correctly pass book data to BookCard components', () => {
+    const compiledElement: HTMLElement = fixture.nativeElement;
+    const bookCardEls = compiledElement.querySelectorAll('app-book-card');
+
+    expect(bookCardEls[0].textContent).toContain('Tierisch gut kochen');
+    expect(bookCardEls[1].textContent).toContain('Backen mit Affen');
+  });
+
+  it('should load the BooksOverviewPage for /books', async () => {
+    const harness = await RouterTestingHarness.create();
+    const component = await harness.navigateByUrl('/books', BooksOverviewPage);
+
+    expect(component).toBeTruthy();
+    expect(document.title).toBe('Books');
+  });
+
+  it('should ask service initially for books', async () => {
+    expect(getAllMock).toHaveBeenCalledExactlyOnceWith(
+      expect.objectContaining({ params: '' })
+    );
+
+    expect(component['searchTerm']()).toBe('');
   });
 
   it('should update searchTerm when query param changes', async () => {
     searchSignal.set('Angular');
-    TestBed.tick();
-    httpTesting
-      .expectOne(r => r.params.get('filter') === 'Angular')
-      .flush([]);
     await fixture.whenStable();
+
+    expect(getAllMock).toHaveBeenLastCalledWith(
+      expect.objectContaining({ params: 'Angular' })
+    );
 
     expect(component['searchTerm']()).toBe('Angular');
   });
@@ -58,72 +114,10 @@ describe('BooksOverviewPage', () => {
     const navigateSpy = vi.spyOn(TestBed.inject(Router), 'navigate');
 
     component['searchTerm'].set('Angular');
-    TestBed.tick();
-    httpTesting
-      .expectOne(r => r.params.get('filter') === 'Angular')
-      .flush([]);
+    await fixture.whenStable();
 
     expect(navigateSpy).toHaveBeenCalledWith([], {
       queryParams: { search: 'Angular' }
     });
-  });
-
-  it('should integrate search, httpResource, and router sync', async () => {
-    const navigateSpy = vi.spyOn(TestBed.inject(Router), 'navigate');
-    const testBook: Partial<Book> = { isbn: '123', title: 'Angular' };
-
-    searchSignal.set('Angular');
-    TestBed.tick();
-    httpTesting
-      .expectOne(r => r.params.get('filter') === 'Angular')
-      .flush([testBook]);
-    await fixture.whenStable();
-
-    expect(component['books'].value()).toEqual([testBook]);
-    expect(navigateSpy).toHaveBeenCalledWith([], {
-      queryParams: { search: 'Angular' }
-    });
-  });
-});
-
-describe('BooksOverviewPage (with initial search)', () => {
-  let component: BooksOverviewPage;
-  let fixture: ComponentFixture<BooksOverviewPage>;
-  let httpTesting: HttpTestingController;
-
-  const searchSignal = signal<string | undefined>('Angular');
-  const testBook: Partial<Book> = { isbn: '123', title: 'Angular' };
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [BooksOverviewPage],
-      providers: [
-        provideRouter([]),
-        provideHttpClientTesting()
-      ]
-    }).compileComponents();
-
-    httpTesting = TestBed.inject(HttpTestingController);
-
-    fixture = TestBed.createComponent(BooksOverviewPage, {
-      bindings: [
-        inputBinding('search', searchSignal)
-      ]
-    });
-    component = fixture.componentInstance;
-  });
-
-  afterEach(() => {
-    httpTesting.verify();
-  });
-
-  it('should load books with search term from URL', async () => {
-    TestBed.tick();
-    httpTesting
-      .expectOne(r => r.params.get('filter') === 'Angular')
-      .flush([testBook]);
-    await fixture.whenStable();
-
-    expect(component['books'].value()).toEqual([testBook]);
   });
 });

@@ -1,58 +1,81 @@
-import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
-import { inputBinding } from '@angular/core';
+import { Location } from '@angular/common';
+import { provideLocationMocks } from '@angular/common/testing';
+import { inputBinding, resource, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { provideRouter } from '@angular/router';
+import { provideRouter, Router } from '@angular/router';
+import { Mock } from 'vitest';
 
-import { Book } from '../../shared/book';
+import { BookStore } from '../../shared/book-store';
+import { booksPortalRoutes } from '../books-portal.routes';
 import { BookDetailsPage } from './book-details-page';
 
 describe('BookDetailsPage', () => {
   let component: BookDetailsPage;
   let fixture: ComponentFixture<BookDetailsPage>;
-  let httpMock: HttpTestingController;
+  let getSingleMock: Mock;
 
-  const testBook: Book = {
-    isbn: '1234567890123',
-    title: 'Test Book',
-    authors: ['Test Author'],
-    description: '',
-    imageUrl: 'https://example.com/test.png',
-    createdAt: '2026-01-01'
-  };
+  const isbn = signal('');
+  const testBook = { isbn: '12345', title: 'Test Book 1', authors: [] };
 
   beforeEach(async () => {
+    isbn.set('12345');
+    getSingleMock = vi.fn().mockResolvedValue(testBook);
+
     await TestBed.configureTestingModule({
       imports: [BookDetailsPage],
       providers: [
-        provideRouter([]),
-        provideHttpClientTesting()
+        provideRouter(booksPortalRoutes),
+        provideLocationMocks(),
+        {
+          provide: BookStore,
+          useFactory: () => ({
+            getSingle: (isbn: () => string) => resource({
+              params: isbn,
+              loader: getSingleMock,
+            })
+          })
+        }
       ]
-    }).compileComponents();
-
-    httpMock = TestBed.inject(HttpTestingController);
+    })
+      .compileComponents();
 
     fixture = TestBed.createComponent(BookDetailsPage, {
-      bindings: [
-        inputBinding('isbn', () => '1234567890123')
-      ]
+      bindings: [inputBinding('isbn', isbn)]
     });
     component = fixture.componentInstance;
-
-    // Triggers the effect - see https://angular.dev/guide/http/http-resource#testing-an-httpresource
-    TestBed.tick();
-
-    // Respond to the HTTP request triggered by the Resource
-    const req = httpMock.expectOne('https://api1.angular-buch.com/books/1234567890123');
-    req.flush(testBook);
-
     await fixture.whenStable();
-  });
-
-  afterEach(() => {
-    httpMock.verify();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should load the correct book by ISBN', async () => {
+    expect(getSingleMock).toHaveBeenCalledExactlyOnceWith(
+      expect.objectContaining({ params: '12345' })
+    )
+    expect(component['book'].value()).toEqual(testBook);
+  });
+
+  it('should navigate to the details page', async () => {
+    const location = TestBed.inject(Location);
+    const router = TestBed.inject(Router);
+
+    await router.navigate(['/books/details/12345']);
+
+    expect(location.path()).toBe('/books/details/12345');
+  });
+
+  it('should update the book when ISBN changes', async () => {
+    const anotherBook = { isbn: '67890', title: 'Test Book 2', authors: [] };
+    getSingleMock.mockResolvedValue(anotherBook);
+
+    isbn.set('67890');
+    await fixture.whenStable();
+
+    expect(getSingleMock).toHaveBeenLastCalledWith(
+      expect.objectContaining({ params: '67890' })
+    )
+    expect(component['book'].value()).toEqual(anotherBook);
   });
 });

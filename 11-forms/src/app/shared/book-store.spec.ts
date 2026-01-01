@@ -1,6 +1,6 @@
 import { HttpErrorResponse, HttpResourceRef } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
-import { ApplicationRef, Injector, runInInjectionContext, signal } from '@angular/core';
+import { ApplicationRef, Injector, runInInjectionContext } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 
 import { BookStore } from './book-store';
@@ -51,11 +51,10 @@ describe('BookStore', () => {
 
   it('should fetch a single book by ISBN', async () => {
     const mockBook: Partial<Book> = { isbn: '123', title: 'Test Book' };
-    const isbn = signal('123');
 
     let bookResource!: HttpResourceRef<Book | undefined>;
     runInInjectionContext(injector, () => {
-      bookResource = service.getSingle(isbn);
+      bookResource = service.getSingle(() => '123');
     });
 
     TestBed.tick();

@@ -47,6 +47,7 @@ describe('BookDetailsPage', () => {
   });
 
   it('should load the correct book by ISBN', async () => {
+    expect(getSingleMock).toHaveBeenCalledExactlyOnceWith('12345');
     expect(component['book']()).toEqual(testBook);
   });
 
