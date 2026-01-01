@@ -1,6 +1,6 @@
 import { Location } from '@angular/common';
 import { provideLocationMocks } from '@angular/common/testing';
-import { inputBinding, resource, signal } from '@angular/core';
+import { inputBinding, resource, signal, WritableSignal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter, Router } from '@angular/router';
 import { Mock } from 'vitest';
@@ -14,11 +14,11 @@ describe('BookDetailsPage', () => {
   let fixture: ComponentFixture<BookDetailsPage>;
   let getSingleMock: Mock;
 
-  const isbn = signal('');
+  let isbn: WritableSignal<string>;
   const testBook = { isbn: '12345', title: 'Test Book 1', authors: [] };
 
   beforeEach(async () => {
-    isbn.set('12345');
+    isbn = signal('12345');
     getSingleMock = vi.fn().mockResolvedValue(testBook);
 
     await TestBed.configureTestingModule({

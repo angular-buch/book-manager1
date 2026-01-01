@@ -1,6 +1,6 @@
 import { Location } from '@angular/common';
 import { provideLocationMocks } from '@angular/common/testing';
-import { inputBinding, signal } from '@angular/core';
+import { inputBinding, signal, WritableSignal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter, Router } from '@angular/router';
 import { of } from 'rxjs';
@@ -15,11 +15,11 @@ describe('BookDetailsPage', () => {
   let fixture: ComponentFixture<BookDetailsPage>;
   let getSingleMock: Mock;
 
-  const isbn = signal('');
+  let isbn: WritableSignal<string>;
   const testBook = { isbn: '12345', title: 'Test Book 1', authors: [] };
 
   beforeEach(async () => {
-    isbn.set('12345');
+    isbn = signal('12345');
     getSingleMock = vi.fn().mockReturnValue(of(testBook));
 
     await TestBed.configureTestingModule({

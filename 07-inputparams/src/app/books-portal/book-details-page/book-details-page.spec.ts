@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter, Router } from '@angular/router';
 import { provideLocationMocks } from '@angular/common/testing';
 import { Location } from '@angular/common';
-import { inputBinding, signal } from '@angular/core';
+import { inputBinding, signal, WritableSignal } from '@angular/core';
 
 import { BookDetailsPage } from './book-details-page';
 import { booksPortalRoutes } from '../books-portal.routes';
@@ -13,10 +13,10 @@ describe('BookDetailsPage', () => {
   let fixture: ComponentFixture<BookDetailsPage>;
   let bookStore: BookStore;
 
-  const isbn = signal('');
+  let isbn: WritableSignal<string>;
 
   beforeEach(async () => {
-    isbn.set('12345');
+    isbn = signal('12345');
 
     await TestBed.configureTestingModule({
       imports: [BookDetailsPage],
