@@ -55,14 +55,14 @@ describe('BookStore', () => {
   });
 
   it('should delete a book', () => {
-    let completed = false;
-    service.remove('123').subscribe(() => completed = true);
+    let success = false;
+    service.remove('123').subscribe(() => success = true);
 
     const req = httpTesting.expectOne('https://api1.angular-buch.com/books/123');
     expect(req.request.method).toBe('DELETE');
     req.flush(null);
 
-    expect(completed).toBe(true);
+    expect(success).toBe(true);
   });
 
   it('should handle server errors', () => {

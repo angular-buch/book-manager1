@@ -37,7 +37,7 @@ describe('BookDetailsPage', () => {
         }
       ]
     })
-      .compileComponents();
+    .compileComponents();
 
     fixture = TestBed.createComponent(BookDetailsPage, {
       bindings: [inputBinding('isbn', isbn)]
@@ -75,7 +75,7 @@ describe('BookDetailsPage', () => {
 
     expect(getSingleMock).toHaveBeenLastCalledWith(
       expect.objectContaining({ params: '67890' })
-    )
+    );
     expect(component['book'].value()).toEqual(anotherBook);
   });
 });

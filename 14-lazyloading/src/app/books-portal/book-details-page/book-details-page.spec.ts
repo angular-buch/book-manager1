@@ -37,7 +37,7 @@ describe('BookDetailsPage', () => {
         }
       ]
     })
-      .compileComponents();
+    .compileComponents();
 
     fixture = TestBed.createComponent(BookDetailsPage, {
       bindings: [inputBinding('isbn', isbn)]

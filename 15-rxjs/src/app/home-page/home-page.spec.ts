@@ -4,8 +4,8 @@ import { RouterTestingHarness } from '@angular/router/testing';
 import { delay, of } from 'rxjs';
 import { Mock } from 'vitest';
 
-import { routes } from '../app.routes';
 import { HomePage } from './home-page';
+import { routes } from '../app.routes';
 import { BookStore } from '../shared/book-store';
 
 describe('HomePage', () => {

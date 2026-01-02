@@ -89,26 +89,26 @@ describe('BookCreatePage', () => {
   });
 
   it('should validate ISBN field', () => {
-    const isbnField = component['bookForm'].isbn();
+    const isbnState = component['bookForm'].isbn();
 
     // Test required validation
-    isbnField.markAsTouched();
-    expect(isbnField.errors().length).toEqual(1);
-    expect(isbnField.errors()[0].kind).toEqual('required');
+    isbnState.markAsTouched();
+    expect(isbnState.errors().length).toEqual(1);
+    expect(isbnState.errors()[0].kind).toEqual('required');
 
     // Test minLength validation
-    isbnField.value.set('123456789012');
-    expect(isbnField.errors().length).toEqual(1);
-    expect(isbnField.errors()[0].kind).toEqual('minLength');
+    isbnState.value.set('123456789012');
+    expect(isbnState.errors().length).toEqual(1);
+    expect(isbnState.errors()[0].kind).toEqual('minLength');
 
     // Test maxLength validation
-    isbnField.value.set('12345678901234');
-    expect(isbnField.errors().length).toEqual(1);
-    expect(isbnField.errors()[0].kind).toEqual('maxLength');
+    isbnState.value.set('12345678901234');
+    expect(isbnState.errors().length).toEqual(1);
+    expect(isbnState.errors()[0].kind).toEqual('maxLength');
 
     // Test valid value
-    isbnField.value.set('1234567890123');
-    expect(isbnField.errors()).toEqual([]);
+    isbnState.value.set('1234567890123');
+    expect(isbnState.errors()).toEqual([]);
   });
 
   it('should disable the submit button when form is invalid', async () => {
@@ -122,7 +122,7 @@ describe('BookCreatePage', () => {
   });
 
   it('should display an error message for a field and mark it as invalid', async () => {
-    const descriptionField = component['bookForm'].description();
+    const descriptionState = component['bookForm'].description();
     const textareaEl = fixture.nativeElement.querySelector('textarea');
     let textareaMessageEl = fixture.nativeElement.querySelector('#description-error');
 
@@ -130,7 +130,7 @@ describe('BookCreatePage', () => {
     expect(textareaEl.hasAttribute('aria-invalid')).toBe(false);
     expect(textareaMessageEl).toBeNull();
 
-    descriptionField.markAsTouched();
+    descriptionState.markAsTouched();
     await fixture.whenStable();
 
     textareaMessageEl = fixture.nativeElement.querySelector('#description-error');
@@ -138,7 +138,7 @@ describe('BookCreatePage', () => {
     expect(textareaEl.getAttribute('aria-invalid')).toBe('true');
     expect(textareaMessageEl.textContent).toBe('Description is required.');
 
-    descriptionField.value.set('my description');
+    descriptionState.value.set('my description');
     await fixture.whenStable();
 
     textareaMessageEl = fixture.nativeElement.querySelector('#description-error');

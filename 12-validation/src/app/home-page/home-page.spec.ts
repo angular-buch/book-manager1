@@ -2,8 +2,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 import { RouterTestingHarness } from '@angular/router/testing';
 
-import { routes } from '../app.routes';
 import { HomePage } from './home-page';
+import { routes } from '../app.routes';
 
 describe('HomePage', () => {
   let component: HomePage;
