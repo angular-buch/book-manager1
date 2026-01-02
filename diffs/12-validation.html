@@ -2838,7 +2838,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const isbnField = component[&#x27;bookForm&#x27;].isbn();</span>
+            <span class="d2h-code-line-ctn">    const isbnState = component[&#x27;bookForm&#x27;].isbn();</span>
         </div>
     </td>
 </tr><tr>
@@ -2868,7 +2868,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    isbnField.markAsTouched();</span>
+            <span class="d2h-code-line-ctn">    isbnState.markAsTouched();</span>
         </div>
     </td>
 </tr><tr>
@@ -2878,7 +2878,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(isbnField.errors().length).toEqual(1);</span>
+            <span class="d2h-code-line-ctn">    expect(isbnState.errors().length).toEqual(1);</span>
         </div>
     </td>
 </tr><tr>
@@ -2888,7 +2888,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(isbnField.errors()[0].kind).toEqual(&#x27;required&#x27;);</span>
+            <span class="d2h-code-line-ctn">    expect(isbnState.errors()[0].kind).toEqual(&#x27;required&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -2918,7 +2918,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    isbnField.value.set(&#x27;123456789012&#x27;);</span>
+            <span class="d2h-code-line-ctn">    isbnState.value.set(&#x27;123456789012&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -2928,7 +2928,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(isbnField.errors().length).toEqual(1);</span>
+            <span class="d2h-code-line-ctn">    expect(isbnState.errors().length).toEqual(1);</span>
         </div>
     </td>
 </tr><tr>
@@ -2938,7 +2938,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(isbnField.errors()[0].kind).toEqual(&#x27;minLength&#x27;);</span>
+            <span class="d2h-code-line-ctn">    expect(isbnState.errors()[0].kind).toEqual(&#x27;minLength&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -2968,7 +2968,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    isbnField.value.set(&#x27;12345678901234&#x27;);</span>
+            <span class="d2h-code-line-ctn">    isbnState.value.set(&#x27;12345678901234&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -2978,7 +2978,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(isbnField.errors().length).toEqual(1);</span>
+            <span class="d2h-code-line-ctn">    expect(isbnState.errors().length).toEqual(1);</span>
         </div>
     </td>
 </tr><tr>
@@ -2988,7 +2988,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(isbnField.errors()[0].kind).toEqual(&#x27;maxLength&#x27;);</span>
+            <span class="d2h-code-line-ctn">    expect(isbnState.errors()[0].kind).toEqual(&#x27;maxLength&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -3018,7 +3018,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    isbnField.value.set(&#x27;1234567890123&#x27;);</span>
+            <span class="d2h-code-line-ctn">    isbnState.value.set(&#x27;1234567890123&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -3028,7 +3028,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(isbnField.errors()).toEqual([]);</span>
+            <span class="d2h-code-line-ctn">    expect(isbnState.errors()).toEqual([]);</span>
         </div>
     </td>
 </tr><tr>
@@ -3168,7 +3168,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const descriptionField = component[&#x27;bookForm&#x27;].description();</span>
+            <span class="d2h-code-line-ctn">    const descriptionState = component[&#x27;bookForm&#x27;].description();</span>
         </div>
     </td>
 </tr><tr>
@@ -3248,7 +3248,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    descriptionField.markAsTouched();</span>
+            <span class="d2h-code-line-ctn">    descriptionState.markAsTouched();</span>
         </div>
     </td>
 </tr><tr>
@@ -3328,7 +3328,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    descriptionField.value.set(&#x27;my description&#x27;);</span>
+            <span class="d2h-code-line-ctn">    descriptionState.value.set(&#x27;my description&#x27;);</span>
         </div>
     </td>
 </tr><tr>
