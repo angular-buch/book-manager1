@@ -49,9 +49,9 @@ Der BookManager verwendet vorbereitete Stylesheets. Den Quelltext stellen wir hi
 - [Quelltext auf GitHub](https://github.com/angular-buch/styles)
 
 
-## ⚠️ Achtung: 5. Auflage
+## ⚠️ Achtung: 1. Auflage (2026)
 
-Dies ist das Beispielprojekt für das Angular-Buch der 5. Auflage! Falls du eine andere Auflage des Buchs besitzt, findest du den Beispielcode in folgenden anderen Repositorys:
+Dies ist das Beispielprojekt <strong>BookManager</strong> für das Angular-Buch der 1. Auflage (2026). In den vorherigen Auflagen hieß das Beispielprojekt <strong>BookMonkey</strong>. Falls du eine ältere Auflage des Buchs besitzt, findest du den Beispielcode in folgenden Repositorys:
 
 - [1. Auflage (2017): `book-monkey2`](https://github.com/angular-buch/book-monkey2)
 - [2. Auflage (2019): `book-monkey3`](https://github.com/angular-buch/book-monkey3)
