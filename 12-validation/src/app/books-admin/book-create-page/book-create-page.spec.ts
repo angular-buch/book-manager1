@@ -85,7 +85,7 @@ describe('BookCreatePage', () => {
     component.submitForm();
     await fixture.whenStable();
 
-    expect(location.path()).toEqual('/books/details/1234567890123');
+    expect(location.path()).toBe('/books/details/1234567890123');
   });
 
   it('should validate ISBN field', () => {
@@ -93,18 +93,18 @@ describe('BookCreatePage', () => {
 
     // Test required validation
     isbnState.markAsTouched();
-    expect(isbnState.errors().length).toEqual(1);
-    expect(isbnState.errors()[0].kind).toEqual('required');
+    expect(isbnState.errors().length).toBe(1);
+    expect(isbnState.errors()[0].kind).toBe('required');
 
     // Test minLength validation
     isbnState.value.set('123456789012');
-    expect(isbnState.errors().length).toEqual(1);
-    expect(isbnState.errors()[0].kind).toEqual('minLength');
+    expect(isbnState.errors().length).toBe(1);
+    expect(isbnState.errors()[0].kind).toBe('minLength');
 
     // Test maxLength validation
     isbnState.value.set('12345678901234');
-    expect(isbnState.errors().length).toEqual(1);
-    expect(isbnState.errors()[0].kind).toEqual('maxLength');
+    expect(isbnState.errors().length).toBe(1);
+    expect(isbnState.errors()[0].kind).toBe('maxLength');
 
     // Test valid value
     isbnState.value.set('1234567890123');

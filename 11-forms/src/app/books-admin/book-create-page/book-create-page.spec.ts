@@ -85,6 +85,6 @@ describe('BookCreatePage', () => {
     component.submitForm();
     await fixture.whenStable();
 
-    expect(location.path()).toEqual('/books/details/1234567890123');
+    expect(location.path()).toBe('/books/details/1234567890123');
   });
 });

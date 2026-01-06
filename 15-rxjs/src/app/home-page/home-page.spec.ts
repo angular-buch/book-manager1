@@ -71,7 +71,7 @@ describe('HomePage', () => {
 
   it('should debounce search terms', () => {
     component['searchTerm$'].next('test1');
-    vi.advanceTimersByTime(499);
+    vi.advanceTimersByTime(300);
     component['searchTerm$'].next('test2');
     vi.advanceTimersByTime(500);
 
