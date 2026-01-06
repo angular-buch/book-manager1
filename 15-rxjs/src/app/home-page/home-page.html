@@ -6,11 +6,11 @@
     (input)="searchTerm$.next($event.target.value)" />
   <ul>
     @for (b of results(); track b.isbn) {
-    <li>
-      <a [routerLink]="['/books', 'details', b.isbn]">
-        {{ b.title }} / {{ b.isbn }}
-      </a>
-    </li>
+      <li>
+        <a [routerLink]="['/books', 'details', b.isbn]">
+          {{ b.title }} / {{ b.isbn }}
+        </a>
+      </li>
     }
   </ul>
 </section>

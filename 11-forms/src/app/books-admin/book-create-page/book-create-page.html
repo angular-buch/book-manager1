@@ -15,11 +15,11 @@
     <button type="button" (click)="addAuthorField()">Add Author</button>
     <div role="group">
       @for (authorField of bookForm.authors; track $index) {
-      <input
-        type="text"
-        [aria-label]="`Author ${$index + 1}`"
-        [field]="authorField"
-      />
+        <input
+          type="text"
+          [aria-label]="`Author ${$index + 1}`"
+          [field]="authorField"
+        />
       }
     </div>
   </fieldset>
