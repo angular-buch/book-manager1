@@ -13,7 +13,7 @@ export class BookStore {
       title: 'Tierisch gut kochen',
       authors: ['Mrs Chimp', 'Mr Gorilla'],
       subtitle: 'Rezepte von Affe bis Zebra',
-      imageUrl: 'https://cdn.ng-buch.de/kochen.png',
+      imageUrl: 'https://cdn.ng-buch.de/kochen.jpg',
       description: 'Immer lecker und gut',
       createdAt: new Date().toISOString()
     },
@@ -22,7 +22,7 @@ export class BookStore {
       title: 'Backen mit Affen',
       subtitle: 'Bananenbrot und mehr',
       authors: ['Orang Utan'],
-      imageUrl: 'https://cdn.ng-buch.de/backen.png',
+      imageUrl: 'https://cdn.ng-buch.de/backen.jpg',
       description: 'Tolle Backtipps für Mensch und Tier',
       createdAt: new Date().toISOString()
     }
