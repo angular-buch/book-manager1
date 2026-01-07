@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { Field, FieldTree, form, maxLength, minLength, required, schema, validate } from '@angular/forms/signals';
+import { FormField, FieldTree, form, maxLength, minLength, required, schema, validate } from '@angular/forms/signals';
 import { Router } from '@angular/router';
 
 import { Book } from '../../shared/book';
@@ -26,7 +26,7 @@ export const bookFormSchema = schema<BookFormData>((path) => {
 
 @Component({
   selector: 'app-book-create-page',
-  imports: [Field],
+  imports: [FormField],
   templateUrl: './book-create-page.html',
   styleUrl: './book-create-page.css'
 })

@@ -2,13 +2,13 @@
 
 <form (submit)="submitForm()">
   <label for="title">Title</label>
-  <input type="text" id="title" [field]="bookForm.title" />
+  <input type="text" id="title" [formField]="bookForm.title" />
 
   <label for="subtitle">Subtitle</label>
-  <input type="text" id="subtitle" [field]="bookForm.subtitle" />
+  <input type="text" id="subtitle" [formField]="bookForm.subtitle" />
 
   <label for="isbn">ISBN</label>
-  <input type="text" id="isbn" [field]="bookForm.isbn" />
+  <input type="text" id="isbn" [formField]="bookForm.isbn" />
 
   <fieldset>
     <legend>Authors</legend>
@@ -18,17 +18,17 @@
         <input
           type="text"
           [aria-label]="`Author ${$index + 1}`"
-          [field]="authorField"
+          [formField]="authorField"
         />
       }
     </div>
   </fieldset>
 
   <label for="description">Description</label>
-  <textarea id="description" [field]="bookForm.description"></textarea>
+  <textarea id="description" [formField]="bookForm.description"></textarea>
 
   <label for="imageUrl">Thumbnail URL</label>
-  <input type="url" id="imageUrl" [field]="bookForm.imageUrl" />
+  <input type="url" id="imageUrl" [formField]="bookForm.imageUrl" />
 
   <button type="submit">
     Save

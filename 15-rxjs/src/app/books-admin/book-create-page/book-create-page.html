@@ -6,7 +6,7 @@
   <input
     type="text"
     id="title"
-    [field]="bookForm.title"
+    [formField]="bookForm.title"
     [aria-errormessage]="titleInvalid ? 'title-error' : null"
     [aria-invalid]="titleInvalid"
   />
@@ -19,14 +19,14 @@
   }
 
   <label for="subtitle">Subtitle</label>
-  <input type="text" id="subtitle" [field]="bookForm.subtitle" />
+  <input type="text" id="subtitle" [formField]="bookForm.subtitle" />
 
   @let isbnInvalid = isInvalid(bookForm.isbn);
   <label for="isbn">ISBN</label>
   <input
     type="text"
     id="isbn"
-    [field]="bookForm.isbn"
+    [formField]="bookForm.isbn"
     [aria-errormessage]="isbnInvalid ? 'isbn-error' : null"
     [aria-invalid]="isbnInvalid"
   />
@@ -47,7 +47,7 @@
         <input
           type="text"
           [aria-label]="`Author ${$index + 1}`"
-          [field]="authorField"
+          [formField]="authorField"
           [aria-errormessage]="authorsInvalid ? 'authors-error' : null"
           [aria-invalid]="authorsInvalid"
         />
@@ -67,7 +67,7 @@
   <label for="description">Description</label>
   <textarea
     id="description"
-    [field]="bookForm.description"
+    [formField]="bookForm.description"
     [aria-errormessage]="descriptionInvalid ? 'description-error' : null"
     [aria-invalid]="descriptionInvalid">
   </textarea>
@@ -84,7 +84,7 @@
   <input
     type="url"
     id="imageUrl"
-    [field]="bookForm.imageUrl"
+    [formField]="bookForm.imageUrl"
     [aria-errormessage]="imageUrlInvalid ? 'image-url-error' : null"
     [aria-invalid]="imageUrlInvalid" />
   @if (imageUrlInvalid) {
