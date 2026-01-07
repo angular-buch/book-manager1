@@ -7,7 +7,7 @@ import { Book } from '../../shared/book';
   selector: 'app-book-card',
   imports: [RouterLink],
   templateUrl: './book-card.html',
-  styleUrl: './book-card.scss'
+  styleUrl: './book-card.css'
 })
 export class BookCard {
   readonly book = input.required<Book>();

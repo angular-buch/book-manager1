@@ -28,7 +28,7 @@ export const bookFormSchema = schema<BookFormData>((path) => {
   selector: 'app-book-create-page',
   imports: [Field],
   templateUrl: './book-create-page.html',
-  styleUrl: './book-create-page.scss'
+  styleUrl: './book-create-page.css'
 })
 export class BookCreatePage {
   #bookStore = inject(BookStore);

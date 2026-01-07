@@ -9,7 +9,7 @@ import { BookStore } from '../shared/book-store';
   selector: 'app-home-page',
   imports: [RouterLink],
   templateUrl: './home-page.html',
-  styleUrl: './home-page.scss'
+  styleUrl: './home-page.css'
 })
 export class HomePage {
   #bookStore = inject(BookStore);

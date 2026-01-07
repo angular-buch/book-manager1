@@ -9,7 +9,7 @@ import { IsbnFormatPipe } from '../../shared/isbn-format.pipe';
   selector: 'app-book-details-page',
   imports: [RouterLink, DatePipe, IsbnFormatPipe],
   templateUrl: './book-details-page.html',
-  styleUrl: './book-details-page.scss'
+  styleUrl: './book-details-page.css'
 })
 export class BookDetailsPage {
   #bookStore = inject(BookStore);

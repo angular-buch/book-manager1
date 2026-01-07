@@ -7,7 +7,7 @@ import { BookStore } from '../../shared/book-store';
   selector: 'app-book-details-page',
   imports: [RouterLink],
   templateUrl: './book-details-page.html',
-  styleUrl: './book-details-page.scss'
+  styleUrl: './book-details-page.css'
 })
 export class BookDetailsPage {
   #bookStore = inject(BookStore);

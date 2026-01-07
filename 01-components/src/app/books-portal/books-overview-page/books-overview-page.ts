@@ -6,7 +6,7 @@ import { Book } from '../../shared/book';
   selector: 'app-books-overview-page',
   imports: [],
   templateUrl: './books-overview-page.html',
-  styleUrl: './books-overview-page.scss',
+  styleUrl: './books-overview-page.css',
 })
 export class BooksOverviewPage {
   protected books = signal<Book[]>([]);

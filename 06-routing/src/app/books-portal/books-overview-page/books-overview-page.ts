@@ -8,7 +8,7 @@ import { BookStore } from '../../shared/book-store';
   selector: 'app-books-overview-page',
   imports: [BookCard],
   templateUrl: './books-overview-page.html',
-  styleUrl: './books-overview-page.scss',
+  styleUrl: './books-overview-page.css',
 })
 export class BooksOverviewPage {
   #bookStore = inject(BookStore);

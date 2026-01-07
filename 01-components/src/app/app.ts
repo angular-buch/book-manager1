@@ -6,6 +6,6 @@ import { BooksOverviewPage } from './books-portal/books-overview-page/books-over
   selector: 'app-root',
   imports: [BooksOverviewPage],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.css'
 })
 export class App {}

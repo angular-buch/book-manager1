@@ -7,7 +7,7 @@ import { BookCard } from '../book-card/book-card';
   selector: 'app-books-overview-page',
   imports: [BookCard],
   templateUrl: './books-overview-page.html',
-  styleUrl: './books-overview-page.scss',
+  styleUrl: './books-overview-page.css',
 })
 export class BooksOverviewPage {
   protected books = signal<Book[]>([]);
