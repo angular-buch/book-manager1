@@ -1,4 +1,5 @@
-# BookManager
+# BookManager (06-routing)
+**[⭐️ Live Demo](https://bm1.angular-buch.com/06-routing/)**
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.5.
 
