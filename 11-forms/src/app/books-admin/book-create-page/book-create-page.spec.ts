@@ -2,7 +2,6 @@ import { Location } from '@angular/common';
 import { provideLocationMocks } from '@angular/common/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
-import { of } from 'rxjs';
 import { Mock } from 'vitest';
 
 import { routes } from '../../app.routes';
@@ -26,7 +25,7 @@ describe('BookCreatePage', () => {
   };
 
   beforeEach(async () => {
-    bookCreateMock = vi.fn().mockReturnValue(of(validBook));
+    bookCreateMock = vi.fn().mockResolvedValue(validBook);
 
     await TestBed.configureTestingModule({
       imports: [BookCreatePage],

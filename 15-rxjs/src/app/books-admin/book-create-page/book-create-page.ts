@@ -1,6 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
-import { FormField, FieldTree, form, maxLength, minLength, required, schema, validate } from '@angular/forms/signals';
+import { FormField, FieldTree, form, maxLength, minLength, required, schema, validate, submit } from '@angular/forms/signals';
 import { Router } from '@angular/router';
+import { firstValueFrom } from 'rxjs';
 
 import { Book } from '../../shared/book';
 import { BookStore } from '../../shared/book-store';
@@ -57,17 +58,18 @@ export class BookCreatePage {
   }
 
   submitForm() {
-    const formValue = this.bookForm().value();
-    const authors = formValue.authors.filter(author => !!author);
+    submit(this.bookForm, async (bookForm) => {
+      const formValue = bookForm().value();
+      const authors = formValue.authors.filter(author => !!author);
 
-    const newBook: Book = {
-      ...formValue,
-      authors,
-      createdAt: new Date().toISOString()
-    };
+      const newBook: Book = {
+        ...formValue,
+        authors,
+        createdAt: new Date().toISOString()
+      };
 
-    this.#bookStore.create(newBook).subscribe(createdBook => {
-      this.#router.navigate(['/books', 'details', createdBook.isbn]);
+      const createdBook = await this.#bookStore.create(newBook);
+      await this.#router.navigate(['/books', 'details', createdBook.isbn]);
     });
 
     return false; // prevent reload

@@ -95,7 +95,7 @@
     </small>
   }
 
-  <button type="submit" [disabled]="bookForm().invalid()">
+  <button type="submit" [aria-busy]="bookForm().submitting()">
     Save
   </button>
 </form>

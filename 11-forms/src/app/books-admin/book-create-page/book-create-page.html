@@ -30,7 +30,7 @@
   <label for="imageUrl">Thumbnail URL</label>
   <input type="url" id="imageUrl" [formField]="bookForm.imageUrl" />
 
-  <button type="submit">
+  <button type="submit" [aria-busy]="bookForm().submitting()">
     Save
   </button>
 </form>

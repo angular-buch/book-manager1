@@ -2,7 +2,6 @@ import { Location } from '@angular/common';
 import { provideLocationMocks } from '@angular/common/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
-import { of } from 'rxjs';
 import { Mock } from 'vitest';
 
 import { routes } from '../../app.routes';
@@ -26,7 +25,7 @@ describe('BookCreatePage', () => {
   };
 
   beforeEach(async () => {
-    bookCreateMock = vi.fn().mockReturnValue(of(validBook));
+    bookCreateMock = vi.fn().mockResolvedValue(validBook);
 
     await TestBed.configureTestingModule({
       imports: [BookCreatePage],
@@ -67,7 +66,13 @@ describe('BookCreatePage', () => {
     );
   });
 
+  it('should not submit form data when form is invalid', () => {
+    component.submitForm();
+    expect(bookCreateMock).not.toHaveBeenCalled();
+  });
+
   it('should filter out empty author data', () => {
+    component['bookForm']().value.set(validBook);
     component['bookForm'].authors().value.set(
       ['', 'Test Author', '']
     );
@@ -82,6 +87,7 @@ describe('BookCreatePage', () => {
   it('should navigate to created book', async () => {
     const location = TestBed.inject(Location);
 
+    component['bookForm']().value.set(validBook);
     component.submitForm();
     await fixture.whenStable();
 
@@ -109,16 +115,6 @@ describe('BookCreatePage', () => {
     // Test valid value
     isbnState.value.set('1234567890123');
     expect(isbnState.errors()).toEqual([]);
-  });
-
-  it('should disable the submit button when form is invalid', async () => {
-    const submitButton = fixture.nativeElement.querySelector('button[type="submit"]');
-    expect(submitButton.disabled).toBe(true);
-
-    component['bookForm']().value.set(validBook);
-    await fixture.whenStable();
-
-    expect(submitButton.disabled).toBe(false);
   });
 
   it('should display an error message for a field and mark it as invalid', async () => {

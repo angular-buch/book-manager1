@@ -33,17 +33,18 @@ export class BookCreatePage {
   }
 
   submitForm() {
-    const formValue = this.bookForm().value();
-    const authors = formValue.authors.filter(author => !!author);
+    submit(this.bookForm, async (bookForm) => {
+      const formValue = bookForm().value();
+      const authors = formValue.authors.filter(author => !!author);
 
-    const newBook: Book = {
-      ...formValue,
-      authors,
-      createdAt: new Date().toISOString()
-    };
+      const newBook: Book = {
+        ...formValue,
+        authors,
+        createdAt: new Date().toISOString()
+      };
 
-    this.#bookStore.create(newBook).subscribe(createdBook => {
-      this.#router.navigate(['/books', 'details', createdBook.isbn]);
+      const createdBook = await this.#bookStore.create(newBook);
+      await this.#router.navigate(['/books', 'details', createdBook.isbn]);
     });
 
     return false; // prevent reload

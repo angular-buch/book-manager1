@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { HttpClient, httpResource, HttpResourceRef } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { firstValueFrom, Observable } from 'rxjs';
 
 import { Book } from './book';
 
@@ -31,8 +31,10 @@ export class BookStore {
     return this.#http.delete<void>(`${this.#apiUrl}/books/${isbn}`);
   }
 
-  create(book: Book): Observable<Book> {
-    return this.#http.post<Book>(`${this.#apiUrl}/books`, book);
+  create(book: Book): Promise<Book> {
+    return firstValueFrom(
+      this.#http.post<Book>(`${this.#apiUrl}/books`, book)
+    );
   }
 
   search(searchTerm: string): Observable<Book[]> {
