@@ -1,6 +1,6 @@
 # BookManager 1
 
-<img src="https://bm1.angular-buch.com/assets/book-cover-v4.png" alt="Coverbild des Angular-Buchs" width="150" align="left">
+<img src="https://bm1.angular-buch.com/assets/book-cover-v1m.png" alt="Coverbild des Angular-Buchs" width="150" align="left">
 
 Auf dieser Seite findest du alle Ressourcen rund um das Beispielprojekt BookManager aus dem Angular-Buch. Neben einer Live-Demo kannst du die Änderungen am Quellcode mit unserer Differenzansicht nachvollziehen.
 
