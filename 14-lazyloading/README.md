@@ -1,7 +1,7 @@
 # BookManager (14-lazyloading)
 **[⭐️ Live Demo](https://bm1.angular-buch.com/14-lazyloading/)**
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.5.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.0.
 
 ## Development server
 
