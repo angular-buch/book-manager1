@@ -44,7 +44,7 @@ describe('BooksOverviewPage', () => {
   it('should have a list of 2 books with correct titles', () => {
     const books = component['books']();
 
-    expect(books.length).toBe(2);
+    expect(books).toHaveLength(2);
     expect(books[0].title).toBe('Tierisch gut kochen');
     expect(books[1].title).toBe('Backen mit Affen');
   });
@@ -53,7 +53,7 @@ describe('BooksOverviewPage', () => {
     const compiledElement: HTMLElement = fixture.nativeElement;
     const articleEls = compiledElement.querySelectorAll('article');
 
-    expect(articleEls.length).toBe(2);
+    expect(articleEls).toHaveLength(2);
     expect(articleEls[0].textContent).toContain('Tierisch gut kochen');
     expect(articleEls[1].textContent).toContain('Backen mit Affen');
   });
@@ -61,7 +61,7 @@ describe('BooksOverviewPage', () => {
   it('should render a BookCard component for each book', () => {
     const compiledElement: HTMLElement = fixture.nativeElement;
     const bookCardEls = compiledElement.querySelectorAll('app-book-card');
-    expect(bookCardEls.length).toBe(2);
+    expect(bookCardEls).toHaveLength(2);
   });
 
   it('should correctly pass book data to BookCard components', () => {
@@ -76,14 +76,14 @@ describe('BooksOverviewPage', () => {
     component['searchTerm'].set('');
 
     const books = component['filteredBooks']();
-    expect(books.length).toBe(2);
+    expect(books).toHaveLength(2);
   });
 
   it('should filter books based on the search term', () => {
     component['searchTerm'].set('Affe');
 
     const books = component['filteredBooks']();
-    expect(books.length).toBe(1);
+    expect(books).toHaveLength(1);
     expect(books[0].title).toBe('Backen mit Affen');
   });
 
@@ -91,7 +91,7 @@ describe('BooksOverviewPage', () => {
     component['searchTerm'].set('AFFEN');
 
     const books = component['filteredBooks']();
-    expect(books.length).toBe(1);
+    expect(books).toHaveLength(1);
     expect(books[0].title).toBe('Backen mit Affen');
   });
 
@@ -99,7 +99,7 @@ describe('BooksOverviewPage', () => {
     component['searchTerm'].set('unbekannter Titel');
 
     const books = component['filteredBooks']();
-    expect(books.length).toBe(0);
+    expect(books).toHaveLength(0);
   });
 
   it('should load the BooksOverviewPage for /books', async () => {

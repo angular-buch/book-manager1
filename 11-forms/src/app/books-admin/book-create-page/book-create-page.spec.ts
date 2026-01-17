@@ -51,7 +51,7 @@ describe('BookCreatePage', () => {
     await fixture.whenStable();
 
     const authorInputs = fixture.nativeElement.querySelectorAll('fieldset input[type="text"]');
-    expect(authorInputs.length).toBe(2);
+    expect(authorInputs).toHaveLength(2);
   });
 
   it('should submit form data', () => {

@@ -51,7 +51,7 @@ describe('BookCreatePage', () => {
     await fixture.whenStable();
 
     const authorInputs = fixture.nativeElement.querySelectorAll('fieldset input[type="text"]');
-    expect(authorInputs.length).toBe(2);
+    expect(authorInputs).toHaveLength(2);
   });
 
   it('should submit form data', () => {
@@ -99,17 +99,17 @@ describe('BookCreatePage', () => {
 
     // Test required validation
     isbnState.markAsTouched();
-    expect(isbnState.errors().length).toBe(1);
+    expect(isbnState.errors()).toHaveLength(1);
     expect(isbnState.errors()[0].kind).toBe('required');
 
     // Test minLength validation
     isbnState.value.set('123456789012');
-    expect(isbnState.errors().length).toBe(1);
+    expect(isbnState.errors()).toHaveLength(1);
     expect(isbnState.errors()[0].kind).toBe('minLength');
 
     // Test maxLength validation
     isbnState.value.set('12345678901234');
-    expect(isbnState.errors().length).toBe(1);
+    expect(isbnState.errors()).toHaveLength(1);
     expect(isbnState.errors()[0].kind).toBe('maxLength');
 
     // Test valid value
