@@ -1,7 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { FormField, FieldTree, form, maxLength, minLength, required, schema, validate, submit } from '@angular/forms/signals';
 import { Router } from '@angular/router';
-import { firstValueFrom } from 'rxjs';
 
 import { Book } from '../../shared/book';
 import { BookStore } from '../../shared/book-store';
