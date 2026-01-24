@@ -17,7 +17,7 @@
       @for (authorField of bookForm.authors; track $index) {
         <input
           type="text"
-          [aria-label]="`Author ${$index + 1}`"
+          aria-label="Author {{ $index + 1 }}"
           [formField]="authorField"
         />
       }
