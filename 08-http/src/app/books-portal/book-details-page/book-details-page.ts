@@ -26,7 +26,7 @@ export class BookDetailsPage {
   }
 
   removeBook(isbn: string) {
-    if (window.confirm('Delete book?')) {
+    if (confirm('Delete book?')) {
       this.#bookStore.remove(isbn).subscribe(() => {
         this.#router.navigateByUrl('/books');
       });
