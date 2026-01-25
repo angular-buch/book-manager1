@@ -12,14 +12,14 @@ import { BookDetailsPage } from './book-details-page';
 describe('BookDetailsPage', () => {
   let component: BookDetailsPage;
   let fixture: ComponentFixture<BookDetailsPage>;
-  let getSingleMock: Mock;
+  let getSingleFn: Mock;
 
   let isbn: WritableSignal<string>;
   const testBook = { isbn: '12345', title: 'Test Book 1', authors: [] };
 
   beforeEach(async () => {
     isbn = signal('12345');
-    getSingleMock = vi.fn().mockResolvedValue(testBook);
+    getSingleFn = vi.fn().mockResolvedValue(testBook);
 
     await TestBed.configureTestingModule({
       imports: [BookDetailsPage],
@@ -31,7 +31,7 @@ describe('BookDetailsPage', () => {
           useFactory: () => ({
             getSingle: (isbn: () => string) => resource({
               params: isbn,
-              loader: getSingleMock,
+              loader: getSingleFn,
             })
           })
         }
@@ -51,7 +51,7 @@ describe('BookDetailsPage', () => {
   });
 
   it('should load the correct book by ISBN', async () => {
-    expect(getSingleMock).toHaveBeenCalledExactlyOnceWith(
+    expect(getSingleFn).toHaveBeenCalledExactlyOnceWith(
       expect.objectContaining({ params: '12345' })
     );
     expect(component['book'].value()).toEqual(testBook);
@@ -68,12 +68,12 @@ describe('BookDetailsPage', () => {
 
   it('should update the book when ISBN changes', async () => {
     const anotherBook = { isbn: '67890', title: 'Test Book 2', authors: [] };
-    getSingleMock.mockResolvedValue(anotherBook);
+    getSingleFn.mockResolvedValue(anotherBook);
 
     isbn.set('67890');
     await fixture.whenStable();
 
-    expect(getSingleMock).toHaveBeenLastCalledWith(
+    expect(getSingleFn).toHaveBeenLastCalledWith(
       expect.objectContaining({ params: '67890' })
     );
     expect(component['book'].value()).toEqual(anotherBook);

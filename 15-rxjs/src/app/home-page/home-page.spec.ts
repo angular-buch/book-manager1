@@ -11,14 +11,14 @@ import { BookStore } from '../shared/book-store';
 describe('HomePage', () => {
   let component: HomePage;
   let fixture: ComponentFixture<HomePage>;
-  let bookStoreSearchMock: Mock;
+  let searchFn: Mock;
 
   beforeAll(() => {
     vi.useFakeTimers();
   });
 
   beforeEach(async () => {
-    bookStoreSearchMock = vi.fn().mockReturnValue(
+    searchFn = vi.fn().mockReturnValue(
       of([]).pipe(delay(100))
     );
     await TestBed.configureTestingModule({
@@ -27,7 +27,7 @@ describe('HomePage', () => {
         provideRouter(routes),
         {
           provide: BookStore,
-          useValue: { search: bookStoreSearchMock }
+          useValue: { search: searchFn }
         }
       ]
     })
@@ -59,14 +59,14 @@ describe('HomePage', () => {
     component['searchTerm$'].next('ab');
     vi.advanceTimersByTime(500);
 
-    expect(bookStoreSearchMock).not.toHaveBeenCalled();
+    expect(searchFn).not.toHaveBeenCalled();
   });
 
   it('should search when term is 3 or more characters', () => {
     component['searchTerm$'].next('abc');
     vi.advanceTimersByTime(500);
 
-    expect(bookStoreSearchMock).toHaveBeenCalledWith('abc');
+    expect(searchFn).toHaveBeenCalledWith('abc');
   });
 
   it('should debounce search terms', () => {
@@ -75,7 +75,7 @@ describe('HomePage', () => {
     component['searchTerm$'].next('test2');
     vi.advanceTimersByTime(500);
 
-    expect(bookStoreSearchMock).toHaveBeenCalledExactlyOnceWith('test2');
+    expect(searchFn).toHaveBeenCalledExactlyOnceWith('test2');
   });
 
   it('should not search for duplicate consecutive terms', () => {
@@ -85,7 +85,7 @@ describe('HomePage', () => {
     component['searchTerm$'].next('test');
     vi.advanceTimersByTime(500);
 
-    expect(bookStoreSearchMock).toHaveBeenCalledTimes(1);
+    expect(searchFn).toHaveBeenCalledTimes(1);
   });
 
   it('should set loading state during search', () => {

@@ -12,7 +12,7 @@ import { BookCreatePage } from './book-create-page';
 describe('BookCreatePage', () => {
   let component: BookCreatePage;
   let fixture: ComponentFixture<BookCreatePage>;
-  let bookCreateMock: Mock;
+  let createFn: Mock;
 
   const validBook: Required<Book> = {
     isbn: '1234567890123',
@@ -25,12 +25,12 @@ describe('BookCreatePage', () => {
   };
 
   beforeEach(async () => {
-    bookCreateMock = vi.fn().mockResolvedValue(validBook);
+    createFn = vi.fn().mockResolvedValue(validBook);
 
     await TestBed.configureTestingModule({
       imports: [BookCreatePage],
       providers: [
-        { provide: BookStore, useValue: { create: bookCreateMock } },
+        { provide: BookStore, useValue: { create: createFn } },
         provideLocationMocks(),
         provideRouter(routes),
       ]
@@ -58,7 +58,7 @@ describe('BookCreatePage', () => {
     component['bookForm']().value.set(validBook);
     component.submitForm();
 
-    expect(bookCreateMock).toHaveBeenCalledExactlyOnceWith(
+    expect(createFn).toHaveBeenCalledExactlyOnceWith(
       expect.objectContaining({
         ...validBook,
         createdAt: expect.stringContaining(new Date().toISOString().slice(0, 10))
@@ -73,7 +73,7 @@ describe('BookCreatePage', () => {
 
     component.submitForm();
 
-    expect(bookCreateMock).toHaveBeenCalledExactlyOnceWith(
+    expect(createFn).toHaveBeenCalledExactlyOnceWith(
       expect.objectContaining({ authors: ['Test Author'] })
     );
   });

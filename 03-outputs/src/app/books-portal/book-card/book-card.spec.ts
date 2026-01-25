@@ -16,10 +16,10 @@ describe('BookCard', () => {
     imageUrl: 'https://example.com/test.png',
     createdAt: '2026-01-01'
   });
-  let likeMock: Mock;
+  let likeFn: Mock;
 
   beforeEach(async () => {
-    likeMock = vi.fn();
+    likeFn = vi.fn();
 
     await TestBed.configureTestingModule({
       imports: [BookCard]
@@ -29,7 +29,7 @@ describe('BookCard', () => {
     fixture = TestBed.createComponent(BookCard, {
       bindings: [
         inputBinding('book', testBook),
-        outputBinding('like', likeMock)
+        outputBinding('like', likeFn)
       ]
     });
     component = fixture.componentInstance;
@@ -55,6 +55,6 @@ describe('BookCard', () => {
 
   it('should emit the like event with the correct book', () => {
     component.likeBook();
-    expect(likeMock).toHaveBeenCalledExactlyOnceWith(testBook());
+    expect(likeFn).toHaveBeenCalledExactlyOnceWith(testBook());
   });
 });

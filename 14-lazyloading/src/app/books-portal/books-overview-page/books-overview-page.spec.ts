@@ -12,7 +12,7 @@ import { BooksOverviewPage } from './books-overview-page';
 describe('BooksOverviewPage', () => {
   let component: BooksOverviewPage;
   let fixture: ComponentFixture<BooksOverviewPage>;
-  let getAllMock: Mock;
+  let getAllFn: Mock;
 
   const searchSignal = signal<string | undefined>(undefined);
   const mockBooks: Partial<Book>[] = [
@@ -22,7 +22,7 @@ describe('BooksOverviewPage', () => {
 
   beforeEach(async () => {
     searchSignal.set(undefined);
-    getAllMock = vi.fn().mockResolvedValue(mockBooks);
+    getAllFn = vi.fn().mockResolvedValue(mockBooks);
 
     await TestBed.configureTestingModule({
       imports: [BooksOverviewPage],
@@ -33,7 +33,7 @@ describe('BooksOverviewPage', () => {
           useFactory: () => ({
             getAll: (searchTerm: () => string) => resource({
               params: searchTerm,
-              loader: getAllMock,
+              loader: getAllFn,
             })
           })
         }
@@ -92,7 +92,7 @@ describe('BooksOverviewPage', () => {
   });
 
   it('should ask service initially for books', async () => {
-    expect(getAllMock).toHaveBeenCalledExactlyOnceWith(
+    expect(getAllFn).toHaveBeenCalledExactlyOnceWith(
       expect.objectContaining({ params: '' })
     );
 
@@ -103,7 +103,7 @@ describe('BooksOverviewPage', () => {
     searchSignal.set('Angular');
     await fixture.whenStable();
 
-    expect(getAllMock).toHaveBeenLastCalledWith(
+    expect(getAllFn).toHaveBeenLastCalledWith(
       expect.objectContaining({ params: 'Angular' })
     );
 
