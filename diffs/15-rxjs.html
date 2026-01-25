@@ -1553,7 +1553,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  let bookStoreSearchMock: Mock;</span>
+            <span class="d2h-code-line-ctn">  let searchFn: Mock;</span>
         </div>
     </td>
 </tr><tr>
@@ -1623,7 +1623,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    bookStoreSearchMock = vi.fn().mockReturnValue(</span>
+            <span class="d2h-code-line-ctn">    searchFn = vi.fn().mockReturnValue(</span>
         </div>
     </td>
 </tr><tr>
@@ -1713,7 +1713,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">          useValue: { search: bookStoreSearchMock }</span>
+            <span class="d2h-code-line-ctn">          useValue: { search: searchFn }</span>
         </div>
     </td>
 </tr><tr>
@@ -1988,7 +1988,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(bookStoreSearchMock).not.toHaveBeenCalled();</span>
+            <span class="d2h-code-line-ctn">    expect(searchFn).not.toHaveBeenCalled();</span>
         </div>
     </td>
 </tr><tr>
@@ -2058,7 +2058,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(bookStoreSearchMock).toHaveBeenCalledWith(&#x27;abc&#x27;);</span>
+            <span class="d2h-code-line-ctn">    expect(searchFn).toHaveBeenCalledWith(&#x27;abc&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -2148,7 +2148,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(bookStoreSearchMock).toHaveBeenCalledExactlyOnceWith(&#x27;test2&#x27;);</span>
+            <span class="d2h-code-line-ctn">    expect(searchFn).toHaveBeenCalledExactlyOnceWith(&#x27;test2&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -2248,7 +2248,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(bookStoreSearchMock).toHaveBeenCalledTimes(1);</span>
+            <span class="d2h-code-line-ctn">    expect(searchFn).toHaveBeenCalledTimes(1);</span>
         </div>
     </td>
 </tr><tr>

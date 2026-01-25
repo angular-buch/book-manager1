@@ -529,7 +529,7 @@
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    getSingleMock = vi.fn().<del>mockReturnValue</del>(<del>of(</del>testBook)<del>)</del>;</span>
+            <span class="d2h-code-line-ctn">    getSingleFn = vi.fn().<del>mockReturnValue</del>(<del>of(</del>testBook)<del>)</del>;</span>
         </div>
     </td>
 </tr><tr>
@@ -604,7 +604,7 @@
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">          <del>useValue</del>: <del>{</del> <del>getSingle:</del> <del>getSingleMock }</del></span>
+            <span class="d2h-code-line-ctn">          <del>useValue</del>: <del>{</del> <del>getSingle:</del> <del>getSingleFn }</del></span>
         </div>
     </td>
 </tr><tr>
@@ -729,7 +729,7 @@
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    expect(getSingleMock).toHaveBeenCalledExactlyOnceWith(<del>&#x27;12345&#x27;);</del></span>
+            <span class="d2h-code-line-ctn">    expect(getSingleFn).toHaveBeenCalledExactlyOnceWith(<del>&#x27;12345&#x27;);</del></span>
         </div>
     </td>
 </tr><tr>
@@ -834,7 +834,7 @@
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    getSingleMock.<del>mockReturnValue</del>(<del>of(</del>anotherBook)<del>)</del>;</span>
+            <span class="d2h-code-line-ctn">    getSingleFn.<del>mockReturnValue</del>(<del>of(</del>anotherBook)<del>)</del>;</span>
         </div>
     </td>
 </tr><tr>
@@ -884,7 +884,7 @@
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    expect(getSingleMock).<del>toHaveBeenCalledWith</del>(<del>&#x27;67890&#x27;);</del></span>
+            <span class="d2h-code-line-ctn">    expect(getSingleFn).<del>toHaveBeenCalledWith</del>(<del>&#x27;67890&#x27;);</del></span>
         </div>
     </td>
 </tr><tr>
@@ -1083,7 +1083,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    getSingleMock = vi.fn().<ins>mockResolvedValue</ins>(testBook);</span>
+            <span class="d2h-code-line-ctn">    getSingleFn = vi.fn().<ins>mockResolvedValue</ins>(testBook);</span>
         </div>
     </td>
 </tr><tr>
@@ -1188,7 +1188,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">              loader: getSingleMock,</span>
+            <span class="d2h-code-line-ctn">              loader: getSingleFn,</span>
         </div>
     </td>
 </tr><tr>
@@ -1283,7 +1283,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(getSingleMock).toHaveBeenCalledExactlyOnceWith(</span>
+            <span class="d2h-code-line-ctn">    expect(getSingleFn).toHaveBeenCalledExactlyOnceWith(</span>
         </div>
     </td>
 </tr><tr>
@@ -1388,7 +1388,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    getSingleMock.<ins>mockResolvedValue</ins>(anotherBook);</span>
+            <span class="d2h-code-line-ctn">    getSingleFn.<ins>mockResolvedValue</ins>(anotherBook);</span>
         </div>
     </td>
 </tr><tr>
@@ -1438,7 +1438,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(getSingleMock).<ins>toHaveBeenLastCalledWith</ins>(</span>
+            <span class="d2h-code-line-ctn">    expect(getSingleFn).<ins>toHaveBeenLastCalledWith</ins>(</span>
         </div>
     </td>
 </tr><tr>

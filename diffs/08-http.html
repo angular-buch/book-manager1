@@ -1243,7 +1243,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  let <ins>getSingleMock</ins>: <ins>Mock</ins>;</span>
+            <span class="d2h-code-line-ctn">  let <ins>getSingleFn</ins>: <ins>Mock</ins>;</span>
         </div>
     </td>
 </tr><tr>
@@ -1313,7 +1313,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    getSingleMock = vi.fn().mockReturnValue(of(testBook));</span>
+            <span class="d2h-code-line-ctn">    getSingleFn = vi.fn().mockReturnValue(of(testBook));</span>
         </div>
     </td>
 </tr><tr>
@@ -1403,7 +1403,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">          useValue: { getSingle: getSingleMock }</span>
+            <span class="d2h-code-line-ctn">          useValue: { getSingle: getSingleFn }</span>
         </div>
     </td>
 </tr><tr>
@@ -1563,7 +1563,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    <ins>expect(getSingleMock)</ins>.<ins>toHaveBeenCalledExactlyOnceWith</ins>(&#x27;12345&#x27;);</span>
+            <span class="d2h-code-line-ctn">    <ins>expect(getSingleFn)</ins>.<ins>toHaveBeenCalledExactlyOnceWith</ins>(&#x27;12345&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -1658,7 +1658,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    getSingleMock.mockReturnValue(of(anotherBook));</span>
+            <span class="d2h-code-line-ctn">    getSingleFn.mockReturnValue(of(anotherBook));</span>
         </div>
     </td>
 </tr><tr>
@@ -1708,7 +1708,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    <ins>expect(getSingleMock)</ins>.<ins>toHaveBeenCalledWith</ins>(&#x27;67890&#x27;);</span>
+            <span class="d2h-code-line-ctn">    <ins>expect(getSingleFn)</ins>.<ins>toHaveBeenCalledWith</ins>(&#x27;67890&#x27;);</span>
         </div>
     </td>
 </tr><tr>

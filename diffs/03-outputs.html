@@ -743,7 +743,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  let likeMock: Mock;</span>
+            <span class="d2h-code-line-ctn">  let likeFn: Mock;</span>
         </div>
     </td>
 </tr><tr>
@@ -773,7 +773,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    likeMock = vi.fn();</span>
+            <span class="d2h-code-line-ctn">    likeFn = vi.fn();</span>
         </div>
     </td>
 </tr><tr>
@@ -873,7 +873,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        outputBinding(&#x27;like&#x27;, likeMock)</span>
+            <span class="d2h-code-line-ctn">        outputBinding(&#x27;like&#x27;, likeFn)</span>
         </div>
     </td>
 </tr><tr>
@@ -988,7 +988,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(likeMock).toHaveBeenCalledExactlyOnceWith(testBook());</span>
+            <span class="d2h-code-line-ctn">    expect(likeFn).toHaveBeenCalledExactlyOnceWith(testBook());</span>
         </div>
     </td>
 </tr><tr>
