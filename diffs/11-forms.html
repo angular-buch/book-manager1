@@ -3164,37 +3164,7 @@
                     <tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line">@@ -0,0 +1,52 @@</div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
+        <div class="d2h-code-side-line">@@ -0,0 +1,49 @@</div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
@@ -3777,7 +3747,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">type BookFormData = Required&lt;Book&gt;;</span>
+            <span class="d2h-code-line-ctn">@Component({</span>
         </div>
     </td>
 </tr><tr>
@@ -3787,7 +3757,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">  selector: &#x27;app-book-create-page&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -3797,7 +3767,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">@Component({</span>
+            <span class="d2h-code-line-ctn">  imports: [FormField],</span>
         </div>
     </td>
 </tr><tr>
@@ -3807,7 +3777,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  selector: &#x27;app-book-create-page&#x27;,</span>
+            <span class="d2h-code-line-ctn">  templateUrl: &#x27;.&#x2F;book-create-page.html&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -3817,7 +3787,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  imports: [FormField],</span>
+            <span class="d2h-code-line-ctn">  styleUrl: &#x27;.&#x2F;book-create-page.css&#x27;</span>
         </div>
     </td>
 </tr><tr>
@@ -3827,7 +3797,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  templateUrl: &#x27;.&#x2F;book-create-page.html&#x27;,</span>
+            <span class="d2h-code-line-ctn">})</span>
         </div>
     </td>
 </tr><tr>
@@ -3837,7 +3807,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  styleUrl: &#x27;.&#x2F;book-create-page.css&#x27;</span>
+            <span class="d2h-code-line-ctn">export class BookCreatePage {</span>
         </div>
     </td>
 </tr><tr>
@@ -3847,7 +3817,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">})</span>
+            <span class="d2h-code-line-ctn">  #bookStore = inject(BookStore);</span>
         </div>
     </td>
 </tr><tr>
@@ -3857,7 +3827,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">export class BookCreatePage {</span>
+            <span class="d2h-code-line-ctn">  #router = inject(Router);</span>
         </div>
     </td>
 </tr><tr>
@@ -3867,7 +3837,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  #bookStore = inject(BookStore);</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -3877,7 +3847,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  #router = inject(Router);</span>
+            <span class="d2h-code-line-ctn">  readonly #bookFormData = signal({</span>
         </div>
     </td>
 </tr><tr>
@@ -3887,7 +3857,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">    isbn: &#x27;&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -3897,7 +3867,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  readonly #bookFormData = signal&lt;BookFormData&gt;({</span>
+            <span class="d2h-code-line-ctn">    title: &#x27;&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -3907,7 +3877,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    isbn: &#x27;&#x27;,</span>
+            <span class="d2h-code-line-ctn">    subtitle: &#x27;&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -3917,7 +3887,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    title: &#x27;&#x27;,</span>
+            <span class="d2h-code-line-ctn">    authors: [&#x27;&#x27;],</span>
         </div>
     </td>
 </tr><tr>
@@ -3927,7 +3897,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    subtitle: &#x27;&#x27;,</span>
+            <span class="d2h-code-line-ctn">    description: &#x27;&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -3937,7 +3907,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    authors: [&#x27;&#x27;],</span>
+            <span class="d2h-code-line-ctn">    imageUrl: &#x27;&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -3947,7 +3917,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    description: &#x27;&#x27;,</span>
+            <span class="d2h-code-line-ctn">  });</span>
         </div>
     </td>
 </tr><tr>
@@ -3957,7 +3927,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    imageUrl: &#x27;&#x27;,</span>
+            <span class="d2h-code-line-ctn">  protected readonly bookForm = form(this.#bookFormData);</span>
         </div>
     </td>
 </tr><tr>
@@ -3967,7 +3937,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    createdAt: &#x27;&#x27;,</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -3977,7 +3947,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  });</span>
+            <span class="d2h-code-line-ctn">  addAuthorField() {</span>
         </div>
     </td>
 </tr><tr>
@@ -3987,7 +3957,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  protected readonly bookForm = form(this.#bookFormData);</span>
+            <span class="d2h-code-line-ctn">    this.bookForm.authors().value.update((authors) =&gt; [...authors, &#x27;&#x27;]);</span>
         </div>
     </td>
 </tr><tr>
@@ -3997,7 +3967,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">  }</span>
         </div>
     </td>
 </tr><tr>
@@ -4007,7 +3977,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  addAuthorField() {</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -4017,7 +3987,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    this.bookForm.authors().value.update((authors) =&gt; [...authors, &#x27;&#x27;]);</span>
+            <span class="d2h-code-line-ctn">  submitForm() {</span>
         </div>
     </td>
 </tr><tr>
@@ -4027,7 +3997,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  }</span>
+            <span class="d2h-code-line-ctn">    submit(this.bookForm, async (bookForm) =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -4037,7 +4007,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">      const formValue = bookForm().value();</span>
         </div>
     </td>
 </tr><tr>
@@ -4047,7 +4017,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  submitForm() {</span>
+            <span class="d2h-code-line-ctn">      const authors = formValue.authors.filter(author =&gt; !!author);</span>
         </div>
     </td>
 </tr><tr>
@@ -4057,7 +4027,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    submit(this.bookForm, async (bookForm) =&gt; {</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -4067,7 +4037,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      const formValue = bookForm().value();</span>
+            <span class="d2h-code-line-ctn">      const newBook: Book = {</span>
         </div>
     </td>
 </tr><tr>
@@ -4077,7 +4047,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      const authors = formValue.authors.filter(author =&gt; !!author);</span>
+            <span class="d2h-code-line-ctn">        ...formValue,</span>
         </div>
     </td>
 </tr><tr>
@@ -4087,7 +4057,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">        authors,</span>
         </div>
     </td>
 </tr><tr>
@@ -4097,7 +4067,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      const newBook: Book = {</span>
+            <span class="d2h-code-line-ctn">        createdAt: new Date().toISOString()</span>
         </div>
     </td>
 </tr><tr>
@@ -4107,7 +4077,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        ...formValue,</span>
+            <span class="d2h-code-line-ctn">      };</span>
         </div>
     </td>
 </tr><tr>
@@ -4117,7 +4087,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        authors,</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -4127,7 +4097,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        createdAt: new Date().toISOString()</span>
+            <span class="d2h-code-line-ctn">      const createdBook = await this.#bookStore.create(newBook);</span>
         </div>
     </td>
 </tr><tr>
@@ -4137,7 +4107,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      };</span>
+            <span class="d2h-code-line-ctn">      await this.#router.navigate([&#x27;&#x2F;books&#x27;, &#x27;details&#x27;, createdBook.isbn]);</span>
         </div>
     </td>
 </tr><tr>
@@ -4147,7 +4117,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">    });</span>
         </div>
     </td>
 </tr><tr>
@@ -4157,7 +4127,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      const createdBook = await this.#bookStore.create(newBook);</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -4167,7 +4137,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      await this.#router.navigate([&#x27;&#x2F;books&#x27;, &#x27;details&#x27;, createdBook.isbn]);</span>
+            <span class="d2h-code-line-ctn">    return false; &#x2F;&#x2F; prevent reload</span>
         </div>
     </td>
 </tr><tr>
@@ -4177,42 +4147,12 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    });</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      49
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      50
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    return false; &#x2F;&#x2F; prevent reload</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      51
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
             <span class="d2h-code-line-ctn">  }</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-ins">
-      52
+      49
     </td>
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
