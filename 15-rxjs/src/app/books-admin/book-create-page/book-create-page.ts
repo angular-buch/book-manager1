@@ -1,28 +1,9 @@
 import { Component, inject, signal } from '@angular/core';
-import { FormField, FieldTree, form, maxLength, minLength, required, schema, validate, submit } from '@angular/forms/signals';
+import { FormField, FieldTree, form, maxLength, minLength, required, validate, submit } from '@angular/forms/signals';
 import { Router } from '@angular/router';
 
 import { Book } from '../../shared/book';
 import { BookStore } from '../../shared/book-store';
-
-type BookFormData = Required<Book>;
-
-export const bookFormSchema = schema<BookFormData>((path) => {
-  required(path.title, { message: 'Title is required.' });
-  required(path.isbn, { message: 'ISBN is required.' });
-  minLength(path.isbn, 13, { message: 'ISBN must have 13 digits.' });
-  maxLength(path.isbn, 13, { message: 'ISBN must have 13 digits.' });
-  validate(path.authors, (ctx) =>
-    !ctx.value().some((a) => a)
-      ? {
-        kind: 'atLeastOneAuthor',
-        message: 'At least one author is required.'
-      }
-      : undefined
-  );
-  required(path.description, { message: 'Description is required.' });
-  required(path.imageUrl, { message: 'URL is required.' });
-});
 
 @Component({
   selector: 'app-book-create-page',
@@ -34,16 +15,30 @@ export class BookCreatePage {
   #bookStore = inject(BookStore);
   #router = inject(Router);
 
-  readonly #bookFormData = signal<BookFormData>({
+  readonly #bookFormData = signal({
     isbn: '',
     title: '',
     subtitle: '',
     authors: [''],
     description: '',
     imageUrl: '',
-    createdAt: '',
   });
-  protected readonly bookForm = form(this.#bookFormData, bookFormSchema);
+  protected readonly bookForm = form(this.#bookFormData, (path) => {
+    required(path.title, { message: 'Title is required.' });
+    required(path.isbn, { message: 'ISBN is required.' });
+    minLength(path.isbn, 13, { message: 'ISBN must have 13 digits.' });
+    maxLength(path.isbn, 13, { message: 'ISBN must have 13 digits.' });
+    validate(path.authors, (ctx) =>
+      !ctx.value().some((a) => a)
+        ? {
+          kind: 'atLeastOneAuthor',
+          message: 'At least one author is required.'
+        }
+        : undefined
+    );
+    required(path.description, { message: 'Description is required.' });
+    required(path.imageUrl, { message: 'URL is required.' });
+  });
 
   addAuthorField() {
     this.bookForm.authors().value.update((authors) => [...authors, '']);
