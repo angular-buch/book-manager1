@@ -1,9 +1,12 @@
 @let b = book();
+@let titleId = `title-${b.isbn}`;
 
 <article class="book-card">
-  <img [src]="b.imageUrl" alt="Cover" />
+  <img alt="Buchcover"
+    [src]="b.imageUrl"
+    [aria-describedby]="titleId" />
   <header>
-    <h2>{{ b.title }}</h2>
+    <h2 [id]="titleId">{{ b.title }}</h2>
   </header>
   <div>
     @if (b.subtitle) {
