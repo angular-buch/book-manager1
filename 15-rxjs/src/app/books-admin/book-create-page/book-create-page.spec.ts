@@ -14,14 +14,14 @@ describe('BookCreatePage', () => {
   let fixture: ComponentFixture<BookCreatePage>;
   let createFn: Mock;
 
-  const validBook: Required<Book> = {
+  const validBook = {
     isbn: '1234567890123',
     title: 'Test Book',
     subtitle: '',
     authors: ['Test Author'],
     description: 'Test description',
     imageUrl: 'https://example.org/img.jpg',
-    createdAt: ''
+    createdAt: '',
   };
 
   beforeEach(async () => {
