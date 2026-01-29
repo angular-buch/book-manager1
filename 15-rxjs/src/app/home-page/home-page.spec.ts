@@ -13,9 +13,7 @@ describe('HomePage', () => {
   let fixture: ComponentFixture<HomePage>;
   let searchFn: Mock;
 
-  beforeAll(() => {
-    vi.useFakeTimers();
-  });
+  beforeAll(() => vi.useFakeTimers());
 
   beforeEach(async () => {
     searchFn = vi.fn().mockReturnValue(
@@ -39,9 +37,7 @@ describe('HomePage', () => {
     await fixture.whenStable();
   });
 
-  afterAll(() => {
-    vi.useRealTimers();
-  });
+  afterAll(() => vi.useRealTimers());
 
   it('should create', () => {
     expect(component).toBeTruthy();
