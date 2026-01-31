@@ -66,6 +66,6 @@ export class BookCreatePage {
       await this.#router.navigate(['/books', 'details', createdBook.isbn]);
     });
 
-    return false; // prevent reload
+    return false; // Neuladen verhindern
   }
 }

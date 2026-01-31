@@ -55,15 +55,20 @@ describe('BookCreatePage', () => {
   });
 
   it('should submit form data', () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date('2026-01-15'));
+
     component['bookForm']().value.set(validBook);
     component.submitForm();
 
     expect(createFn).toHaveBeenCalledExactlyOnceWith(
       expect.objectContaining({
         ...validBook,
-        createdAt: expect.stringContaining(new Date().toISOString().slice(0, 10))
+        createdAt: '2026-01-15T00:00:00.000Z'
       })
     );
+
+    vi.useRealTimers();
   });
 
   it('should filter out empty author data', () => {

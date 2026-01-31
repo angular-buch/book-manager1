@@ -55,15 +55,20 @@ describe('BookCreatePage', () => {
   });
 
   it('should submit form data', () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date('2026-01-15'));
+
     component['bookForm']().value.set(validBook);
     component.submitForm();
 
     expect(createFn).toHaveBeenCalledExactlyOnceWith(
       expect.objectContaining({
         ...validBook,
-        createdAt: expect.stringContaining(new Date().toISOString().slice(0, 10))
+        createdAt: '2026-01-15T00:00:00.000Z'
       })
     );
+
+    vi.useRealTimers();
   });
 
   it('should not submit form data when form is invalid', () => {
@@ -97,22 +102,22 @@ describe('BookCreatePage', () => {
   it('should validate ISBN field', () => {
     const isbnState = component['bookForm'].isbn();
 
-    // Test required validation
+    // Prüfung: required
     isbnState.markAsTouched();
     expect(isbnState.errors()).toHaveLength(1);
     expect(isbnState.errors()[0].kind).toBe('required');
 
-    // Test minLength validation
+    // Prüfung: minLength
     isbnState.value.set('123456789012');
     expect(isbnState.errors()).toHaveLength(1);
     expect(isbnState.errors()[0].kind).toBe('minLength');
 
-    // Test maxLength validation
+    // Prüfung: maxLength
     isbnState.value.set('12345678901234');
     expect(isbnState.errors()).toHaveLength(1);
     expect(isbnState.errors()[0].kind).toBe('maxLength');
 
-    // Test valid value
+    // Prüfung: gültiger Wert
     isbnState.value.set('1234567890123');
     expect(isbnState.errors()).toEqual([]);
   });
