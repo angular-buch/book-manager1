@@ -235,7 +235,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      &lt;button type=&quot;button&quot; (click)=&quot;removeBook(b.isbn)&quot;&gt;</span>
+            <span class="d2h-code-line-ctn">      &lt;button type=&quot;button&quot; (click)=&quot;removeBook()&quot;&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -2341,7 +2341,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  removeBook(isbn: string) {</span>
+            <span class="d2h-code-line-ctn">  removeBook() {</span>
         </div>
     </td>
 </tr><tr>
@@ -2361,7 +2361,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      this.#bookStore.remove(isbn).subscribe(() =&gt; {</span>
+            <span class="d2h-code-line-ctn">      this.#bookStore.remove(this.isbn()).subscribe(() =&gt; {</span>
         </div>
     </td>
 </tr><tr>
