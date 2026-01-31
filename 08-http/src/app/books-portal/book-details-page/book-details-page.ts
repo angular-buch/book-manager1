@@ -25,9 +25,9 @@ export class BookDetailsPage {
     });
   }
 
-  removeBook(isbn: string) {
+  removeBook() {
     if (confirm('Delete book?')) {
-      this.#bookStore.remove(isbn).subscribe(() => {
+      this.#bookStore.remove(this.isbn()).subscribe(() => {
         this.#router.navigateByUrl('/books');
       });
     }

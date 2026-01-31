@@ -16,9 +16,9 @@ export class BookDetailsPage {
   readonly isbn = input.required<string>();
   protected book = this.#bookStore.getSingle(() => this.isbn());
 
-  removeBook(isbn: string) {
+  removeBook() {
     if (confirm('Delete book?')) {
-      this.#bookStore.remove(isbn).subscribe(() => {
+      this.#bookStore.remove(this.isbn()).subscribe(() => {
         this.#router.navigateByUrl('/books');
       });
     }
