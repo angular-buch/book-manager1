@@ -25,8 +25,10 @@
       aria-label="Search"
     />
 
-    @for (b of books.value(); track b.isbn) {
-      <app-book-card [book]="b" (like)="addLikedBook($event)" />
+    @if (books.hasValue()) {
+      @for (b of books.value(); track b.isbn) {
+        <app-book-card [book]="b" (like)="addLikedBook($event)" />
+      }
     }
   </div>
 </section>
