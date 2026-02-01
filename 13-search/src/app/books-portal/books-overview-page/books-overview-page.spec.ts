@@ -1,13 +1,13 @@
-import { inputBinding, resource, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { inputBinding, resource, signal } from '@angular/core';
 import { provideRouter, Router } from '@angular/router';
 import { RouterTestingHarness } from '@angular/router/testing';
 import { Mock } from 'vitest';
 
+import { BooksOverviewPage } from './books-overview-page';
+import { booksPortalRoutes } from '../books-portal.routes';
 import { Book } from '../../shared/book';
 import { BookStore } from '../../shared/book-store';
-import { booksPortalRoutes } from '../books-portal.routes';
-import { BooksOverviewPage } from './books-overview-page';
 
 describe('BooksOverviewPage', () => {
   let component: BooksOverviewPage;

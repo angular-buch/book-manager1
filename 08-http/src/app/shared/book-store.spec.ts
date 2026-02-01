@@ -2,8 +2,8 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 
-import { Book } from './book';
 import { BookStore } from './book-store';
+import { Book } from './book';
 
 describe('BookStore', () => {
   let service: BookStore;
