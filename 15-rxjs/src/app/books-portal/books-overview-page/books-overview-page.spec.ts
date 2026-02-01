@@ -116,7 +116,7 @@ describe('BooksOverviewPage', () => {
     component['searchTerm'].set('Angular');
     await fixture.whenStable();
 
-    expect(navigateSpy).toHaveBeenCalledWith([], {
+    expect(navigateSpy).toHaveBeenCalledExactlyOnceWith([], {
       queryParams: { search: 'Angular' }
     });
   });
