@@ -1,7 +1,7 @@
 # BookManager (01-components)
 **[⭐️ Live Demo](https://bm1.angular-buch.com/01-components/)**
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0-next.1.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0-next.0.
 
 ## Development server
 

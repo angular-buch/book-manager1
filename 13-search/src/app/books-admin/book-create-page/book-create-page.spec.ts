@@ -59,8 +59,7 @@ describe('BookCreatePage', () => {
     vi.setSystemTime(new Date('2026-01-15'));
 
     component['bookForm']().value.set(validBook);
-    const formElement = fixture.nativeElement.querySelector('form');
-    formElement.dispatchEvent(new Event('submit'));
+    component.submitForm();
 
     expect(createFn).toHaveBeenCalledExactlyOnceWith(
       expect.objectContaining({
@@ -73,8 +72,7 @@ describe('BookCreatePage', () => {
   });
 
   it('should not submit form data when form is invalid', () => {
-    const formElement = fixture.nativeElement.querySelector('form');
-    formElement.dispatchEvent(new Event('submit'));
+    component.submitForm();
     expect(createFn).not.toHaveBeenCalled();
   });
 
@@ -84,8 +82,7 @@ describe('BookCreatePage', () => {
       ['', 'Test Author', '']
     );
 
-    const formElement = fixture.nativeElement.querySelector('form');
-    formElement.dispatchEvent(new Event('submit'));
+    component.submitForm();
 
     expect(createFn).toHaveBeenCalledExactlyOnceWith(
       expect.objectContaining({ authors: ['Test Author'] })
@@ -96,8 +93,7 @@ describe('BookCreatePage', () => {
     const location = TestBed.inject(Location);
 
     component['bookForm']().value.set(validBook);
-    const formElement = fixture.nativeElement.querySelector('form');
-    formElement.dispatchEvent(new Event('submit'));
+    component.submitForm();
     await fixture.whenStable();
 
     expect(location.path()).toBe('/books/details/1234567890123');

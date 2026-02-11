@@ -1,6 +1,6 @@
 # BookManager (00-base)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0-next.1.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0-next.0.
 
 ## Development server
 
