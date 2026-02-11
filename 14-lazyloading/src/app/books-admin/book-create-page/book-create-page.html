@@ -1,6 +1,6 @@
 <h1>Create book</h1>
 
-<form (submit)="submitForm()" novalidate>
+<form [formRoot]="bookForm">
   @let titleInvalid = isInvalid(bookForm.title);
   <label for="title">Title</label>
   <input
