@@ -1,7 +1,7 @@
 # BookManager (02-inputs)
 **[⭐️ Live Demo](https://bm1.angular-buch.com/02-inputs/)**
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0-next.0.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0-next.1.
 
 ## Development server
 
