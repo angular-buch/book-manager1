@@ -1,6 +1,6 @@
 <h1>Create book</h1>
 
-<form (submit)="submitForm()">
+<form [formRoot]="bookForm">
   <label for="title">Title</label>
   <input type="text" id="title" [formField]="bookForm.title" />
 

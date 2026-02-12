@@ -1,7 +1,7 @@
 # BookManager (07-inputparams)
 **[⭐️ Live Demo](https://bm1.angular-buch.com/07-inputparams/)**
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0-next.0.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0-next.2.
 
 ## Development server
 
