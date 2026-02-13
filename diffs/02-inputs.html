@@ -1318,7 +1318,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const compiledElement: HTMLElement = fixture.nativeElement;</span>
+            <span class="d2h-code-line-ctn">    const hostEl: HTMLElement = fixture.nativeElement;</span>
         </div>
     </td>
 </tr><tr>
@@ -1328,7 +1328,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(compiledElement.textContent).toContain(testBook().isbn);</span>
+            <span class="d2h-code-line-ctn">    expect(hostEl.textContent).toContain(testBook().isbn);</span>
         </div>
     </td>
 </tr><tr>
@@ -1338,7 +1338,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(compiledElement.textContent).toContain(testBook().title);</span>
+            <span class="d2h-code-line-ctn">    expect(hostEl.textContent).toContain(testBook().title);</span>
         </div>
     </td>
 </tr><tr>
@@ -1378,7 +1378,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const compiledElement: HTMLElement = fixture.nativeElement;</span>
+            <span class="d2h-code-line-ctn">    const hostEl: HTMLElement = fixture.nativeElement;</span>
         </div>
     </td>
 </tr><tr>
@@ -1388,7 +1388,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const imageEl = compiledElement.querySelector(&#x27;img&#x27;);</span>
+            <span class="d2h-code-line-ctn">    const imageEl = hostEl.querySelector(&#x27;img&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -2397,7 +2397,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const compiledElement: HTMLElement = fixture.nativeElement;</span>
+            <span class="d2h-code-line-ctn">    const hostEl: HTMLElement = fixture.nativeElement;</span>
         </div>
     </td>
 </tr><tr>
@@ -2407,7 +2407,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const bookCardEls = compiledElement.querySelectorAll(&#x27;app-book-card&#x27;);</span>
+            <span class="d2h-code-line-ctn">    const cardEls = hostEl.querySelectorAll(&#x27;app-book-card&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -2417,7 +2417,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(bookCardEls).toHaveLength(2);</span>
+            <span class="d2h-code-line-ctn">    expect(cardEls).toHaveLength(2);</span>
         </div>
     </td>
 </tr><tr>
@@ -2447,7 +2447,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should correctly pass book data to BookCard components&#x27;, () =&gt; {</span>
+            <span class="d2h-code-line-ctn">  it(&#x27;should correctly pass book data to BookCards&#x27;, () =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -2457,7 +2457,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const compiledElement: HTMLElement = fixture.nativeElement;</span>
+            <span class="d2h-code-line-ctn">    const hostEl: HTMLElement = fixture.nativeElement;</span>
         </div>
     </td>
 </tr><tr>
@@ -2467,7 +2467,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const bookCardEls = compiledElement.querySelectorAll(&#x27;app-book-card&#x27;);</span>
+            <span class="d2h-code-line-ctn">    const cardEls = hostEl.querySelectorAll(&#x27;app-book-card&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -2487,7 +2487,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(bookCardEls[0].textContent).toContain(&#x27;Tierisch gut kochen&#x27;);</span>
+            <span class="d2h-code-line-ctn">    expect(cardEls[0].textContent).toContain(&#x27;Tierisch gut kochen&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -2497,7 +2497,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(bookCardEls[1].textContent).toContain(&#x27;Backen mit Affen&#x27;);</span>
+            <span class="d2h-code-line-ctn">    expect(cardEls[1].textContent).toContain(&#x27;Backen mit Affen&#x27;);</span>
         </div>
     </td>
 </tr><tr>

@@ -284,7 +284,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    const compiledElement: HTMLElement = fixture.nativeElement;</span>
+            <span class="d2h-code-line-ctn">    const hostEl: HTMLElement = fixture.nativeElement;</span>
         </div>
     </td>
 </tr><tr>
@@ -294,7 +294,7 @@
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    <del>expect(</del>compiledElement.<del>textContent).toContain</del>(<del>testBook(</del>)<del>.isbn)</del>;</span>
+            <span class="d2h-code-line-ctn">    <del>expect(</del>hostEl.<del>textContent).toContain</del>(<del>testBook(</del>)<del>.isbn)</del>;</span>
         </div>
     </td>
 </tr><tr>
@@ -304,7 +304,7 @@
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    <del>expect(</del>compiledElement.<del>textContent).toContain</del>(<del>testBook(</del>)<del>.title)</del>;</span>
+            <span class="d2h-code-line-ctn">    <del>expect(</del>hostEl.<del>textContent).toContain</del>(<del>testBook(</del>)<del>.title)</del>;</span>
         </div>
     </td>
 </tr><tr>
@@ -398,7 +398,7 @@
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn">    const compiledElement: HTMLElement = fixture.nativeElement;</span>
+            <span class="d2h-code-line-ctn">    const hostEl: HTMLElement = fixture.nativeElement;</span>
         </div>
     </td>
 </tr><tr>
@@ -408,7 +408,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    <ins>const titleEl = </ins>compiledElement.<ins>querySelector</ins>(<ins>&#x27;h2&#x27;</ins>);</span>
+            <span class="d2h-code-line-ctn">    <ins>const titleEl = </ins>hostEl.<ins>querySelector</ins>(<ins>&#x27;h2&#x27;</ins>);</span>
         </div>
     </td>
 </tr><tr>
@@ -418,7 +418,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    <ins>const isbnEl = </ins>compiledElement.<ins>querySelector</ins>(<ins>&#x27;article &gt; div&#x27;</ins>);</span>
+            <span class="d2h-code-line-ctn">    <ins>const isbnEl = </ins>hostEl.<ins>querySelector</ins>(<ins>&#x27;article &gt; div&#x27;</ins>);</span>
         </div>
     </td>
 </tr><tr>
@@ -1680,7 +1680,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should return the original string if it is not 13 characters long&#x27;, () =&gt; {</span>
+            <span class="d2h-code-line-ctn">  it(&#x27;should not change values shorter than 13 chars&#x27;, () =&gt; {</span>
         </div>
     </td>
 </tr><tr>
