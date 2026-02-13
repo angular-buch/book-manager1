@@ -39,7 +39,10 @@ export class BooksOverviewPage {
     );
 
     if (!foundBook) {
-      this.likedBooks.update((likedBooks) => [...likedBooks, newLikedBook]);
+      this.likedBooks.update((likedBooks) => [
+        ...likedBooks,
+        newLikedBook
+      ]);
     }
   }
 

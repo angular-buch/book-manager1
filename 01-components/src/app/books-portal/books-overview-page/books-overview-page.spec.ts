@@ -21,7 +21,7 @@ describe('BooksOverviewPage', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have a list of 2 books with correct titles', () => {
+  it('should have 2 books with correct titles', () => {
     const books = component['books']();
 
     expect(books).toHaveLength(2);
@@ -30,8 +30,8 @@ describe('BooksOverviewPage', () => {
   });
 
   it('should render the correct book titles', () => {
-    const compiledElement: HTMLElement = fixture.nativeElement;
-    const articleEls = compiledElement.querySelectorAll('article');
+    const hostEl: HTMLElement = fixture.nativeElement;
+    const articleEls = hostEl.querySelectorAll('article');
 
     expect(articleEls).toHaveLength(2);
     expect(articleEls[0].textContent).toContain('Tierisch gut kochen');

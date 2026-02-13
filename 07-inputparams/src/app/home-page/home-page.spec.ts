@@ -25,7 +25,7 @@ describe('HomePage', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should load the HomePage component for /home', async () => {
+  it('should load HomePage component for /home', async () => {
     const harness = await RouterTestingHarness.create();
     const component = await harness.navigateByUrl('/home', HomePage);
 

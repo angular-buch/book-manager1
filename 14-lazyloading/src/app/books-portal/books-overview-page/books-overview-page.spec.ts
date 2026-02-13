@@ -52,7 +52,7 @@ describe('BooksOverviewPage', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have a list of 2 books with correct titles', () => {
+  it('should have 2 books with correct titles', () => {
     const books = component['books'].value();
 
     expect(books).toHaveLength(2);
@@ -61,8 +61,8 @@ describe('BooksOverviewPage', () => {
   });
 
   it('should render the correct book titles', () => {
-    const compiledElement: HTMLElement = fixture.nativeElement;
-    const articleEls = compiledElement.querySelectorAll('article');
+    const hostEl: HTMLElement = fixture.nativeElement;
+    const articleEls = hostEl.querySelectorAll('article');
 
     expect(articleEls).toHaveLength(2);
     expect(articleEls[0].textContent).toContain('Tierisch gut kochen');
@@ -70,20 +70,20 @@ describe('BooksOverviewPage', () => {
   });
 
   it('should render a BookCard component for each book', () => {
-    const compiledElement: HTMLElement = fixture.nativeElement;
-    const bookCardEls = compiledElement.querySelectorAll('app-book-card');
-    expect(bookCardEls).toHaveLength(2);
+    const hostEl: HTMLElement = fixture.nativeElement;
+    const cardEls = hostEl.querySelectorAll('app-book-card');
+    expect(cardEls).toHaveLength(2);
   });
 
-  it('should correctly pass book data to BookCard components', () => {
-    const compiledElement: HTMLElement = fixture.nativeElement;
-    const bookCardEls = compiledElement.querySelectorAll('app-book-card');
+  it('should correctly pass book data to BookCards', () => {
+    const hostEl: HTMLElement = fixture.nativeElement;
+    const cardEls = hostEl.querySelectorAll('app-book-card');
 
-    expect(bookCardEls[0].textContent).toContain('Tierisch gut kochen');
-    expect(bookCardEls[1].textContent).toContain('Backen mit Affen');
+    expect(cardEls[0].textContent).toContain('Tierisch gut kochen');
+    expect(cardEls[1].textContent).toContain('Backen mit Affen');
   });
 
-  it('should load the BooksOverviewPage for /books', async () => {
+  it('should load BooksOverviewPage for /books', async () => {
     const harness = await RouterTestingHarness.create();
     const component = await harness.navigateByUrl('/', BooksOverviewPage);
 

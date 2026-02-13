@@ -41,19 +41,19 @@ describe('BookCard', () => {
   });
 
   it('should render book title and isbn', () => {
-    const compiledElement: HTMLElement = fixture.nativeElement;
-    expect(compiledElement.textContent).toContain(testBook().isbn);
-    expect(compiledElement.textContent).toContain(testBook().title);
+    const hostEl: HTMLElement = fixture.nativeElement;
+    expect(hostEl.textContent).toContain(testBook().isbn);
+    expect(hostEl.textContent).toContain(testBook().title);
   });
 
   it('should display the correct image', () => {
-    const compiledElement: HTMLElement = fixture.nativeElement;
-    const imageEl = compiledElement.querySelector('img');
+    const hostEl: HTMLElement = fixture.nativeElement;
+    const imageEl = hostEl.querySelector('img');
     expect(imageEl).toBeTruthy();
     expect(imageEl?.src).toBe(testBook().imageUrl);
   });
 
-  it('should emit the like event with the correct book', () => {
+  it('should emit the like event with a book', () => {
     component.likeBook();
     expect(likeFn).toHaveBeenCalledExactlyOnceWith(testBook());
   });

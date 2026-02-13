@@ -12,7 +12,7 @@ describe('IsbnFormatPipe', () => {
     expect(result).toBe('123-4-5678-9012-3');
   });
 
-  it('should return the original string if it is not 13 characters long', () => {
+  it('should not change values shorter than 13 chars', () => {
     const result = pipe.transform('123');
     expect(result).toBe('123');
   });

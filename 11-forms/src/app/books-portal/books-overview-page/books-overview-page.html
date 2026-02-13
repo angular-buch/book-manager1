@@ -1,6 +1,8 @@
 <section>
   <h1>Favorite Books</h1>
-  <button type="button" (click)="clearLikedBooks()">Clear</button>
+  <button type="button" (click)="clearLikedBooks()">
+    Clear
+  </button>
   <ul>
     @for (b of likedBooks(); track b.isbn) {
       <li>{{ b.title }} ({{ b.isbn }})</li>
