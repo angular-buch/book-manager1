@@ -1,12 +1,12 @@
+import { Location } from '@angular/common';
+import { provideLocationMocks } from '@angular/common/testing';
+import { inputBinding, signal, WritableSignal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter, Router } from '@angular/router';
-import { provideLocationMocks } from '@angular/common/testing';
-import { Location } from '@angular/common';
-import { inputBinding, signal, WritableSignal } from '@angular/core';
 
-import { BookDetailsPage } from './book-details-page';
-import { booksPortalRoutes } from '../books-portal.routes';
 import { BookStore } from '../../shared/book-store';
+import { booksPortalRoutes } from '../books-portal.routes';
+import { BookDetailsPage } from './book-details-page';
 
 describe('BookDetailsPage', () => {
   let component: BookDetailsPage;

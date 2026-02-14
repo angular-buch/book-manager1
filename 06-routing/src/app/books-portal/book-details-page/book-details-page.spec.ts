@@ -1,12 +1,12 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingHarness } from '@angular/router/testing';
-import { provideRouter, Router } from '@angular/router';
-import { provideLocationMocks } from '@angular/common/testing';
 import { Location } from '@angular/common';
+import { provideLocationMocks } from '@angular/common/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter, Router } from '@angular/router';
+import { RouterTestingHarness } from '@angular/router/testing';
 
-import { BookDetailsPage } from './book-details-page';
-import { booksPortalRoutes } from '../books-portal.routes';
 import { BookStore } from '../../shared/book-store';
+import { booksPortalRoutes } from '../books-portal.routes';
+import { BookDetailsPage } from './book-details-page';
 
 describe('BookDetailsPage', () => {
   let component: BookDetailsPage;
