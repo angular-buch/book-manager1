@@ -1151,7 +1151,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    &lt;button type=&quot;button&quot; (click)=&quot;addAuthorField()&quot;&gt;Add Author&lt;&#x2F;button&gt;</span>
+            <span class="d2h-code-line-ctn">    &lt;button type=&quot;button&quot; (click)=&quot;addAuthorField()&quot;&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -1161,7 +1161,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    &lt;div role=&quot;group&quot;&gt;</span>
+            <span class="d2h-code-line-ctn">      Add Author</span>
         </div>
     </td>
 </tr><tr>
@@ -1171,7 +1171,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      @for (authorField of bookForm.authors; track $index) {</span>
+            <span class="d2h-code-line-ctn">    &lt;&#x2F;button&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -1181,7 +1181,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        &lt;input</span>
+            <span class="d2h-code-line-ctn">    &lt;div role=&quot;group&quot;&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -1191,7 +1191,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">          type=&quot;text&quot;</span>
+            <span class="d2h-code-line-ctn">      @for (authorField of bookForm.authors; track $index) {</span>
         </div>
     </td>
 </tr><tr>
@@ -1201,7 +1201,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">          aria-label=&quot;Author {{ $index + 1 }}&quot;</span>
+            <span class="d2h-code-line-ctn">        &lt;input type=&quot;text&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -1211,7 +1211,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">          [formField]=&quot;authorField&quot;</span>
+            <span class="d2h-code-line-ctn">          aria-label=&quot;Author {{ $index + 1 }}&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -1221,7 +1221,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        &#x2F;&gt;</span>
+            <span class="d2h-code-line-ctn">          [formField]=&quot;authorField&quot; &#x2F;&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -2994,7 +2994,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const formElement = fixture.nativeElement.querySelector(&#x27;form&#x27;);</span>
+            <span class="d2h-code-line-ctn">    const formEl = fixture.nativeElement.querySelector(&#x27;form&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -3004,7 +3004,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    formElement.dispatchEvent(new Event(&#x27;submit&#x27;));</span>
+            <span class="d2h-code-line-ctn">    formEl.dispatchEvent(new Event(&#x27;submit&#x27;));</span>
         </div>
     </td>
 </tr><tr>
@@ -3174,7 +3174,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const formElement = fixture.nativeElement.querySelector(&#x27;form&#x27;);</span>
+            <span class="d2h-code-line-ctn">    const formEl = fixture.nativeElement.querySelector(&#x27;form&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -3184,7 +3184,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    formElement.dispatchEvent(new Event(&#x27;submit&#x27;));</span>
+            <span class="d2h-code-line-ctn">    formEl.dispatchEvent(new Event(&#x27;submit&#x27;));</span>
         </div>
     </td>
 </tr><tr>
@@ -3284,7 +3284,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const formElement = fixture.nativeElement.querySelector(&#x27;form&#x27;);</span>
+            <span class="d2h-code-line-ctn">    const formEl = fixture.nativeElement.querySelector(&#x27;form&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -3294,7 +3294,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    formElement.dispatchEvent(new Event(&#x27;submit&#x27;));</span>
+            <span class="d2h-code-line-ctn">    formEl.dispatchEvent(new Event(&#x27;submit&#x27;));</span>
         </div>
     </td>
 </tr><tr>
@@ -4247,7 +4247,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">          const formValue = bookForm().value();</span>
+            <span class="d2h-code-line-ctn">          const value = bookForm().value();</span>
         </div>
     </td>
 </tr><tr>
@@ -4257,7 +4257,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">          const authors = formValue.authors.filter(author =&gt; !!author);</span>
+            <span class="d2h-code-line-ctn">          const authors = value.authors.filter(author =&gt; !!author);</span>
         </div>
     </td>
 </tr><tr>
@@ -4287,7 +4287,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">            ...formValue,</span>
+            <span class="d2h-code-line-ctn">            ...value,</span>
         </div>
     </td>
 </tr><tr>
