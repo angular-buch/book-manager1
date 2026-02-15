@@ -59,8 +59,8 @@ describe('BookCreatePage', () => {
     vi.setSystemTime(new Date('2026-01-15'));
 
     component['bookForm']().value.set(validBook);
-    const formElement = fixture.nativeElement.querySelector('form');
-    formElement.dispatchEvent(new Event('submit'));
+    const formEl = fixture.nativeElement.querySelector('form');
+    formEl.dispatchEvent(new Event('submit'));
 
     expect(createFn).toHaveBeenCalledExactlyOnceWith(
       expect.objectContaining({
@@ -73,8 +73,8 @@ describe('BookCreatePage', () => {
   });
 
   it('should not submit form data when form is invalid', () => {
-    const formElement = fixture.nativeElement.querySelector('form');
-    formElement.dispatchEvent(new Event('submit'));
+    const formEl = fixture.nativeElement.querySelector('form');
+    formEl.dispatchEvent(new Event('submit'));
     expect(createFn).not.toHaveBeenCalled();
   });
 
@@ -84,8 +84,8 @@ describe('BookCreatePage', () => {
       ['', 'Test Author', '']
     );
 
-    const formElement = fixture.nativeElement.querySelector('form');
-    formElement.dispatchEvent(new Event('submit'));
+    const formEl = fixture.nativeElement.querySelector('form');
+    formEl.dispatchEvent(new Event('submit'));
 
     expect(createFn).toHaveBeenCalledExactlyOnceWith(
       expect.objectContaining({ authors: ['Test Author'] })
@@ -96,8 +96,8 @@ describe('BookCreatePage', () => {
     const location = TestBed.inject(Location);
 
     component['bookForm']().value.set(validBook);
-    const formElement = fixture.nativeElement.querySelector('form');
-    formElement.dispatchEvent(new Event('submit'));
+    const formEl = fixture.nativeElement.querySelector('form');
+    formEl.dispatchEvent(new Event('submit'));
     await fixture.whenStable();
 
     expect(location.path()).toBe('/books/details/1234567890123');
@@ -126,29 +126,29 @@ describe('BookCreatePage', () => {
     expect(isbnState.errors()).toEqual([]);
   });
 
-  it('should display an error message for a field and mark it as invalid', async () => {
-    const descriptionState = component['bookForm'].description();
-    const textareaEl = fixture.nativeElement.querySelector('textarea');
-    let textareaMessageEl = fixture.nativeElement.querySelector('#description-error');
+  it('should show error and mark field invalid', async () => {
+    const state = component['bookForm'].description();
+    const field = fixture.nativeElement.querySelector('textarea');
+    let error = fixture.nativeElement.querySelector('#description-error');
 
-    expect(textareaEl.hasAttribute('aria-errormessage')).toBe(false);
-    expect(textareaEl.hasAttribute('aria-invalid')).toBe(false);
-    expect(textareaMessageEl).toBeNull();
+    expect(field.hasAttribute('aria-errormessage')).toBe(false);
+    expect(field.hasAttribute('aria-invalid')).toBe(false);
+    expect(error).toBeNull();
 
-    descriptionState.markAsTouched();
+    state.markAsTouched();
     await fixture.whenStable();
 
-    textareaMessageEl = fixture.nativeElement.querySelector('#description-error');
-    expect(textareaEl.getAttribute('aria-errormessage')).toBe('description-error');
-    expect(textareaEl.getAttribute('aria-invalid')).toBe('true');
-    expect(textareaMessageEl.textContent).toBe('Description is required.');
+    error = fixture.nativeElement.querySelector('#description-error');
+    expect(field.getAttribute('aria-errormessage')).toBe('description-error');
+    expect(field.getAttribute('aria-invalid')).toBe('true');
+    expect(error.textContent).toBe('Description is required.');
 
-    descriptionState.value.set('my description');
+    state.value.set('my description');
     await fixture.whenStable();
 
-    textareaMessageEl = fixture.nativeElement.querySelector('#description-error');
-    expect(textareaEl.hasAttribute('aria-errormessage')).toBe(false);
-    expect(textareaEl.getAttribute('aria-invalid')).toBe('false');
-    expect(textareaMessageEl).toBeNull();
+    error = fixture.nativeElement.querySelector('#description-error');
+    expect(field.hasAttribute('aria-errormessage')).toBe(false);
+    expect(field.getAttribute('aria-invalid')).toBe('false');
+    expect(error).toBeNull();
   });
 });

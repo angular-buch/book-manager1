@@ -51,14 +51,14 @@ describe('HomePage', () => {
     expect(document.title).toBe('BookManager');
   });
 
-  it('should filter search terms shorter than 3 characters', () => {
+  it('should filter search terms shorter than 3 chars', () => {
     component['searchTerm$'].next('ab');
     vi.advanceTimersByTime(500);
 
     expect(searchFn).not.toHaveBeenCalled();
   });
 
-  it('should search when term is 3 or more characters', () => {
+  it('should search when term is 3 or more chars', () => {
     component['searchTerm$'].next('abc');
     vi.advanceTimersByTime(500);
 
@@ -74,7 +74,7 @@ describe('HomePage', () => {
     expect(searchFn).toHaveBeenCalledExactlyOnceWith('test2');
   });
 
-  it('should not search for duplicate consecutive terms', () => {
+  it('should not search duplicate consecutive terms', () => {
     component['searchTerm$'].next('test');
     vi.advanceTimersByTime(500);
     component['searchTerm$'].next('test2');

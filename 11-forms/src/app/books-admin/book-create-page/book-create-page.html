@@ -12,14 +12,14 @@
 
   <fieldset>
     <legend>Authors</legend>
-    <button type="button" (click)="addAuthorField()">Add Author</button>
+    <button type="button" (click)="addAuthorField()">
+      Add Author
+    </button>
     <div role="group">
       @for (authorField of bookForm.authors; track $index) {
-        <input
-          type="text"
+        <input type="text"
           aria-label="Author {{ $index + 1 }}"
-          [formField]="authorField"
-        />
+          [formField]="authorField" />
       }
     </div>
   </fieldset>

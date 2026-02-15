@@ -30,11 +30,11 @@ export class BookCreatePage {
     {
       submission: {
         action: async (bookForm) => {
-          const formValue = bookForm().value();
-          const authors = formValue.authors.filter(author => !!author);
+          const value = bookForm().value();
+          const authors = value.authors.filter(author => !!author);
 
           const newBook: Book = {
-            ...formValue,
+            ...value,
             authors,
             createdAt: new Date().toISOString()
           };

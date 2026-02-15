@@ -59,8 +59,8 @@ describe('BookCreatePage', () => {
     vi.setSystemTime(new Date('2026-01-15'));
 
     component['bookForm']().value.set(validBook);
-    const formElement = fixture.nativeElement.querySelector('form');
-    formElement.dispatchEvent(new Event('submit'));
+    const formEl = fixture.nativeElement.querySelector('form');
+    formEl.dispatchEvent(new Event('submit'));
 
     expect(createFn).toHaveBeenCalledExactlyOnceWith(
       expect.objectContaining({
@@ -77,8 +77,8 @@ describe('BookCreatePage', () => {
       ['', 'Test Author', '']
     );
 
-    const formElement = fixture.nativeElement.querySelector('form');
-    formElement.dispatchEvent(new Event('submit'));
+    const formEl = fixture.nativeElement.querySelector('form');
+    formEl.dispatchEvent(new Event('submit'));
 
     expect(createFn).toHaveBeenCalledExactlyOnceWith(
       expect.objectContaining({ authors: ['Test Author'] })
@@ -88,8 +88,8 @@ describe('BookCreatePage', () => {
   it('should navigate to created book', async () => {
     const location = TestBed.inject(Location);
 
-    const formElement = fixture.nativeElement.querySelector('form');
-    formElement.dispatchEvent(new Event('submit'));
+    const formEl = fixture.nativeElement.querySelector('form');
+    formEl.dispatchEvent(new Event('submit'));
     await fixture.whenStable();
 
     expect(location.path()).toBe('/books/details/1234567890123');

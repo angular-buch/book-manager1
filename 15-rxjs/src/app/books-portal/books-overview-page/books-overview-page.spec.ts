@@ -99,7 +99,7 @@ describe('BooksOverviewPage', () => {
     expect(component['searchTerm']()).toBe('');
   });
 
-  it('should update searchTerm when query param changes', async () => {
+  it('should update term on query param change', async () => {
     searchSignal.set('Angular');
     await fixture.whenStable();
 
@@ -111,12 +111,12 @@ describe('BooksOverviewPage', () => {
   });
 
   it('should sync searchTerm to URL via Router', async () => {
-    const navigateSpy = vi.spyOn(TestBed.inject(Router), 'navigate');
+    const navSpy = vi.spyOn(TestBed.inject(Router), 'navigate');
 
     component['searchTerm'].set('Angular');
     await fixture.whenStable();
 
-    expect(navigateSpy).toHaveBeenCalledExactlyOnceWith([], {
+    expect(navSpy).toHaveBeenCalledExactlyOnceWith([], {
       queryParams: { search: 'Angular' }
     });
   });
