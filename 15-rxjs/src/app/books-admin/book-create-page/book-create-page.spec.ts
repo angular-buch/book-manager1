@@ -30,7 +30,10 @@ describe('BookCreatePage', () => {
     await TestBed.configureTestingModule({
       imports: [BookCreatePage],
       providers: [
-        { provide: BookStore, useValue: { create: createFn } },
+        {
+          provide: BookStore,
+          useValue: { create: createFn }
+        },
         provideLocationMocks(),
         provideRouter(routes),
       ]

@@ -8,5 +8,5 @@ export const booksAdminRoutes: Routes = [
     path: 'create',
     component: BookCreatePage,
     title: 'Create Book'
-  }
+  },
 ];
