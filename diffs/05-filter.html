@@ -72,7 +72,7 @@
                     <tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line">@@ -15,7 +15,15 @@</div>
+        <div class="d2h-code-side-line">@@ -15,7 +15,13 @@</div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
@@ -111,27 +111,7 @@
     <td class="d2h-del d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">    <del>@for (b of books(); track b.isbn) {</del></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
-            <span class="d2h-code-line-prefix">&nbsp;</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">    <del>@for</del> <del>(b of books(); track b.isbn) {</del></span>
         </div>
     </td>
 </tr><tr>
@@ -275,7 +255,7 @@
     <td class="d2h-ins d2h-change">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    <ins>&lt;input</ins></span>
+            <span class="d2h-code-line-ctn">    <ins>&lt;input</ins> <ins>type=&quot;search&quot;</ins></span>
         </div>
     </td>
 </tr><tr>
@@ -285,7 +265,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      type=&quot;search&quot;</span>
+            <span class="d2h-code-line-ctn">      [value]=&quot;searchTerm()&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -295,7 +275,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      [value]=&quot;searchTerm()&quot;</span>
+            <span class="d2h-code-line-ctn">      (input)=&quot;searchTerm.set($event.target.value)&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -305,7 +285,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      (input)=&quot;searchTerm.set($event.target.value)&quot;</span>
+            <span class="d2h-code-line-ctn">      placeholder=&quot;Search&quot;</span>
         </div>
     </td>
 </tr><tr>
@@ -315,7 +295,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      placeholder=&quot;Search&quot;</span>
+            <span class="d2h-code-line-ctn">      aria-label=&quot;Search&quot; &#x2F;&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -325,7 +305,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      aria-label=&quot;Search&quot;</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -335,32 +315,12 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    &#x2F;&gt;</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      25
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      26
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line">
-            <span class="d2h-code-line-prefix">+</span>
             <span class="d2h-code-line-ctn">    @for (b of filteredBooks(); track b.isbn) {</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      27
+      25
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
@@ -370,7 +330,7 @@
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      28
+      26
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
@@ -380,7 +340,7 @@
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      29
+      27
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line">
