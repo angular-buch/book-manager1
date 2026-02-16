@@ -1391,7 +1391,37 @@
                     <tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line">@@ -0,0 +1,97 @@</div>
+        <div class="d2h-code-side-line">@@ -0,0 +1,100 @@</div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder">
+            <span class="d2h-code-line-prefix">&nbsp;</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
@@ -2704,7 +2734,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        { provide: BookStore, useValue: { create: createFn } },</span>
+            <span class="d2h-code-line-ctn">        {</span>
         </div>
     </td>
 </tr><tr>
@@ -2714,7 +2744,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        provideLocationMocks(),</span>
+            <span class="d2h-code-line-ctn">          provide: BookStore,</span>
         </div>
     </td>
 </tr><tr>
@@ -2724,7 +2754,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        provideRouter(routes),</span>
+            <span class="d2h-code-line-ctn">          useValue: { create: createFn }</span>
         </div>
     </td>
 </tr><tr>
@@ -2734,7 +2764,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      ]</span>
+            <span class="d2h-code-line-ctn">        },</span>
         </div>
     </td>
 </tr><tr>
@@ -2744,7 +2774,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    })</span>
+            <span class="d2h-code-line-ctn">        provideLocationMocks(),</span>
         </div>
     </td>
 </tr><tr>
@@ -2754,7 +2784,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    .compileComponents();</span>
+            <span class="d2h-code-line-ctn">        provideRouter(routes),</span>
         </div>
     </td>
 </tr><tr>
@@ -2764,7 +2794,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">      ]</span>
         </div>
     </td>
 </tr><tr>
@@ -2774,7 +2804,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    fixture = TestBed.createComponent(BookCreatePage);</span>
+            <span class="d2h-code-line-ctn">    })</span>
         </div>
     </td>
 </tr><tr>
@@ -2784,7 +2814,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    component = fixture.componentInstance;</span>
+            <span class="d2h-code-line-ctn">    .compileComponents();</span>
         </div>
     </td>
 </tr><tr>
@@ -2794,7 +2824,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    await fixture.whenStable();</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -2804,7 +2834,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  });</span>
+            <span class="d2h-code-line-ctn">    fixture = TestBed.createComponent(BookCreatePage);</span>
         </div>
     </td>
 </tr><tr>
@@ -2814,7 +2844,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">    component = fixture.componentInstance;</span>
         </div>
     </td>
 </tr><tr>
@@ -2824,7 +2854,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should create&#x27;, () =&gt; {</span>
+            <span class="d2h-code-line-ctn">    await fixture.whenStable();</span>
         </div>
     </td>
 </tr><tr>
@@ -2834,7 +2864,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(component).toBeTruthy();</span>
+            <span class="d2h-code-line-ctn">  });</span>
         </div>
     </td>
 </tr><tr>
@@ -2844,7 +2874,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  });</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -2854,7 +2884,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">  it(&#x27;should create&#x27;, () =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -2864,7 +2894,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should add a new author field&#x27;, async () =&gt; {</span>
+            <span class="d2h-code-line-ctn">    expect(component).toBeTruthy();</span>
         </div>
     </td>
 </tr><tr>
@@ -2874,7 +2904,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    fixture.nativeElement.querySelector(&#x27;fieldset button&#x27;).click();</span>
+            <span class="d2h-code-line-ctn">  });</span>
         </div>
     </td>
 </tr><tr>
@@ -2884,7 +2914,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    await fixture.whenStable();</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -2894,7 +2924,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">  it(&#x27;should add a new author field&#x27;, async () =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -2904,7 +2934,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const authorInputs = fixture.nativeElement.querySelectorAll(&#x27;fieldset input[type=&quot;text&quot;]&#x27;);</span>
+            <span class="d2h-code-line-ctn">    fixture.nativeElement.querySelector(&#x27;fieldset button&#x27;).click();</span>
         </div>
     </td>
 </tr><tr>
@@ -2914,7 +2944,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(authorInputs).toHaveLength(2);</span>
+            <span class="d2h-code-line-ctn">    await fixture.whenStable();</span>
         </div>
     </td>
 </tr><tr>
@@ -2924,7 +2954,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  });</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -2934,7 +2964,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">    const authorInputs = fixture.nativeElement.querySelectorAll(&#x27;fieldset input[type=&quot;text&quot;]&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -2944,7 +2974,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should submit form data&#x27;, () =&gt; {</span>
+            <span class="d2h-code-line-ctn">    expect(authorInputs).toHaveLength(2);</span>
         </div>
     </td>
 </tr><tr>
@@ -2954,7 +2984,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    vi.useFakeTimers();</span>
+            <span class="d2h-code-line-ctn">  });</span>
         </div>
     </td>
 </tr><tr>
@@ -2964,7 +2994,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    vi.setSystemTime(new Date(&#x27;2026-01-15&#x27;));</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -2974,7 +3004,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">  it(&#x27;should submit form data&#x27;, () =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -2984,7 +3014,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    component[&#x27;bookForm&#x27;]().value.set(validBook);</span>
+            <span class="d2h-code-line-ctn">    vi.useFakeTimers();</span>
         </div>
     </td>
 </tr><tr>
@@ -2994,7 +3024,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const formEl = fixture.nativeElement.querySelector(&#x27;form&#x27;);</span>
+            <span class="d2h-code-line-ctn">    vi.setSystemTime(new Date(&#x27;2026-01-15&#x27;));</span>
         </div>
     </td>
 </tr><tr>
@@ -3004,7 +3034,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    formEl.dispatchEvent(new Event(&#x27;submit&#x27;));</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -3014,7 +3044,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">    component[&#x27;bookForm&#x27;]().value.set(validBook);</span>
         </div>
     </td>
 </tr><tr>
@@ -3024,7 +3054,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(createFn).toHaveBeenCalledExactlyOnceWith(</span>
+            <span class="d2h-code-line-ctn">    const formEl = fixture.nativeElement.querySelector(&#x27;form&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -3034,7 +3064,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      expect.objectContaining({</span>
+            <span class="d2h-code-line-ctn">    formEl.dispatchEvent(new Event(&#x27;submit&#x27;));</span>
         </div>
     </td>
 </tr><tr>
@@ -3044,7 +3074,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        ...validBook,</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -3054,7 +3084,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        createdAt: &#x27;2026-01-15T00:00:00.000Z&#x27;</span>
+            <span class="d2h-code-line-ctn">    expect(createFn).toHaveBeenCalledExactlyOnceWith(</span>
         </div>
     </td>
 </tr><tr>
@@ -3064,7 +3094,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      })</span>
+            <span class="d2h-code-line-ctn">      expect.objectContaining({</span>
         </div>
     </td>
 </tr><tr>
@@ -3074,7 +3104,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    );</span>
+            <span class="d2h-code-line-ctn">        ...validBook,</span>
         </div>
     </td>
 </tr><tr>
@@ -3084,7 +3114,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">        createdAt: &#x27;2026-01-15T00:00:00.000Z&#x27;</span>
         </div>
     </td>
 </tr><tr>
@@ -3094,7 +3124,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    vi.useRealTimers();</span>
+            <span class="d2h-code-line-ctn">      })</span>
         </div>
     </td>
 </tr><tr>
@@ -3104,7 +3134,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  });</span>
+            <span class="d2h-code-line-ctn">    );</span>
         </div>
     </td>
 </tr><tr>
@@ -3124,7 +3154,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should filter out empty author data&#x27;, () =&gt; {</span>
+            <span class="d2h-code-line-ctn">    vi.useRealTimers();</span>
         </div>
     </td>
 </tr><tr>
@@ -3134,7 +3164,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    component[&#x27;bookForm&#x27;].authors().value.set(</span>
+            <span class="d2h-code-line-ctn">  });</span>
         </div>
     </td>
 </tr><tr>
@@ -3144,7 +3174,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      [&#x27;&#x27;, &#x27;Test Author&#x27;, &#x27;&#x27;]</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -3154,7 +3184,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    );</span>
+            <span class="d2h-code-line-ctn">  it(&#x27;should filter out empty author data&#x27;, () =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -3164,7 +3194,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">    component[&#x27;bookForm&#x27;].authors().value.set(</span>
         </div>
     </td>
 </tr><tr>
@@ -3174,7 +3204,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const formEl = fixture.nativeElement.querySelector(&#x27;form&#x27;);</span>
+            <span class="d2h-code-line-ctn">      [&#x27;&#x27;, &#x27;Test Author&#x27;, &#x27;&#x27;]</span>
         </div>
     </td>
 </tr><tr>
@@ -3184,7 +3214,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    formEl.dispatchEvent(new Event(&#x27;submit&#x27;));</span>
+            <span class="d2h-code-line-ctn">    );</span>
         </div>
     </td>
 </tr><tr>
@@ -3204,7 +3234,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(createFn).toHaveBeenCalledExactlyOnceWith(</span>
+            <span class="d2h-code-line-ctn">    const formEl = fixture.nativeElement.querySelector(&#x27;form&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -3214,7 +3244,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      expect.objectContaining({ authors: [&#x27;Test Author&#x27;] })</span>
+            <span class="d2h-code-line-ctn">    formEl.dispatchEvent(new Event(&#x27;submit&#x27;));</span>
         </div>
     </td>
 </tr><tr>
@@ -3224,7 +3254,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    );</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -3234,7 +3264,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  });</span>
+            <span class="d2h-code-line-ctn">    expect(createFn).toHaveBeenCalledExactlyOnceWith(</span>
         </div>
     </td>
 </tr><tr>
@@ -3244,7 +3274,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">      expect.objectContaining({ authors: [&#x27;Test Author&#x27;] })</span>
         </div>
     </td>
 </tr><tr>
@@ -3254,7 +3284,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  it(&#x27;should navigate to created book&#x27;, async () =&gt; {</span>
+            <span class="d2h-code-line-ctn">    );</span>
         </div>
     </td>
 </tr><tr>
@@ -3264,7 +3294,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const location = TestBed.inject(Location);</span>
+            <span class="d2h-code-line-ctn">  });</span>
         </div>
     </td>
 </tr><tr>
@@ -3284,7 +3314,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const formEl = fixture.nativeElement.querySelector(&#x27;form&#x27;);</span>
+            <span class="d2h-code-line-ctn">  it(&#x27;should navigate to created book&#x27;, async () =&gt; {</span>
         </div>
     </td>
 </tr><tr>
@@ -3294,7 +3324,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    formEl.dispatchEvent(new Event(&#x27;submit&#x27;));</span>
+            <span class="d2h-code-line-ctn">    const location = TestBed.inject(Location);</span>
         </div>
     </td>
 </tr><tr>
@@ -3304,7 +3334,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    await fixture.whenStable();</span>
+            <span class="d2h-code-line-ctn"><br></span>
         </div>
     </td>
 </tr><tr>
@@ -3314,7 +3344,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><br></span>
+            <span class="d2h-code-line-ctn">    const formEl = fixture.nativeElement.querySelector(&#x27;form&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -3324,7 +3354,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    expect(location.path()).toBe(&#x27;&#x2F;books&#x2F;details&#x2F;1234567890123&#x27;);</span>
+            <span class="d2h-code-line-ctn">    formEl.dispatchEvent(new Event(&#x27;submit&#x27;));</span>
         </div>
     </td>
 </tr><tr>
@@ -3334,12 +3364,42 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  });</span>
+            <span class="d2h-code-line-ctn">    await fixture.whenStable();</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-ins">
       97
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn"><br></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      98
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    expect(location.path()).toBe(&#x27;&#x2F;books&#x2F;details&#x2F;1234567890123&#x27;);</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      99
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">  });</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      100
     </td>
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
