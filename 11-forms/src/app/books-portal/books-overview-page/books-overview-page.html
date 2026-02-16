@@ -19,13 +19,11 @@
   </button>
 
   <div>
-    <input
-      type="search"
+    <input type="search"
       [value]="searchTerm()"
       (input)="searchTerm.set($event.target.value)"
       placeholder="Search"
-      aria-label="Search"
-    />
+      aria-label="Search" />
 
     @for (b of filteredBooks(); track b.isbn) {
       <app-book-card [book]="b" (like)="addLikedBook($event)" />
