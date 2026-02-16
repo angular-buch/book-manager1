@@ -83,14 +83,6 @@ describe('BooksOverviewPage', () => {
     expect(cardEls[1].textContent).toContain('Backen mit Affen');
   });
 
-  it('should load BooksOverviewPage for /books', async () => {
-    const harness = await RouterTestingHarness.create();
-    const component = await harness.navigateByUrl('/books', BooksOverviewPage);
-
-    expect(component).toBeTruthy();
-    expect(document.title).toBe('Books');
-  });
-
   it('should ask service initially for books', async () => {
     expect(getAllFn).toHaveBeenCalledExactlyOnceWith(
       expect.objectContaining({ params: '' })
@@ -119,5 +111,13 @@ describe('BooksOverviewPage', () => {
     expect(navSpy).toHaveBeenCalledExactlyOnceWith([], {
       queryParams: { search: 'Angular' }
     });
+  });
+
+  it('should load BooksOverviewPage for /books', async () => {
+    const harness = await RouterTestingHarness.create();
+    const component = await harness.navigateByUrl('/books', BooksOverviewPage);
+
+    expect(component).toBeTruthy();
+    expect(document.title).toBe('Books');
   });
 });
