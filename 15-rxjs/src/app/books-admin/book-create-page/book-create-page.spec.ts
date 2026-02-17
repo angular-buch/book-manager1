@@ -5,7 +5,6 @@ import { provideRouter } from '@angular/router';
 import { Mock } from 'vitest';
 
 import { routes } from '../../app.routes';
-import { Book } from '../../shared/book';
 import { BookStore } from '../../shared/book-store';
 import { BookCreatePage } from './book-create-page';
 
