@@ -1,7 +1,7 @@
 # BookManager (15-rxjs)
 **[⭐️ Live Demo](https://bm1.angular-buch.com/15-rxjs/)**
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0-next.2.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0-rc.0.
 
 ## Development server
 
