@@ -1191,7 +1191,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      @for (authorField of bookForm.authors; track $index) {</span>
+            <span class="d2h-code-line-ctn">      @for (author of bookForm.authors; track author) {</span>
         </div>
     </td>
 </tr><tr>
@@ -1221,7 +1221,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">          [formField]=&quot;authorField&quot; &#x2F;&gt;</span>
+            <span class="d2h-code-line-ctn">          [formField]=&quot;author&quot; &#x2F;&gt;</span>
         </div>
     </td>
 </tr><tr>
