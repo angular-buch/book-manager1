@@ -39,10 +39,10 @@
     </button>
     @let authorsInvalid = isInvalid(bookForm.authors);
     <div role="group">
-      @for (authorField of bookForm.authors; track $index) {
+      @for (author of bookForm.authors; track author) {
         <input type="text"
           aria-label="Author {{ $index + 1 }}"
-          [formField]="authorField"
+          [formField]="author"
           [aria-errormessage]="authorsInvalid ? 'authors-error' : null"
           [aria-invalid]="authorsInvalid" />
       }
