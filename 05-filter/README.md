@@ -1,7 +1,7 @@
 # BookManager (05-filter)
 **[⭐️ Live Demo](https://bm1.angular-buch.com/05-filter/)**
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.0-next.4.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.0-next.5.
 
 ## Development server
 
