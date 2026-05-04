@@ -1,0 +1,2 @@
+import {v,at as vo,au as Gd,av as Lf,a7 as q}from'./main-Y3SZIB44.js';var n=class o{#o=v(vo);#t="https://api1.angular-buch.com";getAll(t){return Gd(()=>({url:`${this.#t}/books`,params:{filter:t()}}),{defaultValue:[]})}getSingle(t){return Gd(()=>`${this.#t}/books/${t()}`)}remove(t){return this.#o.delete(`${this.#t}/books/${t}`)}create(t){return Lf(this.#o.post(`${this.#t}/books`,t))}static \u0275fac=function(p){return new(p||o)};static \u0275prov=q({token:o,factory:o.\u0275fac,providedIn:"root"})};
+export{n};
