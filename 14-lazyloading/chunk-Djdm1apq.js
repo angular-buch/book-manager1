@@ -1,1 +1,0 @@
-import {l as ly,A as Ad,Y as Yy,R as Rd}from'./main-Y3SZIB44.js';var i=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=ly({type:t,selectors:[["app-home-page"]],decls:2,vars:0,template:function(e,s){e&1&&(Ad(0,"h1"),Yy(1,"Welcome to the BookManager!"),Rd());},encapsulation:2})};export{i as HomePage};
