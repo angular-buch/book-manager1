@@ -1,12 +1,10 @@
-import { inject, Injectable } from '@angular/core';
+import { inject, Service } from '@angular/core';
 import { HttpClient, httpResource, HttpResourceRef } from '@angular/common/http';
 import { firstValueFrom, Observable } from 'rxjs';
 
 import { Book } from './book';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Service()
 export class BookStore {
   #http = inject(HttpClient);
   #apiUrl = 'https://api1.angular-buch.com';
