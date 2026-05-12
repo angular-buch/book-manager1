@@ -1,2 +1,0 @@
-import {E,at as Do,au as Gd,av as Hf,aw as _h}from'./main-CCRJ6XWM.js';var n=class o{#o=E(Do);#t="https://api1.angular-buch.com";getAll(t){return Gd(()=>({url:`${this.#t}/books`,params:{filter:t()}}),{defaultValue:[]})}getSingle(t){return Gd(()=>`${this.#t}/books/${t()}`)}remove(t){return this.#o.delete(`${this.#t}/books/${t}`)}create(t){return Hf(this.#o.post(`${this.#t}/books`,t))}static \u0275fac=function(c){return new(c||o)};static \u0275prov=_h({token:o,factory:o.\u0275fac})};
-export{n};
