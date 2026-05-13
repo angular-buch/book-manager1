@@ -1,0 +1,1332 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <title>BookManager 1</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+  <meta name="description" content="Begleitmaterial zum BookManager-Beispielprojekt aus dem Angular-Buch: Demos, Quelltext und Diff-Ansichten zu allen Entwicklungsstufen.">
+  <link href="/assets/favicon.ico" rel="icon" type="image/x-icon" />
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero card" aria-labelledby="page-title">
+  <div class="hero__image">
+    <img
+      src="assets/book-cover-v1m.png"
+      alt="Coverbild des Angular-Buchs"
+      width="200"
+    />
+  </div>
+  <div class="hero__text">
+    <h1 id="page-title">BookManager 1</h1>
+    <p>
+      Auf dieser Seite findest du alle Ressourcen rund um das Beispielprojekt
+      <strong>BookManager</strong> aus dem Angular-Buch. Neben einer Live-Demo
+      kannst du die Änderungen am Quellcode mit unserer Differenzansicht
+      nachvollziehen.
+    </p>
+    <p>
+      Alle Infos zum Buch findest du auf unserer Website:
+      <a
+        href="https://angular-buch.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        >angular-buch.com</a
+      >
+    </p>
+  </div>
+</header>
+
+<section class="card" aria-labelledby="zwischenstaende-title">
+  <h2 id="zwischenstaende-title">Alle Zwischenstände</h2>
+  <p>
+    Hier findest du eine Übersicht aller Entwicklungsstufen des
+    BookManager-Projekts. Jede Stufe zeigt die schrittweisen Änderungen im Code,
+    sodass du die Entwicklung der Anwendung nachvollziehen kannst. Außerdem
+    findest du hier den Quellcode und eine Live-Demo der einzelnen
+    Entwicklungsstufen.
+  </p>
+  <p>
+    <a
+      href="https://github.com/angular-buch/book-manager1/archive/refs/heads/main.zip"
+      class="button button--secondary icon zip"
+    >
+      Gesamtes Repository als ZIP herunterladen
+    </a>
+  </p>
+</section>
+
+<ul
+  class="projects"
+  role="list"
+  aria-label="Entwicklungsstufen des BookManagers"
+>
+  
+  <li class="card project" id="bm01">
+    <div class="project__header">
+      <div class="project__title_group">
+        <h3 class="project__title">
+          <a
+            href="#bm01"
+            class="project__anchor"
+            aria-label="Direktlink zu 01-components"
+            >#</a
+          >
+          01-components
+        </h3>
+        
+        <p class="project__chapter">
+          <strong>Kapitel 6</strong>
+          <span class="project__chapter-page"
+            >(Seite 81)</span
+          >
+          <span class="project__chapter-sep" aria-hidden="true"> – </span>
+          <span class="project__chapter-title"
+            >Buchliste anzeigen</span
+          >
+        </p>
+         
+      </div>
+      <a
+        href="https://bm1.angular-buch.com/01-components/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button icon demo project__demo"
+      >
+        <span class="project__demo-label">Demo</span>
+      </a>
+      
+    </div>
+
+    
+    <p class="project__description">Erste Schritte mit Komponenten und Signals: Wir bauen die Buchliste als Komponente auf und nutzen Property Bindings, um Daten an das Template zu übergeben.</p>
+     
+
+    <ul
+      class="project__links"
+      role="list"
+      aria-label="Links zu 01-components"
+    >
+      <li>
+        <a
+          href="https://github.com/angular-buch/book-manager1/tree/main/01-components"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon github"
+        >
+          Code auf GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://stackblitz.com/fork/github/angular-buch/book-manager1/tree/main/01-components"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon stackblitz"
+        >
+          Mit StackBlitz starten
+        </a>
+      </li>
+      <li>
+        <a
+          href="/diffs/01-components.html"
+          class="button button--secondary icon diff"
+        >
+          Diff
+        </a>
+      </li>
+    </ul>
+  </li>
+  
+  <li class="card project" id="bm02">
+    <div class="project__header">
+      <div class="project__title_group">
+        <h3 class="project__title">
+          <a
+            href="#bm02"
+            class="project__anchor"
+            aria-label="Direktlink zu 02-inputs"
+            >#</a
+          >
+          02-inputs
+        </h3>
+        
+        <p class="project__chapter">
+          <strong>Kapitel 8</strong>
+          <span class="project__chapter-page"
+            >(Seite 107)</span
+          >
+          <span class="project__chapter-sep" aria-hidden="true"> – </span>
+          <span class="project__chapter-title"
+            >Komponenten aufteilen</span
+          >
+        </p>
+         
+      </div>
+      <a
+        href="https://bm1.angular-buch.com/02-inputs/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button icon demo project__demo"
+      >
+        <span class="project__demo-label">Demo</span>
+      </a>
+      
+    </div>
+
+    
+    <p class="project__description">Wir zerlegen die Anwendung in mehrere Komponenten und übergeben Daten von einer Eltern- an eine Kindkomponente per Input.</p>
+     
+
+    <ul
+      class="project__links"
+      role="list"
+      aria-label="Links zu 02-inputs"
+    >
+      <li>
+        <a
+          href="https://github.com/angular-buch/book-manager1/tree/main/02-inputs"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon github"
+        >
+          Code auf GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://stackblitz.com/fork/github/angular-buch/book-manager1/tree/main/02-inputs"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon stackblitz"
+        >
+          Mit StackBlitz starten
+        </a>
+      </li>
+      <li>
+        <a
+          href="/diffs/02-inputs.html"
+          class="button button--secondary icon diff"
+        >
+          Diff
+        </a>
+      </li>
+    </ul>
+  </li>
+  
+  <li class="card project" id="bm03">
+    <div class="project__header">
+      <div class="project__title_group">
+        <h3 class="project__title">
+          <a
+            href="#bm03"
+            class="project__anchor"
+            aria-label="Direktlink zu 03-outputs"
+            >#</a
+          >
+          03-outputs
+        </h3>
+        
+        <p class="project__chapter">
+          <strong>Kapitel 10</strong>
+          <span class="project__chapter-page"
+            >(Seite 125)</span
+          >
+          <span class="project__chapter-sep" aria-hidden="true"> – </span>
+          <span class="project__chapter-title"
+            >Favoritenliste erstellen</span
+          >
+        </p>
+         
+      </div>
+      <a
+        href="https://bm1.angular-buch.com/03-outputs/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button icon demo project__demo"
+      >
+        <span class="project__demo-label">Demo</span>
+      </a>
+      
+    </div>
+
+    
+    <p class="project__description">Mit Outputs reichen wir Events aus Kindkomponenten an die Eltern weiter. So entsteht eine Favoritenliste, die per Klick befüllt wird.</p>
+     
+
+    <ul
+      class="project__links"
+      role="list"
+      aria-label="Links zu 03-outputs"
+    >
+      <li>
+        <a
+          href="https://github.com/angular-buch/book-manager1/tree/main/03-outputs"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon github"
+        >
+          Code auf GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://stackblitz.com/fork/github/angular-buch/book-manager1/tree/main/03-outputs"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon stackblitz"
+        >
+          Mit StackBlitz starten
+        </a>
+      </li>
+      <li>
+        <a
+          href="/diffs/03-outputs.html"
+          class="button button--secondary icon diff"
+        >
+          Diff
+        </a>
+      </li>
+    </ul>
+  </li>
+  
+  <li class="card project" id="bm04">
+    <div class="project__header">
+      <div class="project__title_group">
+        <h3 class="project__title">
+          <a
+            href="#bm04"
+            class="project__anchor"
+            aria-label="Direktlink zu 04-services"
+            >#</a
+          >
+          04-services
+        </h3>
+        
+        <p class="project__chapter">
+          <strong>Kapitel 12</strong>
+          <span class="project__chapter-page"
+            >(Seite 145)</span
+          >
+          <span class="project__chapter-sep" aria-hidden="true"> – </span>
+          <span class="project__chapter-title"
+            >Services nutzen</span
+          >
+        </p>
+         
+      </div>
+      <a
+        href="https://bm1.angular-buch.com/04-services/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button icon demo project__demo"
+      >
+        <span class="project__demo-label">Demo</span>
+      </a>
+      
+    </div>
+
+    
+    <p class="project__description">Mit Services entkoppeln wir die Businesslogik von den Komponenten. Wir verwenden Dependency Injection, um den Service in unsere Komponenten einzubinden.</p>
+     
+
+    <ul
+      class="project__links"
+      role="list"
+      aria-label="Links zu 04-services"
+    >
+      <li>
+        <a
+          href="https://github.com/angular-buch/book-manager1/tree/main/04-services"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon github"
+        >
+          Code auf GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://stackblitz.com/fork/github/angular-buch/book-manager1/tree/main/04-services"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon stackblitz"
+        >
+          Mit StackBlitz starten
+        </a>
+      </li>
+      <li>
+        <a
+          href="/diffs/04-services.html"
+          class="button button--secondary icon diff"
+        >
+          Diff
+        </a>
+      </li>
+    </ul>
+  </li>
+  
+  <li class="card project" id="bm05">
+    <div class="project__header">
+      <div class="project__title_group">
+        <h3 class="project__title">
+          <a
+            href="#bm05"
+            class="project__anchor"
+            aria-label="Direktlink zu 05-filter"
+            >#</a
+          >
+          05-filter
+        </h3>
+        
+        <p class="project__chapter">
+          <strong>Kapitel 14</strong>
+          <span class="project__chapter-page"
+            >(Seite 161)</span
+          >
+          <span class="project__chapter-sep" aria-hidden="true"> – </span>
+          <span class="project__chapter-title"
+            >Bücher lokal suchen</span
+          >
+        </p>
+         
+      </div>
+      <a
+        href="https://bm1.angular-buch.com/05-filter/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button icon demo project__demo"
+      >
+        <span class="project__demo-label">Demo</span>
+      </a>
+      
+    </div>
+
+    
+    <p class="project__description">Mit einem reaktiven Datenfluss aus Signals und Computed Signals filtern wir die Buchliste lokal nach einem Suchbegriff.</p>
+     
+
+    <ul
+      class="project__links"
+      role="list"
+      aria-label="Links zu 05-filter"
+    >
+      <li>
+        <a
+          href="https://github.com/angular-buch/book-manager1/tree/main/05-filter"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon github"
+        >
+          Code auf GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://stackblitz.com/fork/github/angular-buch/book-manager1/tree/main/05-filter"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon stackblitz"
+        >
+          Mit StackBlitz starten
+        </a>
+      </li>
+      <li>
+        <a
+          href="/diffs/05-filter.html"
+          class="button button--secondary icon diff"
+        >
+          Diff
+        </a>
+      </li>
+    </ul>
+  </li>
+  
+  <li class="card project" id="bm06">
+    <div class="project__header">
+      <div class="project__title_group">
+        <h3 class="project__title">
+          <a
+            href="#bm06"
+            class="project__anchor"
+            aria-label="Direktlink zu 06-routing"
+            >#</a
+          >
+          06-routing
+        </h3>
+        
+        <p class="project__chapter">
+          <strong>Kapitel 16</strong>
+          <span class="project__chapter-page"
+            >(Seite 187)</span
+          >
+          <span class="project__chapter-sep" aria-hidden="true"> – </span>
+          <span class="project__chapter-title"
+            >Routing</span
+          >
+        </p>
+         
+      </div>
+      <a
+        href="https://bm1.angular-buch.com/06-routing/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button icon demo project__demo"
+      >
+        <span class="project__demo-label">Demo</span>
+      </a>
+      
+    </div>
+
+    
+    <p class="project__description">Wir lernen den Angular-Router kennen und navigieren zwischen mehreren Seiten der Anwendung.</p>
+     
+
+    <ul
+      class="project__links"
+      role="list"
+      aria-label="Links zu 06-routing"
+    >
+      <li>
+        <a
+          href="https://github.com/angular-buch/book-manager1/tree/main/06-routing"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon github"
+        >
+          Code auf GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://stackblitz.com/fork/github/angular-buch/book-manager1/tree/main/06-routing"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon stackblitz"
+        >
+          Mit StackBlitz starten
+        </a>
+      </li>
+      <li>
+        <a
+          href="/diffs/06-routing.html"
+          class="button button--secondary icon diff"
+        >
+          Diff
+        </a>
+      </li>
+    </ul>
+  </li>
+  
+  <li class="card project" id="bm07">
+    <div class="project__header">
+      <div class="project__title_group">
+        <h3 class="project__title">
+          <a
+            href="#bm07"
+            class="project__anchor"
+            aria-label="Direktlink zu 07-inputparams"
+            >#</a
+          >
+          07-inputparams
+        </h3>
+        
+        <p class="project__chapter">
+          <strong>Kapitel 18</strong>
+          <span class="project__chapter-page"
+            >(Seite 213)</span
+          >
+          <span class="project__chapter-sep" aria-hidden="true"> – </span>
+          <span class="project__chapter-title"
+            >Component Input Binding</span
+          >
+        </p>
+         
+      </div>
+      <a
+        href="https://bm1.angular-buch.com/07-inputparams/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button icon demo project__demo"
+      >
+        <span class="project__demo-label">Demo</span>
+      </a>
+      
+    </div>
+
+    
+    <p class="project__description">Per Component Input Binding lesen wir Routenparameter direkt als Inputs in der Zielkomponente aus.</p>
+     
+
+    <ul
+      class="project__links"
+      role="list"
+      aria-label="Links zu 07-inputparams"
+    >
+      <li>
+        <a
+          href="https://github.com/angular-buch/book-manager1/tree/main/07-inputparams"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon github"
+        >
+          Code auf GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://stackblitz.com/fork/github/angular-buch/book-manager1/tree/main/07-inputparams"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon stackblitz"
+        >
+          Mit StackBlitz starten
+        </a>
+      </li>
+      <li>
+        <a
+          href="/diffs/07-inputparams.html"
+          class="button button--secondary icon diff"
+        >
+          Diff
+        </a>
+      </li>
+    </ul>
+  </li>
+  
+  <li class="card project" id="bm08">
+    <div class="project__header">
+      <div class="project__title_group">
+        <h3 class="project__title">
+          <a
+            href="#bm08"
+            class="project__anchor"
+            aria-label="Direktlink zu 08-http"
+            >#</a
+          >
+          08-http
+        </h3>
+        
+        <p class="project__chapter">
+          <strong>Kapitel 20</strong>
+          <span class="project__chapter-page"
+            >(Seite 229)</span
+          >
+          <span class="project__chapter-sep" aria-hidden="true"> – </span>
+          <span class="project__chapter-title"
+            >Daten per HTTP abrufen</span
+          >
+        </p>
+         
+      </div>
+      <a
+        href="https://bm1.angular-buch.com/08-http/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button icon demo project__demo"
+      >
+        <span class="project__demo-label">Demo</span>
+      </a>
+      
+    </div>
+
+    
+    <p class="project__description">Statt Beispieldaten greifen wir nun per HttpClient auf eine echte Web-API zu und verarbeiten die Antworten in der Anwendung.</p>
+     
+
+    <ul
+      class="project__links"
+      role="list"
+      aria-label="Links zu 08-http"
+    >
+      <li>
+        <a
+          href="https://github.com/angular-buch/book-manager1/tree/main/08-http"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon github"
+        >
+          Code auf GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://stackblitz.com/fork/github/angular-buch/book-manager1/tree/main/08-http"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon stackblitz"
+        >
+          Mit StackBlitz starten
+        </a>
+      </li>
+      <li>
+        <a
+          href="/diffs/08-http.html"
+          class="button button--secondary icon diff"
+        >
+          Diff
+        </a>
+      </li>
+    </ul>
+  </li>
+  
+  <li class="card project" id="bm09">
+    <div class="project__header">
+      <div class="project__title_group">
+        <h3 class="project__title">
+          <a
+            href="#bm09"
+            class="project__anchor"
+            aria-label="Direktlink zu 09-resource"
+            >#</a
+          >
+          09-resource
+        </h3>
+        
+        <p class="project__chapter">
+          <strong>Kapitel 22</strong>
+          <span class="project__chapter-page"
+            >(Seite 261)</span
+          >
+          <span class="project__chapter-sep" aria-hidden="true"> – </span>
+          <span class="project__chapter-title"
+            >HTTP mit der Resource API</span
+          >
+        </p>
+         
+      </div>
+      <a
+        href="https://bm1.angular-buch.com/09-resource/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button icon demo project__demo"
+      >
+        <span class="project__demo-label">Demo</span>
+      </a>
+      
+    </div>
+
+    
+    <p class="project__description">Die Resource API verbindet HTTP-Anfragen mit Signals. Wir nutzen sie, um Daten asynchron abzurufen und Zustände wie Laden oder Fehler reaktiv abzubilden.</p>
+     
+
+    <ul
+      class="project__links"
+      role="list"
+      aria-label="Links zu 09-resource"
+    >
+      <li>
+        <a
+          href="https://github.com/angular-buch/book-manager1/tree/main/09-resource"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon github"
+        >
+          Code auf GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://stackblitz.com/fork/github/angular-buch/book-manager1/tree/main/09-resource"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon stackblitz"
+        >
+          Mit StackBlitz starten
+        </a>
+      </li>
+      <li>
+        <a
+          href="/diffs/09-resource.html"
+          class="button button--secondary icon diff"
+        >
+          Diff
+        </a>
+      </li>
+    </ul>
+  </li>
+  
+  <li class="card project" id="bm10">
+    <div class="project__header">
+      <div class="project__title_group">
+        <h3 class="project__title">
+          <a
+            href="#bm10"
+            class="project__anchor"
+            aria-label="Direktlink zu 10-pipes"
+            >#</a
+          >
+          10-pipes
+        </h3>
+        
+        <p class="project__chapter">
+          <strong>Kapitel 24</strong>
+          <span class="project__chapter-page"
+            >(Seite 293)</span
+          >
+          <span class="project__chapter-sep" aria-hidden="true"> – </span>
+          <span class="project__chapter-title"
+            >Pipes verwenden</span
+          >
+        </p>
+         
+      </div>
+      <a
+        href="https://bm1.angular-buch.com/10-pipes/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button icon demo project__demo"
+      >
+        <span class="project__demo-label">Demo</span>
+      </a>
+      
+    </div>
+
+    
+    <p class="project__description">Mit Pipes formatieren wir Datumsangaben direkt im Template. Außerdem schreiben wir eine eigene Pipe zur Formatierung der ISBN.</p>
+     
+
+    <ul
+      class="project__links"
+      role="list"
+      aria-label="Links zu 10-pipes"
+    >
+      <li>
+        <a
+          href="https://github.com/angular-buch/book-manager1/tree/main/10-pipes"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon github"
+        >
+          Code auf GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://stackblitz.com/fork/github/angular-buch/book-manager1/tree/main/10-pipes"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon stackblitz"
+        >
+          Mit StackBlitz starten
+        </a>
+      </li>
+      <li>
+        <a
+          href="/diffs/10-pipes.html"
+          class="button button--secondary icon diff"
+        >
+          Diff
+        </a>
+      </li>
+    </ul>
+  </li>
+  
+  <li class="card project" id="bm11">
+    <div class="project__header">
+      <div class="project__title_group">
+        <h3 class="project__title">
+          <a
+            href="#bm11"
+            class="project__anchor"
+            aria-label="Direktlink zu 11-forms"
+            >#</a
+          >
+          11-forms
+        </h3>
+        
+        <p class="project__chapter">
+          <strong>Kapitel 26</strong>
+          <span class="project__chapter-page"
+            >(Seite 333)</span
+          >
+          <span class="project__chapter-sep" aria-hidden="true"> – </span>
+          <span class="project__chapter-title"
+            >Buchdaten im Formular erfassen</span
+          >
+        </p>
+         
+      </div>
+      <a
+        href="https://bm1.angular-buch.com/11-forms/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button icon demo project__demo"
+      >
+        <span class="project__demo-label">Demo</span>
+      </a>
+      
+    </div>
+
+    
+    <p class="project__description">Mit dem neuen Ansatz Signal Forms erfassen wir Buchdaten über ein Formular und binden die Werte reaktiv an Signals.</p>
+     
+
+    <ul
+      class="project__links"
+      role="list"
+      aria-label="Links zu 11-forms"
+    >
+      <li>
+        <a
+          href="https://github.com/angular-buch/book-manager1/tree/main/11-forms"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon github"
+        >
+          Code auf GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://stackblitz.com/fork/github/angular-buch/book-manager1/tree/main/11-forms"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon stackblitz"
+        >
+          Mit StackBlitz starten
+        </a>
+      </li>
+      <li>
+        <a
+          href="/diffs/11-forms.html"
+          class="button button--secondary icon diff"
+        >
+          Diff
+        </a>
+      </li>
+    </ul>
+  </li>
+  
+  <li class="card project" id="bm12">
+    <div class="project__header">
+      <div class="project__title_group">
+        <h3 class="project__title">
+          <a
+            href="#bm12"
+            class="project__anchor"
+            aria-label="Direktlink zu 12-validation"
+            >#</a
+          >
+          12-validation
+        </h3>
+        
+        <p class="project__chapter">
+          <strong>Kapitel 27</strong>
+          <span class="project__chapter-page"
+            >(Seite 351)</span
+          >
+          <span class="project__chapter-sep" aria-hidden="true"> – </span>
+          <span class="project__chapter-title"
+            >Formulareingaben validieren</span
+          >
+        </p>
+         
+      </div>
+      <a
+        href="https://bm1.angular-buch.com/12-validation/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button icon demo project__demo"
+      >
+        <span class="project__demo-label">Demo</span>
+      </a>
+      
+    </div>
+
+    
+    <p class="project__description">Über ein Schema definieren wir Validierungsregeln für unsere Signal Forms und zeigen verständliche Fehlermeldungen an.</p>
+     
+
+    <ul
+      class="project__links"
+      role="list"
+      aria-label="Links zu 12-validation"
+    >
+      <li>
+        <a
+          href="https://github.com/angular-buch/book-manager1/tree/main/12-validation"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon github"
+        >
+          Code auf GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://stackblitz.com/fork/github/angular-buch/book-manager1/tree/main/12-validation"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon stackblitz"
+        >
+          Mit StackBlitz starten
+        </a>
+      </li>
+      <li>
+        <a
+          href="/diffs/12-validation.html"
+          class="button button--secondary icon diff"
+        >
+          Diff
+        </a>
+      </li>
+    </ul>
+  </li>
+  
+  <li class="card project" id="bm13">
+    <div class="project__header">
+      <div class="project__title_group">
+        <h3 class="project__title">
+          <a
+            href="#bm13"
+            class="project__anchor"
+            aria-label="Direktlink zu 13-search"
+            >#</a
+          >
+          13-search
+        </h3>
+        
+        <p class="project__chapter">
+          <strong>Kapitel 28</strong>
+          <span class="project__chapter-page"
+            >(Seite 365)</span
+          >
+          <span class="project__chapter-sep" aria-hidden="true"> – </span>
+          <span class="project__chapter-title"
+            >Suche auf dem Server</span
+          >
+        </p>
+         
+      </div>
+      <a
+        href="https://bm1.angular-buch.com/13-search/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button icon demo project__demo"
+      >
+        <span class="project__demo-label">Demo</span>
+      </a>
+      
+    </div>
+
+    
+    <p class="project__description">Wir verlagern die Suche vom Client auf den Server und übergeben den Suchbegriff als Parameter an die HTTP-Schnittstelle.</p>
+     
+
+    <ul
+      class="project__links"
+      role="list"
+      aria-label="Links zu 13-search"
+    >
+      <li>
+        <a
+          href="https://github.com/angular-buch/book-manager1/tree/main/13-search"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon github"
+        >
+          Code auf GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://stackblitz.com/fork/github/angular-buch/book-manager1/tree/main/13-search"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon stackblitz"
+        >
+          Mit StackBlitz starten
+        </a>
+      </li>
+      <li>
+        <a
+          href="/diffs/13-search.html"
+          class="button button--secondary icon diff"
+        >
+          Diff
+        </a>
+      </li>
+    </ul>
+  </li>
+  
+  <li class="card project" id="bm14">
+    <div class="project__header">
+      <div class="project__title_group">
+        <h3 class="project__title">
+          <a
+            href="#bm14"
+            class="project__anchor"
+            aria-label="Direktlink zu 14-lazyloading"
+            >#</a
+          >
+          14-lazyloading
+        </h3>
+        
+        <p class="project__chapter">
+          <strong>Kapitel 30</strong>
+          <span class="project__chapter-page"
+            >(Seite 395)</span
+          >
+          <span class="project__chapter-sep" aria-hidden="true"> – </span>
+          <span class="project__chapter-title"
+            >Lazy Loading implementieren</span
+          >
+        </p>
+         
+      </div>
+      <a
+        href="https://bm1.angular-buch.com/14-lazyloading/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button icon demo project__demo"
+      >
+        <span class="project__demo-label">Demo</span>
+      </a>
+      
+    </div>
+
+    
+    <p class="project__description">Mit Lazy Loading teilen wir die Anwendung in mehrere Bundles auf, die zur Laufzeit nachgeladen werden. Das verkürzt die initiale Ladezeit.</p>
+     
+
+    <ul
+      class="project__links"
+      role="list"
+      aria-label="Links zu 14-lazyloading"
+    >
+      <li>
+        <a
+          href="https://github.com/angular-buch/book-manager1/tree/main/14-lazyloading"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon github"
+        >
+          Code auf GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://stackblitz.com/fork/github/angular-buch/book-manager1/tree/main/14-lazyloading"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon stackblitz"
+        >
+          Mit StackBlitz starten
+        </a>
+      </li>
+      <li>
+        <a
+          href="/diffs/14-lazyloading.html"
+          class="button button--secondary icon diff"
+        >
+          Diff
+        </a>
+      </li>
+    </ul>
+  </li>
+  
+  <li class="card project" id="bm15">
+    <div class="project__header">
+      <div class="project__title_group">
+        <h3 class="project__title">
+          <a
+            href="#bm15"
+            class="project__anchor"
+            aria-label="Direktlink zu 15-rxjs"
+            >#</a
+          >
+          15-rxjs
+        </h3>
+        
+        <p class="project__chapter">
+          <strong>Kapitel 32</strong>
+          <span class="project__chapter-page"
+            >(Seite 443)</span
+          >
+          <span class="project__chapter-sep" aria-hidden="true"> – </span>
+          <span class="project__chapter-title"
+            >Typeahead-Suche</span
+          >
+        </p>
+         
+      </div>
+      <a
+        href="https://bm1.angular-buch.com/15-rxjs/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button icon demo project__demo"
+      >
+        <span class="project__demo-label">Demo</span>
+      </a>
+      
+    </div>
+
+    
+    <p class="project__description">Mit RxJS, Observables und Operatoren bauen wir eine Typeahead-Suche, die Eingaben entkoppelt verarbeitet und unnötige HTTP-Anfragen vermeidet.</p>
+     
+
+    <ul
+      class="project__links"
+      role="list"
+      aria-label="Links zu 15-rxjs"
+    >
+      <li>
+        <a
+          href="https://github.com/angular-buch/book-manager1/tree/main/15-rxjs"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon github"
+        >
+          Code auf GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://stackblitz.com/fork/github/angular-buch/book-manager1/tree/main/15-rxjs"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--secondary icon stackblitz"
+        >
+          Mit StackBlitz starten
+        </a>
+      </li>
+      <li>
+        <a
+          href="/diffs/15-rxjs.html"
+          class="button button--secondary icon diff"
+        >
+          Diff
+        </a>
+      </li>
+    </ul>
+  </li>
+  
+</ul>
+
+<section class="card" aria-labelledby="api-title">
+  <h2 id="api-title">BookManager API</h2>
+  <p>
+    Als zentrale Datenquelle dient uns die BookManager API. Wir stellen eine gehostete Instanz der HTTP-Schnittstelle bereit:
+  </p>
+  <ul class="link-list">
+    <li>
+      <a
+        href="https://api1.angular-buch.com"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        >Oberfläche der API</a
+      >
+    </li>
+  </ul>
+</section>
+
+<section class="card" aria-labelledby="styles-title">
+  <h2 id="styles-title">BookManager 1 Styles</h2>
+  <p>
+    Der BookManager verwendet vorbereitete Stylesheets. Den Quelltext stellen
+    wir hier bereit:
+  </p>
+  <ul class="link-list">
+    <li>
+      <a
+        href="https://www.npmjs.com/package/@angular-buch/styles"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Paket <code>@angular-buch/styles</code> auf NPM</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://github.com/angular-buch/styles"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Quelltext auf GitHub</a
+      >
+    </li>
+  </ul>
+</section>
+
+<section class="card card--notice" aria-labelledby="auflage-title">
+  <h2 id="auflage-title">
+    <span aria-hidden="true">⚠️</span>
+    <span class="visually-hidden">Achtung: </span>
+    Hinweis zur 1. Auflage (2026)
+  </h2>
+  <p>
+    Dies ist das Beispielprojekt <strong>BookManager</strong> für das
+    Angular-Buch der 1. Auflage (2026). In den vorherigen Auflagen hieß das
+    Beispielprojekt <strong>BookMonkey</strong>. Falls du eine ältere Auflage
+    des Buchs besitzt, findest du den Beispielcode in folgenden Repositorys:
+  </p>
+  <ul class="link-list">
+    <li>
+      <a
+        href="https://github.com/angular-buch/book-monkey5"
+        target="_blank"
+        rel="noopener noreferrer"
+        >4. Auflage (2023): <code>book-monkey5</code></a
+      >
+    </li>
+    <li>
+      <a
+        href="https://github.com/angular-buch/book-monkey4"
+        target="_blank"
+        rel="noopener noreferrer"
+        >3. Auflage (2020): <code>book-monkey4</code></a
+      >
+    </li>
+    <li>
+      <a
+        href="https://github.com/angular-buch/book-monkey3"
+        target="_blank"
+        rel="noopener noreferrer"
+        >2. Auflage (2019): <code>book-monkey3</code></a
+      >
+    </li>
+    <li>
+      <a
+        href="https://github.com/angular-buch/book-monkey2"
+        target="_blank"
+        rel="noopener noreferrer"
+        >1. Auflage (2017): <code>book-monkey2</code></a
+      >
+    </li>
+  </ul>
+</section>
+
+<section class="card" aria-labelledby="kontakt-title">
+  <h2 id="kontakt-title">Fehler gefunden oder Fragen?</h2>
+  <p>
+    Du hast einen Fehler entdeckt oder hast Fragen und Anregungen zum Buch?<br />
+    Bitte schreibe uns:
+    <a href="mailto:team@angular-buch.com">team@angular-buch.com</a>
+  </p>
+</section>
+
+<footer class="footer">
+  <p>
+    <strong>Angular-Buch-Team</strong><br />
+    Ferdinand Malcher, Danny Koppenhagen, Johannes Hoppe
+  </p>
+  <p>
+    <a
+      href="https://angular-buch.com/impressum"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Impressum</a
+    >
+    <span aria-hidden="true"> | </span>
+    <a
+      href="https://angular-buch.com/datenschutz"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Datenschutz</a
+    >
+  </p>
+</footer>
+
+  </main>
+</body>
+</html>
