@@ -1,0 +1,1 @@
+import {h as hy,O as Od,t as tv,P as Pd}from'./main-DKCNE6P2.js';var i=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=hy({type:t,selectors:[["app-home-page"]],decls:2,vars:0,template:function(e,s){e&1&&(Od(0,"h1"),tv(1,"Welcome to the BookManager!"),Pd());},encapsulation:2})};export{i as HomePage};

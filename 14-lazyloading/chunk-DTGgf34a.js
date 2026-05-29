@@ -1,1 +1,0 @@
-import {p as py,O as Od,e as ev,P as Pd}from'./main-ZW2TXL57.js';var i=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=py({type:t,selectors:[["app-home-page"]],decls:2,vars:0,template:function(e,s){e&1&&(Od(0,"h1"),ev(1,"Welcome to the BookManager!"),Pd());},encapsulation:2})};export{i as HomePage};
