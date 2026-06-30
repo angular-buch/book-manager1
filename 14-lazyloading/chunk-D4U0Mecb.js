@@ -1,2 +1,0 @@
-import {E,ar as So,as as lh,at as Hf,au as Un}from'./main-NFVTRGM4.js';var n=class o{#o=E(So);#t="https://api1.angular-buch.com";getAll(t){return lh(()=>({url:`${this.#t}/books`,params:{filter:t()}}),{defaultValue:[]})}getSingle(t){return lh(()=>`${this.#t}/books/${t()}`)}remove(t){return this.#o.delete(`${this.#t}/books/${t}`)}create(t){return Hf(this.#o.post(`${this.#t}/books`,t))}static \u0275fac=function(c){return new(c||o)};static \u0275prov=Un({token:o,factory:o.\u0275fac})};
-export{n};

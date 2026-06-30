@@ -1,0 +1,1 @@
+import {g as gy,P as Pd,r as rv,F as Fd}from'./main-JO7HO6AD.js';var i=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=gy({type:t,selectors:[["app-home-page"]],decls:2,vars:0,template:function(e,s){e&1&&(Pd(0,"h1"),rv(1,"Welcome to the BookManager!"),Fd());},encapsulation:2})};export{i as HomePage};
