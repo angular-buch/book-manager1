@@ -1,7 +1,7 @@
 # BookManager (11-forms)
 **[⭐️ Live Demo](https://bm1.angular-buch.com/11-forms/)**
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.4.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.6.
 
 ## Development server
 
