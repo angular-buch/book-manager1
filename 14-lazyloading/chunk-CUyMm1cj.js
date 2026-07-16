@@ -1,1 +1,0 @@
-import {m as my,P as Pd,o as ov,F as Fd}from'./main-5FFUDVN2.js';var i=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=my({type:t,selectors:[["app-home-page"]],decls:2,vars:0,template:function(e,s){e&1&&(Pd(0,"h1"),ov(1,"Welcome to the BookManager!"),Fd());},encapsulation:2})};export{i as HomePage};
