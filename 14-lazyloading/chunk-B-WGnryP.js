@@ -1,2 +1,0 @@
-import {E,at as So,au as lh,av as Bf,aw as Un}from'./main-PKSMKQPA.js';var n=class o{#o=E(So);#t="https://api1.angular-buch.com";getAll(t){return lh(()=>({url:`${this.#t}/books`,params:{filter:t()}}),{defaultValue:[]})}getSingle(t){return lh(()=>`${this.#t}/books/${t()}`)}remove(t){return this.#o.delete(`${this.#t}/books/${t}`)}create(t){return Bf(this.#o.post(`${this.#t}/books`,t))}static \u0275fac=function(c){return new(c||o)};static \u0275prov=Un({token:o,factory:o.\u0275fac})};
-export{n};
