@@ -1,7 +1,7 @@
 # BookManager (09-resource)
 **[⭐️ Live Demo](https://bm1.angular-buch.com/09-resource/)**
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.1.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.3.
 
 ## Development server
 
