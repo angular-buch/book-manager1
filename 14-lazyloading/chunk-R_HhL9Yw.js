@@ -1,1 +1,0 @@
-import{at as _y,ft as hv,h as Bd,l as $d}from"./main-KDR6Y4GQ.js";var i=class t{static ɵfac=function(e){return new(e||t)};static ɵcmp=_y({type:t,selectors:[[`app-home-page`]],decls:2,vars:0,template:function(e,s){e&1&&(Bd(0,`h1`),hv(1,`Welcome to the BookManager!`),$d())},encapsulation:2})};export{i as HomePage};
