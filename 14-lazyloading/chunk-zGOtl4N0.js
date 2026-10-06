@@ -1,0 +1,1 @@
+import{I as Qd,et as Zd,nt as _y,yt as mv}from"./main-42PD26AW.js";var i=class t{static ɵfac=function(e){return new(e||t)};static ɵcmp=_y({type:t,selectors:[[`app-home-page`]],decls:2,vars:0,template:function(e,s){e&1&&(Qd(0,`h1`),mv(1,`Welcome to the BookManager!`),Zd())},encapsulation:2})};export{i as HomePage};

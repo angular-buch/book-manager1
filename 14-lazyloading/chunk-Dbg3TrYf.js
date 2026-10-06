@@ -1,1 +1,0 @@
-import{B as Sy,Nt as zd,jt as yv,xt as qd}from"./main-5SBDNM25.js";var i=class t{static ɵfac=function(e){return new(e||t)};static ɵcmp=Sy({type:t,selectors:[[`app-home-page`]],decls:2,vars:0,template:function(e,s){e&1&&(qd(0,`h1`),yv(1,`Welcome to the BookManager!`),zd())},encapsulation:2})};export{i as HomePage};
