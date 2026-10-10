@@ -1,0 +1,1 @@
+import{At as yv,Q as Zd,Y as Yd,k as My}from"./main-WM7J663G.js";var i=class t{static ɵfac=function(e){return new(e||t)};static ɵcmp=My({type:t,selectors:[[`app-home-page`]],decls:2,vars:0,template:function(e,s){e&1&&(Zd(0,`h1`),yv(1,`Welcome to the BookManager!`),Yd())},encapsulation:2})};export{i as HomePage};
