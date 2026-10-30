@@ -1,0 +1,1 @@
+import{Ot as vv,Q as Zd,V as Sy,Y as Yd}from"./main-MTDEWBNC.js";var i=class t{static ɵfac=function(e){return new(e||t)};static ɵcmp=Sy({type:t,selectors:[[`app-home-page`]],decls:2,vars:0,template:function(e,s){e&1&&(Zd(0,`h1`),vv(1,`Welcome to the BookManager!`),Yd())},encapsulation:2})};export{i as HomePage};
